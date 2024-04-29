@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Nav, Navbar,Button } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import logo from '../logo.svg'; // Example logo, replace with your own
-import "./hover.css"
+import "./hover.css";
 
 function NavBar() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg" style={{ height: '75px' }}>
       <Container>
         <Navbar.Brand href="#home">
           <img
@@ -23,10 +23,8 @@ function NavBar() {
             <Nav.Link href="#features" className="nav-link">Features</Nav.Link>
             <Nav.Link href="#pricing" className="nav-link">Pricing</Nav.Link>
             {/* Add more Nav.Link components for additional pages */}
-            <div className="d-flex align-items-right">
-            <Button variant="outline-light">Login</Button>          
-            </div>          
           </Nav>
+          <Button variant="outline-light" className="ms-auto">Sign In</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
@@ -34,3 +32,4 @@ function NavBar() {
 }
 
 export default NavBar;
+
