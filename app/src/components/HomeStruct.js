@@ -7,15 +7,17 @@ import row3DonationImage from "../images/row3-donation.png";
 export default function HomeStruct() {
   return (
     <Container fluid>
-      <Row >
+      {/* <Row >
         <Image src={row1DonationImage} alt="row1-donation" />
-      </Row>
+        style={{ width: imageSize.width, height: imageSize.height }}
+      </Row> */}
       <Row>
         <SlideShow fluid></SlideShow>
       </Row>
-      <Row>
+      {/* <Row>
         <Image src={row3DonationImage} alt="row3-donation" />
-      </Row>
+        style={{ width: imageSize.width, height: imageSize.height }}
+      </Row> */}
     </Container>
   );
 }
