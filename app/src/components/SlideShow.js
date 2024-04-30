@@ -11,13 +11,14 @@ import React, { useState } from 'react';
 export default function SlideShow() {
   const [imageSize, setImageSize] = useState({ width: '100%', height: '100%', opacity: '0.4' });
 
+  // eslint-disable-next-line
   const handleImageSizeChange = (newWidth, newHeight) => {
     setImageSize({ width: newWidth, height: newHeight });
   };
 
   return (
-    <div className="carousel-container" style={{ width: '80%', margin: '0' }}>
-      <Carousel>
+    <div className="carousel-container" style={{ width: '80%', marginLeft: '-15px' }}>
+      <Carousel interval={11000}> {/* Set interval to 11000 milliseconds (11 seconds) */}
         <Carousel.Item>
           <Image src={slide1DonationImage} alt="slide1-donation" style={{ width: imageSize.width, height: imageSize.height }} />
           <Carousel.Caption>
