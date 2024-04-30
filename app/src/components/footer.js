@@ -17,10 +17,10 @@ export default function footer() {
 
           <div>
             <a class="text-white me-4">
-              <i class="fab fa-linkedin">linkedIn</i>
+              <i class="fab fa-linkedin">LinkedIn</i>
             </a>
             <a class="text-white me-4">
-              <i class="fab fa-github">Github</i>
+              <i class="fab fa-github">Facebook</i>
             </a>
           </div>
         </section>
@@ -97,10 +97,10 @@ export default function footer() {
                   <a class="text-white">Your Account</a>
                 </p>
                 <p>
-                  <a class="text-white">Apache ActiveMQ</a>
+                  <a class="text-white">Donate Now!</a>
                 </p>
                 <p>
-                  <a class="text-white">Spring Boot JMS</a>
+                  <a class="text-white">Support</a>
                 </p>
               </div>
 

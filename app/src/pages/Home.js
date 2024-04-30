@@ -1,15 +1,13 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/footer";
+import HomeStruct from "../components/HomeStruct";
 
 
 function Home() {
     return (
       <div>
         <NavBar></NavBar>
-        <div>
-          
-        </div>
-        {/* <HomeStruct></HomeStruct> */}
+        <HomeStruct></HomeStruct>
         <Footer></Footer>
       </div>
     );
