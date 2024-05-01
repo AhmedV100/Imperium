@@ -5,7 +5,7 @@ import HomeStruct from "../components/HomeStruct";
 
 function Home() {
     return (
-      <div>
+      <div >
         <NavBar></NavBar>
         <HomeStruct></HomeStruct>
         <Footer></Footer>

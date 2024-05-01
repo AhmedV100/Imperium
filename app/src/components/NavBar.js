@@ -6,7 +6,7 @@ import "./hover.css";
 function NavBar() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: '75px'}}>
-      <Container style={{margin: '0'}}>
+      <Container style={{margin: '0'}} >
         <Navbar.Brand href="#home" style={{ paddingLeft: '15px', paddingRight: '15px', marginRight: '20px', marginLeft: '75px' }}>
           <img
             src={logo}
@@ -24,7 +24,7 @@ function NavBar() {
             <Nav.Link href="#pricing" className="nav-link" style={{ paddingLeft: '15px', paddingRight: '15px', margin: '0' }}>FAQs</Nav.Link>
             {/* Add more Nav.Link components for additional pages */}
           </Nav>
-          <Button variant="outline-light" className="ms-auto" style={{ paddingLeft: '15px', paddingRight: '15px', paddingTop: '3px', paddingBottom: '5px', margin: '-300px' }}>Sign In</Button>
+          <Button variant="outline-light" className="ms-auto" style={{ paddingLeft: '15px', paddingRight: '15px', paddingTop: '3px', paddingBottom: '5px', margin: '-15%' }}>Sign In</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -1,4 +1,4 @@
-import { Col, Row, Container, Image } from "react-bootstrap";
+import { Row, Container } from "react-bootstrap";
 import SlideShow from "../components/SlideShow";
 
 import row1DonationImage from "../images/row1-donation.png";
@@ -6,7 +6,7 @@ import row3DonationImage from "../images/row3-donation.png";
 
 export default function HomeStruct() {
   return (
-    <Container fluid>
+    <Container fluid style={{margin: '0'}}>
       {/* <Row >
         <Image src={row1DonationImage} alt="row1-donation" />
         style={{ width: imageSize.width, height: imageSize.height }}
