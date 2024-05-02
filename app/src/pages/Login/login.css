@@ -1,0 +1,79 @@
+.forgotBox{
+    display: inline-block;
+}
+.rememberBox{
+    display: inline-block;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #000;
+}
+.box{
+    margin-left: 85%;
+    width: 400px;
+    background-color: rgb(167, 162, 162);
+    color: black;
+    border-radius: 10px;
+    padding: 25px 35px;
+}
+.box h1{
+    text-align: center;
+}
+.box .inputs{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin: 20px 0;
+}
+
+.inputs input{
+    padding: 5px 10px;
+    width: 93%;
+    height: 100%;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    border-radius: 35px;
+    color: #000;
+    background: transparent;
+}
+
+.inputs input::placeholder{ 
+    color: #000;
+}
+
+
+.box .remember_forgot{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 7px 30px 4px;
+}
+.remember_forgot .forgotBox a{
+    color: black;
+} 
+.remember_forgot label input{
+    accent-color: rgb(255, 255, 255);
+}
+
+.box button{
+    width: 100%;
+    height: 35px;
+    background: white;
+    border: none;
+    color: #000;
+    font-weight: 750;
+    border-radius: 35px;
+}
+
+.box .resgisteration{
+    text-align: center;
+    margin-top: 15px;
+}
