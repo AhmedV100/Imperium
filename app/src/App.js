@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register";
 
+
 function App() {
   return (
     <div className="App">
@@ -13,10 +14,7 @@ function App() {
           <Route index element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
-          <Route
-            path="/register"
-            element={<Register></Register>}
-          ></Route>
+          <Route path="/register" element={<Register></Register>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

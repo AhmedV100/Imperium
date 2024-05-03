@@ -10,17 +10,22 @@
     box-sizing: border-box;
 }
 body{
+    background-image: url("../../images/row3-donation.png");
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     min-width: 100vw;
-    background-color: #000;
 }
+
 .box{
     margin-left: 85%;
+    height: 440px;
     width: 400px;
-    background-color: rgb(167, 162, 162);
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(300px);
     color: black;
     border-radius: 10px;
     padding: 25px 35px;
@@ -39,7 +44,7 @@ body{
     padding: 5px 10px;
     width: 93%;
     height: 100%;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid rgba(0, 0, 0, 0.541);
     outline: none;
     border-radius: 35px;
     color: #000;
