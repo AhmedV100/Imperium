@@ -1,7 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
 import "./carousel-styles.css";
-import "./carousel-image.css";
 
 import slide1DonationImage from "../images/slide1.png";
 import slide2DonationImage from "../images/slide2.png";
@@ -14,9 +13,9 @@ export default function SlideShow() {
     <div
       className="carousel-container"
     >
-      <Carousel interval={11000}>
+      <Carousel interval={12000}>
         {" "}
-        {/* Set interval to 11000 milliseconds (11 seconds) */}
+        {/* Set interval to 12000 milliseconds (12 seconds) */}
         <Carousel.Item>
           <Image
             src={slide1DonationImage}
@@ -24,8 +23,8 @@ export default function SlideShow() {
             className="carousel-img"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <p>Through this platform, we provide a space for individuals, groups, and organizations to 
+              connect and support causes they are passionate about. </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -35,8 +34,8 @@ export default function SlideShow() {
             className="carousel-img"
           />
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>From volunteering opportunities to in-kind donations, our website serves as a hub for those eager 
+              to make a difference in the lives of others and in their communities. </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -46,10 +45,7 @@ export default function SlideShow() {
             className="carousel-img"
           />
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <p>Start exploring, start giving, and let your generosity spark change! </p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

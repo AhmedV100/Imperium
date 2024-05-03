@@ -20,11 +20,13 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto" style={{ margin: '0' }}>
             <Nav.Link href="#home" className="nav-link" style={{ paddingLeft: '15px', paddingRight: '15px', margin: '0' }}>Home</Nav.Link>
-            <Nav.Link href="#features" className="nav-link" style={{ paddingLeft: '15px', paddingRight: '15px', margin: '0' }}>Donate</Nav.Link>
-            <Nav.Link href="#pricing" className="nav-link" style={{ paddingLeft: '15px', paddingRight: '15px', margin: '0' }}>FAQs</Nav.Link>
+            <Nav.Link href="#donate" className="nav-link" style={{ paddingLeft: '15px', paddingRight: '15px', margin: '0' }}>Donate</Nav.Link>
+            <Nav.Link href="#faqs" className="nav-link" style={{ paddingLeft: '15px', paddingRight: '15px', margin: '0' }}>FAQs</Nav.Link>
             {/* Add more Nav.Link components for additional pages */}
           </Nav>
-          <Button variant="outline-light" className="ms-auto" style={{ paddingLeft: '15px', paddingRight: '15px', paddingTop: '3px', paddingBottom: '5px', marginRight: '-30%' }}>Sign In</Button>
+          <Button variant="outline-light" className="ms-auto" 
+          style={{ paddingLeft: '15px', paddingRight: '15px', paddingTop: '3px', paddingBottom: '5px', marginRight: '-30%' }}>
+            Sign In</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
