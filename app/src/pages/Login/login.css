@@ -9,7 +9,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+    
+.container{
     background-image: url("../../images/row3-donation.png");
     background-size: cover;
     display: flex;
@@ -18,9 +20,8 @@ body{
     min-height: 100vh;
     min-width: 100vw;
 }
-
 .box{
-    margin-left: 85%;
+    margin-left: 36%;
     height: 440px;
     width: 400px;
     background: transparent;
