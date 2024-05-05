@@ -2,9 +2,13 @@ import React from "react";
 import "./login.css"
 import { RiUserHeartLine } from "react-icons/ri";
 import { FaLock } from "react-icons/fa";
+import NavBar from "../../components/NavBar";
+import Footer from "../../components/footer";
 
 function Login() {
     return (
+        <>
+        <header className="headnav"><NavBar/></header>
        <div className="container1"> 
             <div className="box">
                     <form action="">
@@ -33,7 +37,9 @@ function Login() {
                     </form>
             </div>
            
-      </div>   
+      </div>
+      <footer><Footer/></footer>
+        </>   
     );
   } 
   export default Login;
