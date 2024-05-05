@@ -5,7 +5,7 @@ import { FaLock } from "react-icons/fa";
 
 function Login() {
     return (
-       <div className="container"> 
+       <div className="container1"> 
             <div className="box">
                     <form action="">
                         <h1>Login</h1>
@@ -28,7 +28,7 @@ function Login() {
                         </div>
                         <button type="submit">Login</button>
                         <div className="resgisteration">
-                            <p>Don't have an account? <a href="/Register">Register Here</a> </p>
+                            <p><strong>Don't have an account?</strong> <a href="/Register">Register Here</a> </p>
                         </div>
                     </form>
             </div>
