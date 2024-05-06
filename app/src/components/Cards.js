@@ -7,7 +7,7 @@ import donationImage2 from "../images/row3-donation.png";
 
 function UnfeaturedCards() {  
   return (
-    <CardGroup style={{ scale: '0.93', width: '100%', marginBottom: '5%' }}>
+    <CardGroup style={{ scale: '0.93', width: '100%', marginBottom: '4%' }}>
       <Card className="card">
         <a href="your_link_here">
           <Card.Img variant="top"
