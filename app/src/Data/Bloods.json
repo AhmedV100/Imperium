@@ -1,0 +1,102 @@
+[
+  {
+    "object_type":"bloods",
+    "name": "John Doe",
+    "blood_type": "A+",
+    "hospital_name": "City General Hospital",
+    "hospital_area": "Downtown",
+    "governorate": "Metropolis",
+    "hospital_address": "123 Main Street, Downtown, Metropolis",
+    "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+  },
+  {
+    "object_type":"bloods",
+    "name": "Jane Smith",
+    "blood_type": "O-",
+    "hospital_name": "Metropolis Medical Center",
+    "hospital_area": "Midtown",
+    "governorate": "Metropolis",
+    "hospital_address": "456 Oak Avenue, Midtown, Metropolis",
+    "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+  },
+  {
+    "object_type":"bloods",
+    "name": "David Johnson",
+    "blood_type": "B+",
+    "hospital_name": "Unity Hospital",
+    "hospital_area": "Uptown",
+    "governorate": "Metropolis",
+    "hospital_address": "789 Elm Street, Uptown, Metropolis",
+    "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+  },
+  {
+    "object_type":"bloods",
+    "name": "Emily Wilson",
+    "blood_type": "AB-",
+    "hospital_name": "Central Medical Center",
+    "hospital_area": "Downtown",
+    "governorate": "Capital City",
+    "hospital_address": "101 Pine Boulevard, Downtown, Capital City",
+    "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+  },
+  {
+    "object_type":"bloods",
+    "name": "Michael Brown",
+    "blood_type": "O+",
+    "hospital_name": "Sunset Hospital",
+    "hospital_area": "Beachside",
+    "governorate": "Coastal County",
+    "hospital_address": "321 Ocean Avenue, Beachside, Coastal County",
+    "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+  },
+  {
+    "object_type":"bloods",
+    "name": "Sarah Lee",
+    "blood_type": "A-",
+    "hospital_name": "Oceanview Medical Center",
+    "hospital_area": "Seaside",
+    "governorate": "Coastal County",
+    "hospital_address": "555 Shoreline Drive, Seaside, Coastal County",
+    "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+  },
+  {
+    "object_type":"bloods",
+    "name": "Daniel Garcia",
+    "blood_type": "B-",
+    "hospital_name": "Hilltop Hospital",
+    "hospital_area": "Hillside",
+    "governorate": "Highland Region",
+    "hospital_address": "777 Summit Road, Hillside, Highland Region",
+    "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+  },
+  {
+    "object_type":"bloods",
+    "name": "Olivia Martinez",
+    "blood_type": "AB+",
+    "hospital_name": "Mountain Medical Center",
+    "hospital_area": "Peak District",
+    "governorate": "Highland Region",
+    "hospital_address": "888 Summit View, Peak District, Highland Region",
+    "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+  },
+  {
+    "object_type":"bloods",
+    "name": "James Taylor",
+    "blood_type": "O+",
+    "hospital_name": "Valley Hospital",
+    "hospital_area": "Valley",
+    "governorate": "Lowland County",
+    "hospital_address": "999 Valley Lane, Valley, Lowland County",
+    "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+  },
+  {
+    "object_type":"bloods",
+    "name": "Emma Anderson",
+    "blood_type": "A+",
+    "hospital_name": "Riverfront Medical Center",
+    "hospital_area": "Riverside",
+    "governorate": "Lowland County",
+    "hospital_address": "234 River Road, Riverside, Lowland County",
+    "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+  }
+]

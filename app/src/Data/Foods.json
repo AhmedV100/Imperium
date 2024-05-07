@@ -1,0 +1,62 @@
+[
+  {
+    "object_type": "foods",
+    "name": "Apples",
+    "quantity": "5 kg",
+    "type": "fruits and vegetables"
+  },
+  {
+    "object_type": "foods",
+    "name": "Bananas",
+    "quantity": "2 bunches",
+    "type": "fresh"
+  },
+  {
+    "object_type": "foods",
+    "name": "Canned Soup",
+    "quantity": "3 cans",
+    "type": "canned"
+  },
+  {
+    "object_type": "foods",
+    "name": "Carrots",
+    "quantity": "17 kg",
+    "type": "fruits and vegetables"
+  },
+  {
+    "object_type": "foods",
+    "name": "Bread",
+    "quantity": "2 loaves",
+    "type": "baked"
+  },
+  {
+    "object_type": "foods",
+    "name": "Spinach",
+    "quantity": "500 kg",
+    "type": "fresh"
+  },
+  {
+    "object_type": "foods",
+    "name": "Canned Tuna",
+    "quantity": "5 cans",
+    "type": "canned"
+  },
+  {
+    "object_type": "foods",
+    "name": "Strawberries",
+    "quantity": "500 kg",
+    "type": "fresh"
+  },
+  {
+    "object_type": "foods",
+    "name": "Pizza",
+    "quantity": "2 boxes",
+    "type": "baked"
+  },
+  {
+    "object_type": "foods",
+    "name": "Frozen Peas",
+    "quantity": "1 kg",
+    "type": "fresh"
+  }
+]

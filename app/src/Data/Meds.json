@@ -1,0 +1,73 @@
+[
+    {
+      "object_type":"meds",
+      "device_type": "Blood Pressure Monitor",
+      "use": "Measuring blood pressure",
+      "image": "https://images.pexels.com/photos/40568/medical-blood-pressure-meter-40568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 20
+    },
+    {
+      "object_type":"meds",
+      "device_type": "Thermometer",
+      "use": "Measuring body temperature",
+      "image": "https://images.pexels.com/photos/40663/thermometer-fever-temperature-measurement-40663.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 30
+    },
+    {
+      "object_type":"meds",
+      "device_type": "Surgical Mask",
+      "use": "Protection against airborne particles",
+      "image": "https://images.pexels.com/photos/5052805/pexels-photo-5052805.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 200
+    },
+    {
+      "object_type":"meds",
+      "device_type": "Gloves",
+      "use": "Protecting hands during medical procedures",
+      "image": "https://images.pexels.com/photos/40552/gloves-latex-protection-rubber-40552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 500
+    },
+    {
+      "object_type":"meds",
+      "device_type": "Face Shield",
+      "use": "Protecting the face from splashes and sprays",
+      "image": "https://images.pexels.com/photos/5064145/pexels-photo-5064145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 100
+    },
+    {
+      "object_type":"meds",
+      "device_type": "Stethoscope",
+      "use": "Listening to heart and lung sounds",
+      "image": "https://images.pexels.com/photos/40654/medical-doctor-ocardian-listening-to-heartbeat-40654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 40
+    },
+    {
+      "object_type":"meds",
+      "device_type": "Syringes",
+      "use": "Injecting medication or drawing blood",
+      "image": "https://images.pexels.com/photos/2910701/pexels-photo-2910701.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 300
+    },
+    {
+      "object_type":"meds",
+      "device_type": "Bandages",
+      "use": "Covering wounds or injuries",
+      "image": "https://images.pexels.com/photos/374891/pexels-photo-374891.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 150
+    },
+    {
+      "object_type":"meds",
+      "device_type": "Oxygen Mask",
+      "use": "Delivering oxygen to patients with respiratory issues",
+      "image": "https://images.pexels.com/photos/40659/oxygen-mask-patient-medical-40659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 50
+    },
+    {
+      "object_type":"meds",
+      "device_type": "Defibrillator",
+      "use": "Restoring normal heart rhythm during cardiac arrest",
+      "image": "https://images.pexels.com/photos/3559703/pexels-photo-3559703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 10
+    }
+  ]
+  

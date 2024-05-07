@@ -1,0 +1,92 @@
+[
+  {
+    "object_type": "toys",
+    "type": "LEGO Set",
+    "age": "5+",
+    "gender": "Unisex",
+    "category": "Building Blocks",
+    "picture": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 20
+  },
+  {
+    "object_type": "toys",
+    "type": "Dolls",
+    "age": "3+",
+    "gender": "Female",
+    "category": "Dolls",
+    "picture": "https://images.pexels.com/photos/614033/pexels-photo-614033.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 15
+  },
+  {
+    "object_type": "toys",
+    "type": "Cars",
+    "age": "3+",
+    "gender": "Male",
+    "category": "Toy Cars",
+    "picture": "https://images.pexels.com/photos/2335207/pexels-photo-2335207.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 30
+  },
+  {
+    "object_type": "toys",
+    "type": "Puzzle",
+    "age": "6+",
+    "gender": "Unisex",
+    "category": "Educational",
+    "picture": "https://images.pexels.com/photos/327507/pexels-photo-327507.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 25
+  },
+  {
+    "object_type": "toys",
+    "type": "Dolls",
+    "age": "0+",
+    "gender": "Unisex",
+    "category": "Army Toys",
+    "picture": "https://images.pexels.com/photos/2335955/pexels-photo-2335955.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 20
+  },
+  {
+    "object_type": "toys",
+    "type": "Outdoor",
+    "age": "8+",
+    "gender": "Unisex",
+    "category": "Remote Control Toys",
+    "picture": "https://images.pexels.com/photos/353647/pexels-photo-353647.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 10
+  },
+  {
+    "object_type": "toys",
+    "type": "Board Game",
+    "age": "6+",
+    "gender": "Unisex",
+    "category": "Family Games",
+    "picture": "https://images.pexels.com/photos/393170/pexels-photo-393170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 18
+  },
+  {
+    "object_type": "toys",
+    "type": "Action Figure",
+    "age": "4+",
+    "gender": "Male",
+    "category": "Figures",
+    "picture": "https://images.pexels.com/photos/40984/action-figure-toys-cartoon-40984.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 22
+  },
+  {
+    "object_type": "toys",
+    "type": "Dolls",
+    "age": "3+",
+    "gender": "Female",
+    "category": "Playsets",
+    "picture": "https://images.pexels.com/photos/173641/pexels-photo-173641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 12
+  },
+  {
+    "object_type": "toys",
+    "type": "Stuffed Toy",
+    "age": "0+",
+    "gender": "Unisex",
+    "category": "Plush Toys",
+    "picture": "https://images.pexels.com/photos/129714/pexels-photo-129714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 16
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "object_type":"teaches",
+    "number_of_students": 30,
+    "address": "123 Main St, Cityville, USA",
+    "google_map_marker": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.8547339884437!2d-122.41939268467548!3d37.77492997975463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858090b094f111%3A0x4a501367f076adff!2s123%20Main%20St%2C%20San%20Francisco%2C%20CA%2094104%2C%20USA!5e0!3m2!1sen!2suk!4v1642496428694!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+    "subjects_to_be_taught": ["Mathematics", "Science", "History"],
+    "area": "maadi",
+    "government": "aswan"
+  },
+  {
+    "object_type":"teaches",
+    "number_of_students": 25,
+    "address": "456 Elm St, Townsville, USA",
+    "google_map_marker": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.368187394391!2d-74.00600068457268!3d40.71277513244632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a15455a5dcd%3A0x4e4861fc78d5974f!2s456%20Elm%20St%2C%20New%20York%2C%20NY%2010018%2C%20USA!5e0!3m2!1sen!2suk!4v1642496558918!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+    "subjects_to_be_taught": ["English", "Art", "Physical Education"],
+    "area": "area 1",
+    "government": "aswan"
+  },
+  {
+    "object_type":"teaches",
+    "number_of_students": 20,
+    "address": "789 Oak St, Villagetown, USA",
+    "google_map_marker": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52882.19499456796!2d-118.24368417231761!3d34.05223400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf0a454a44ec!2s789%20Oak%20St%2C%20Los%20Angeles%2C%20CA%2090014%2C%20USA!5e0!3m2!1sen!2suk!4v1642496637119!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+    "subjects_to_be_taught": ["Computer Science", "Music", "Geography"],
+    "area": "maadi",
+    "government": "cairo"
+  },
+  {
+    "object_type":"teaches",
+    "number_of_students": 35,
+    "address": "101 Pine St, Hamletville, USA",
+    "google_map_marker": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.0!2d-0.12980068414082868!3d51.50735097963634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b5b5ba2f01%3A0x8dd6a6e6a188a0c!2s101%20Pine%20St%2C%20London%20WC2N%205JR%2C%20UK!5e0!3m2!1sen!2suk!4v1642496682538!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+    "subjects_to_be_taught": ["Foreign Language", "Physics", "Chemistry"],
+    "area": "area 1",
+    "government": "cairo"
+  },
+  {
+    "object_type":"teaches",
+    "number_of_students": 28,
+    "address": "222 Walnut St, Suburbia, USA",
+    "google_map_marker": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6215951673246!2d2.3493287156739166!3d48.85661497928728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2s222%20Walnut%20St%2C%2075001%20Paris%2C%20France!5e0!3m2!1sen!2suk!4v1642496737723!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+    "subjects_to_be_taught": ["Biology", "Economics", "Literature"],
+    "area": "area 2",
+    "government": "isamlia"
+  },
+  {
+    "object_type":"teaches",
+    "number_of_students": 22,
+    "address": "333 Maple St, Countryside, USA",
+    "google_map_marker": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.9191033660797!2d139.69170611516472!3d35.68948798019139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bb427e70c43%3A0x872e68cecbf8e57a!2s333%20Maple%20St%2C%20Shibuya%2C%20Tokyo%201501-0043%2C%20Japan!5e0!3m2!1sen!2suk!4v1642496803532!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+    "subjects_to_be_taught": ["Physical Science", "Psychology", "Sociology"],
+    "area": "area 2",
+    "government": "aswan"
+  },
+  {
+    "object_type":"teaches",
+    "number_of_students": 31,
+    "address": "444 Cedar St, Beachtown, USA",
+    "google_map_marker": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.4159503377833!2d151.20929651510877!3d-33.86881968754044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae7b0eb2bb2d%3A0x3accd8180eb0a08a!2s444%20Cedar%20St%2C%20Sydney%20NSW%202000%2C%20Australia!5e0!3m2!1sen!2suk!4v1642496876654!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+    "subjects_to_be_taught": ["Environmental Studies", "Philosophy", "Religious Studies"],
+    "area": "area 3",
+    "government": "cairo"
+  },
+  {
+    "object_type":"teaches",
+    "number_of_students": 26,
+    "address": "555 Ash St, Mountainville, USA",
+    "google_map_marker": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2392.3354695330327!2d-43.172897985116644!3d-22.906846902847603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9982d912032e45%3A0x5e062bbd0b30ac85!2s555%20Ash%20St%2C%20Rio%20de%20Janeiro%2C%20State%20of%20Rio%20de%20Janeiro%2020010-000%2C%20Brazil!5e0!3m2!1sen!2suk!4v1642496951469!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+    "subjects_to_be_taught": ["Political Science", "Statistics", "Anthropology"],
+    "area": "area 2",
+    "government": "cairo"
+  },
+  {
+    "object_type":"teaches",
+    "number_of_students": 29,
+    "address": "666 Birch St, Riverdale, USA",
+    "google_map_marker": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.414564232411!2d-58.38155968488199!3d-34.60372298044707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3fd6e9476f%3A0xa8803cf9810e8c52!2s666%20Birch%20St%2C%20CABA%2C%20Argentina!5e0!3m2!1sen!2suk!4v1642497008199!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+    "subjects_to_be_taught": ["Health Education", "Engineering", "Astronomy"],
+    "area": "maadi",
+    "government": "aswan"
+  },
+  {
+    "object_type":"teaches",
+    "number_of_students": 24,
+    "address": "777 Pine St, Lakeside, USA",
+    "google_map_marker": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.379412904277!2d-3.7037633852313263!3d40.41677599691409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x169d3f74c4cd8e9b!2s777%20Pine%20St%2C%20Madrid%2C%20Spain!5e0!3m2!1sen!2suk!4v1642497060593!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+    "subjects_to_be_taught": ["Home Economics", "Law", "Business"],
+    "area": "maadi",
+    "government": "aswan"
+  }
+]

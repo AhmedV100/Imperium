@@ -26,6 +26,7 @@ function NavBar() {
             <Nav.Link href="#faqs" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>FAQs</Nav.Link>
             {/* Add more Nav.Link components for additional pages */}
           </Nav>
+
         </Navbar.Collapse>
         <div style={{ display:'flex', justifyContent: 'flex-end' }}>
           <Button type="button" onClick={()=>nav("/Login")} variant="outline-light" 

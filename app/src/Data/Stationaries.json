@@ -1,0 +1,53 @@
+[
+    {
+      "object_type":"stationaries",
+      "type_of_item": "Ballpoint Pens",
+      "amount": 50
+    },
+    {
+      "object_type":"stationaries",
+      "type_of_item": "Notebooks",
+      "amount": 100
+    },
+    {
+      "object_type":"stationaries",
+      "type_of_item": "Highlighters",
+      "amount": 30
+    },
+    {
+      "object_type":"stationaries",
+      "type_of_item": "Sticky Notes",
+      "amount": 200
+    },
+    {
+      "object_type":"stationaries",
+      "type_of_item": "Pencils",
+      "amount": 50
+    },
+    {
+      "object_type":"stationaries",
+      "type_of_item": "Erasers",
+      "amount": 50
+    },
+    {
+      "object_type":"stationaries",
+      "type_of_item": "Binder Clips",
+      "amount": 100
+    },
+    {
+      "object_type":"stationaries",
+      "type_of_item": "Scissors",
+      "amount": 20
+    },
+    {
+      "object_type":"stationaries",
+      "type_of_item": "Markers",
+      "amount": 40
+    },
+    {
+      "object_type":"stationaries",
+      "type_of_item": "Correction Tape",
+      "amount": 30
+    }
+  ]
+  

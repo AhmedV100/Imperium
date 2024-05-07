@@ -1,0 +1,122 @@
+[
+  {
+    "object_type":"cases",
+    "patient_name": "John Doe",
+    "age": 35,
+    "gender": "Male",
+    "weight": "75 kg",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+    "address": "123 Main Street, San Francisco, CA",
+    "organization_name": "ABC Hospital",
+    "medical_specialty": "Cardiology",
+    "case_description": "Patient presents with chest pain and shortness of breath."
+  },
+  {
+    "object_type":"cases",
+    "patient_name": "Jane Smith",
+    "age": 45,
+    "gender": "Female",
+    "weight": "65 kg",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+    "address": "456 Elm Street, San Francisco, CA",
+    "organization_name": "XYZ Clinic",
+    "medical_specialty": "Dermatology",
+    "case_description": "Patient has a persistent skin rash with itching."
+  },
+  {
+    "object_type":"cases",
+    "patient_name": "Alice Johnson",
+    "age": 25,
+    "gender": "Female",
+    "weight": "60 kg",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+    "address": "789 Oak Avenue, San Francisco, CA",
+    "organization_name": "City Medical Center",
+    "medical_specialty": "Pediatrics",
+    "case_description": "Child with fever and cough."
+  },
+  {
+    "object_type":"cases",
+    "patient_name": "Michael Brown",
+    "age": 50,
+    "gender": "Male",
+    "weight": "80 kg",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+    "address": "1010 Pine Street, San Francisco, CA",
+    "organization_name": "Bayview Hospital",
+    "medical_specialty": "Orthopedics",
+    "case_description": "Fractured leg due to fall."
+  },
+  {
+    "object_type":"cases",
+    "patient_name": "Emily Taylor",
+    "age": 30,
+    "gender": "Female",
+    "weight": "55 kg",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+    "address": "111 Maple Drive, San Francisco, CA",
+    "organization_name": "Golden Gate Medical Center",
+    "medical_specialty": "Psychiatry",
+    "case_description": "Patient experiencing depression and anxiety."
+  },
+  {
+    "object_type":"cases",
+    "patient_name": "David Clark",
+    "age": 40,
+    "gender": "Male",
+    "weight": "70 kg",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+    "address": "1212 Cedar Lane, San Francisco, CA",
+    "organization_name": "Sunset Medical Clinic",
+    "medical_specialty": "Ophthalmology",
+    "case_description": "Patient complains of blurred vision."
+  },
+  {
+    "object_type":"cases",
+    "patient_name": "Sarah Baker",
+    "age": 55,
+    "gender": "Female",
+    "weight": "68 kg",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+    "address": "1313 Willow Street, San Francisco, CA",
+    "organization_name": "Oakwood Health Center",
+    "medical_specialty": "Gynecology",
+    "case_description": "Patient in for routine check-up."
+  },
+  {
+    "object_type":"cases",
+    "patient_name": "Robert Green",
+    "age": 65,
+    "gender": "Male",
+    "weight": "85 kg",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+    "address": "1414 Pinecrest Avenue, San Francisco, CA",
+    "organization_name": "Hilltop Medical Group",
+    "medical_specialty": "Geriatrics",
+    "case_description": "Elderly patient with hypertension."
+  },
+  {
+    "object_type":"cases",
+    "patient_name": "Laura White",
+    "age": 20,
+    "gender": "Female",
+    "weight": "50 kg",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+    "address": "1515 Rose Street, San Francisco, CA",
+    "organization_name": "Evergreen Family Clinic",
+    "medical_specialty": "Internal Medicine",
+    "case_description": "Young patient with flu-like symptoms."
+  },
+  {
+    "object_type":"cases",
+    "patient_name": "Ahmed Mohamed",
+    "age": 83,
+    "gender": "Male",
+    "weight": "500 kg",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+    "address": "1515 Rose Street, San Francisco, CA",
+    "organization_name": "Evergreen Family Clinic",
+    "medical_specialty": "Internal Medicine",
+    "case_description": "old patient with a beard."
+  }
+]

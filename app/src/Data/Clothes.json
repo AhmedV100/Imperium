@@ -1,0 +1,92 @@
+[
+  {
+    "object_type":"clothes",
+    "type_of_clothing": "T-shirt",
+    "age": "Adult",
+    "gender": "Male",
+    "season": "Summer",
+    "material": "Cotton",
+    "quantity": 100
+  },
+  {
+    "object_type":"clothes",
+    "type_of_clothing": "Dress",
+    "age": "Adult",
+    "gender": "Female",
+    "season": "Spring",
+    "material": "Linen",
+    "quantity": 50
+  },
+  {
+    "object_type":"clothes",
+    "type_of_clothing": "Sweater",
+    "age": "Child",
+    "gender": "Unisex",
+    "season": "Winter",
+    "material": "Wool",
+    "quantity": 30
+  },
+  {
+    "object_type":"clothes",
+    "type_of_clothing": "Jeans",
+    "age": "Teenager",
+    "gender": "Male",
+    "season": "All seasons",
+    "material": "Denim",
+    "quantity": 80
+  },
+  {
+    "object_type":"clothes",
+    "type_of_clothing": "Skirt",
+    "age": "Adult",
+    "gender": "Female",
+    "season": "Summer",
+    "material": "Cotton",
+    "quantity": 60
+  },
+  {
+    "object_type":"clothes",
+    "type_of_clothing": "Shorts",
+    "age": "Child",
+    "gender": "Unisex",
+    "season": "Spring/Summer",
+    "material": "Polyester",
+    "quantity": 70
+  },
+  {
+    "object_type":"clothes",
+    "type_of_clothing": "Coat",
+    "age": "Adult",
+    "gender": "Male",
+    "season": "Winter",
+    "material": "Wool Blend",
+    "quantity": 40
+  },
+  {
+    "object_type":"clothes",
+    "type_of_clothing": "Sweatshirt",
+    "age": "Teenager",
+    "gender": "Female",
+    "season": "Fall",
+    "material": "Fleece",
+    "quantity": 55
+  },
+  {
+    "object_type":"clothes",
+    "type_of_clothing": "Polo Shirt",
+    "age": "Adult",
+    "gender": "Male",
+    "season": "Spring/Summer",
+    "material": "Polyester Blend",
+    "quantity": 90
+  },
+  {
+    "object_type":"clothes",
+    "type_of_clothing": "Jacket",
+    "age": "Child",
+    "gender": "Unisex",
+    "season": "Fall/Winter",
+    "material": "Nylon",
+    "quantity": 65
+  }
+]

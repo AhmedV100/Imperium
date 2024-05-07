@@ -1,0 +1,102 @@
+[
+  {
+    "object_type":"books",
+    "name": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "language": "English",
+    "edition": "1st",
+    "summary": "The novel explores the irrationality of adult attitudes towards race and class in the Deep South of the 1930s through the innocent viewpoint of a young girl.",
+    "picture": "https://images.pexels.com/photos/159866/books-bookstore-bookshop-read-159866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 20
+  },
+  {
+    "object_type":"books",
+    "name": "1984",
+    "author": "George Orwell",
+    "language": "English",
+    "edition": "1st",
+    "summary": "Set in a dystopian future where critical thought is suppressed under a totalitarian regime, the novel follows the story of Winston Smith as he rebels against the oppressive government.",
+    "picture": "https://images.pexels.com/photos/733174/pexels-photo-733174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 15
+  },
+  {
+    "object_type":"books",
+    "name": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "language": "English",
+    "edition": "1st",
+    "summary": "The novel depicts the roaring twenties in America, focusing on the mysterious millionaire Jay Gatsby and his pursuit of the elusive Daisy Buchanan.",
+    "picture": "https://images.pexels.com/photos/693267/pexels-photo-693267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 25
+  },
+  {
+    "object_type":"books",
+    "name": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "language": "English",
+    "edition": "1st",
+    "summary": "The first book in the Harry Potter series follows the young wizard Harry as he discovers his magical heritage and battles the dark wizard Voldemort.",
+    "picture": "https://images.pexels.com/photos/1154738/pexels-photo-1154738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 30
+  },
+  {
+    "object_type":"books",
+    "name": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "language": "English",
+    "edition": "1st",
+    "summary": "A classic romantic novel set in rural England, it follows the life of Elizabeth Bennet as she navigates love, marriage, and social expectations.",
+    "picture": "https://images.pexels.com/photos/159866/books-bookstore-bookshop-read-159866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 18
+  },
+  {
+    "object_type":"books",
+    "name": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "language": "English",
+    "edition": "1st",
+    "summary": "The novel follows the cynical teenager Holden Caulfield as he navigates the challenges of adolescence and searches for meaning in a superficial world.",
+    "picture": "https://images.pexels.com/photos/733174/pexels-photo-733174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 22
+  },
+  {
+    "object_type":"books",
+    "name": "To the Lighthouse",
+    "author": "Virginia Woolf",
+    "language": "English",
+    "edition": "1st",
+    "summary": "A pioneering work of modernist literature, the novel explores themes of time, memory, and the complexity of human relationships.",
+    "picture": "https://images.pexels.com/photos/693267/pexels-photo-693267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 17
+  },
+  {
+    "object_type":"books",
+    "name": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "language": "English",
+    "edition": "1st",
+    "summary": "A fantasy adventure novel, it follows the hobbit Bilbo Baggins as he embarks on a quest to reclaim a treasure guarded by the dragon Smaug.",
+    "picture": "https://images.pexels.com/photos/1154738/pexels-photo-1154738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 28
+  },
+  {
+    "object_type":"books",
+    "name": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "language": "English",
+    "edition": "1st",
+    "summary": "A high fantasy epic, it follows the journey of the hobbit Frodo Baggins as he seeks to destroy the One Ring and defeat the dark lord Sauron.",
+    "picture": "https://images.pexels.com/photos/159866/books-bookstore-bookshop-read-159866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 32
+  },
+  {
+    "object_type":"books",
+    "name": "Brave New World",
+    "author": "Aldous Huxley",
+    "language": "English",
+    "edition": "1st",
+    "summary": "Set in a futuristic society where individuality is suppressed, the novel explores themes of technology, social control, and the pursuit of happiness.",
+    "picture": "https://images.pexels.com/photos/733174/pexels-photo-733174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "quantity": 12
+  }
+]
