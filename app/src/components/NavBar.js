@@ -32,13 +32,11 @@ function NavBar() {
               <Dropdown.Toggle variant="success" id="dropdown-basic">
                 Sign Up
               </Dropdown.Toggle>
-
               <Dropdown.Menu>
                 <Dropdown.Item href="/Register">Register as Donor</Dropdown.Item>
                 <Dropdown.Item href="/RegisterOrg">Register as Organization</Dropdown.Item>
               </Dropdown.Menu>
           </Dropdown>
-          <Button type="button" onClick={()=>nav("/Register")} variant="outline-light" className="ms-auto" style={{ paddingLeft: '15px', paddingRight: '15px', paddingTop: '3px', paddingBottom: '5px', margin: '-30%' }}>Sign In</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
