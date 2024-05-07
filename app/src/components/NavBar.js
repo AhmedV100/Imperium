@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
-import logo from '../logo.svg'; // Example logo, replace with your own
+import logo from './navIcon.ico'; // Example logo, replace with your own
 import "./hover.css";
 import {useNavigate} from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -10,14 +10,14 @@ function NavBar() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: '70px'}}>
       <Container style={{margin: '0'}} >
-        <Navbar.Brand href="#home" style={{ paddingLeft: '15px', paddingRight: '15px', marginRight: '2%', marginLeft: '3%' }}>
+        <Navbar.Brand href="/Home" style={{ paddingLeft: '15px', paddingRight: '15px', marginRight: '2%', marginLeft: '3%' }}>
           <img
             src={logo}
             height="30"
             className="d-inline-block align-top"
             alt="Logo"
           />
-          {' Your Brand'}
+          {' Imperium'}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
