@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 .headnav{
-    width: 99.1vw;
+    width: 100%;
 }
     
 .container1{
@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    min-width: 99.1vw;
+    min-width: 100%;
 }
 .box{
     margin-left: 36%;

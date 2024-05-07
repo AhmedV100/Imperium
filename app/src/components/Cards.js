@@ -9,14 +9,14 @@ function UnfeaturedCards() {
   return (
     <CardGroup style={{ scale: '0.93', width: '100%', marginBottom: '4%' }}>
       <Card className="card">
-        <a href="your_link_here">
+        <a href="Donation1">
           <Card.Img variant="top"
             src={donationImage1}
             className="card-img"
           />
         </a>
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Donation 1</Card.Title>
           <Card.Text>
             This is a wider card with supporting text below as a natural lead-in
             to additional content. This content is a little bit longer.
@@ -27,13 +27,13 @@ function UnfeaturedCards() {
         </Card.Footer>
       </Card>
       <Card className="card">
-        <a href="your_link_here">
+        <a href="Donation2">
           <Card.Img variant="top" src={donationImage2}
             className="card-img"
           />
         </a>
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Donation 2</Card.Title>
           <Card.Text>
             This card has supporting text below as a natural lead-in to
             additional content.{' '}
@@ -44,13 +44,13 @@ function UnfeaturedCards() {
         </Card.Footer>
       </Card>
       <Card className="card">
-        <a href="your_link_here">
+        <a href="Donation3">
           <Card.Img variant="top" src={donationImage1}
             className="card-img"
           />
         </a>
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Donation 3</Card.Title>
           <Card.Text>
             This is a wider card with supporting text below as a natural lead-in
             to additional content. This card has even longer content than the

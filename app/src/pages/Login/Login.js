@@ -32,7 +32,10 @@ function Login() {
                         </div>
                         <button type="submit">Login</button>
                         <div className="resgisteration">
-                            <p><strong>Don't have an account?</strong> <a href="/Register">Register Here</a> </p>
+                            <p style={{marginBottom:'2%'}}><strong>Don't have an account?</strong> <a href="/Register">Register Here</a> <br /> </p>
+                            <p style={{marginBottom:'1%'}}> <strong>Or</strong> </p>
+                            <p>
+                             <a href="/RegisterOrg">Register as an organization here</a> </p>
                         </div>
                     </form>
             </div>
