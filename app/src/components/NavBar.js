@@ -27,8 +27,8 @@ function NavBar() {
             <Nav.Link href="#faqs" className="nav-link" style={{ paddingLeft: '15px', paddingRight: '15px', margin: '0' }}>FAQs</Nav.Link>
             {/* Add more Nav.Link components for additional pages */}
           </Nav>
-          <Button type="button" onClick={()=>nav("/Login")} variant="outline-light" className="ms-auto" style={{ paddingLeft: '15px', paddingRight: '15px', paddingTop: '3px', paddingBottom: '5px', marginRight: '-30%' }}>Login</Button>
-          <Dropdown data-bs-theme="dark">
+          <Button type="button" onClick={()=>nav("/Login")} variant="outline-light" className="ms-auto" style={{ paddingLeft: '15px', paddingRight: '15px', paddingTop: '3px', paddingBottom: '5px', marginRight: '-20%' }}>Login</Button>
+          <Dropdown style={{marginRight: '-36%'}} data-bs-theme="dark">
               <Dropdown.Toggle variant="success" id="dropdown-basic">
                 Sign Up
               </Dropdown.Toggle>
