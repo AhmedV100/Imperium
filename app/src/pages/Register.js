@@ -34,7 +34,7 @@ function Register() {
                         </div>
 
                         <div className="upload">
-                            <label for="uploadFile"><strong>Upload Documentations:</strong></label>
+                            <label for="uploadFile"><strong>Upload Documentations(if applicable):</strong></label>
                             <input type="file" className="choosefile" id="uploadFile"/> 
                         </div>
 
