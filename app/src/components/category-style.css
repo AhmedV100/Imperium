@@ -1,8 +1,8 @@
 .category-text {
-  margin-left: 7%;
+  /* margin-left: 7%; */
   margin-top: 1.5%;
   margin-bottom: 0.5%;
-  padding: 0;
+  padding-left: 7%;
   font-size: 38px;
   font-weight: bold;
   font-family: Caveat, cursive;
