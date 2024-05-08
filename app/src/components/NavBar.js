@@ -22,7 +22,7 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto" style={{ margin: '0' }}>
             <Nav.Link href="/Home" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Home</Nav.Link>
-            <Nav.Link href="/Login" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Donate</Nav.Link>
+            <Nav.Link href="/donor" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Donate</Nav.Link>
             <Nav.Link href="#faqs" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>FAQs</Nav.Link>
             {/* Add more Nav.Link components for additional pages */}
           </Nav>
