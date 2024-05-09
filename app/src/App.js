@@ -56,6 +56,7 @@ function App() {
           />
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
+          <Route path="/registerOrg" element={<RegisterOrg></RegisterOrg>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

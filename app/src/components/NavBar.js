@@ -30,7 +30,7 @@ function NavBar() {
         </Navbar.Collapse>
         <div style={{ display:'flex', justifyContent: 'flex-end' }}>
           <Button type="button" onClick={()=>nav("/Login")} variant="outline-light" 
-          style={{ paddingLeft: '1.2vw', paddingRight: '1.2vw', paddingTop: '3px', paddingBottom: '5px', marginRight:'-10vw'}}>
+          style={{ paddingLeft: '1.2vw', paddingRight: '1.2vw', paddingTop: '3px', paddingBottom: '5px', marginRight:'-25vw'}}>
             Sign In</Button>
           </div>
       </Container>

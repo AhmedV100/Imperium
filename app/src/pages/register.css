@@ -10,7 +10,7 @@
 
 .box2{
     margin-left: 36%;
-    height: 695px;
+    height: 720px;
     width: 500px;
     background: transparent;
     border: 2px solid rgba(0, 0, 0, 0.6);
@@ -116,4 +116,9 @@ input::-webkit-inner-spin-button {
 
 .resgisteration a{
     color: rgb(0, 0, 0);
+}
+
+.box2 .error-message{
+    text-align: center;
+    margin-top: 7px;
 }
