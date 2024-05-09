@@ -138,7 +138,7 @@ export default function SidebarMenu({
             onClick={() => setActiveFilter("Medical Supplies")}
             active={activeFilter === "Medical Supplies"}
           >
-            Medical Supplies
+            Medical Supplies/Cases
           </ListGroup.Item>
           <ListGroup.Item
             onClick={() => setActiveFilter("School Supplies")}
