@@ -30,9 +30,11 @@ function Register() {
         // Combine first name and last name to create username
         const username = `${firstName} ${lastName}`;
         const object_type = 'organization';
+        const id = 7;
 
         // Create a new user object
         const newUser = {
+            id,
             object_type,
             username,
             password
@@ -51,7 +53,7 @@ function Register() {
         setConfirmPassword('');
 
         console.log('User registered successfully');
-        navigate("/login");
+        navigate("/organization/id:"+newUser.id);
 
     };
 

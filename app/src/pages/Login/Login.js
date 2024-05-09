@@ -20,11 +20,17 @@ function Login() {
 
         if (user) {
             if (user.object_type === "admin") {
+                console.log('Login successful');
                 navigate("/home");
-            } else {
+            }else if (user.object_type === "organization") {
+                console.log('Login successful');
+                navigate("/organization/:orgId");
+            }
+            else{
                 console.log('Login successful');
                 navigate("/donor");
             }
+
         } else {
             setErrorMessage('Invalid username or password');
         }
