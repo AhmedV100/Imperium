@@ -11,6 +11,7 @@ import FoodComponent from "./FilterOptions/FoodComponent";
 import MedicalSuppliesComponent from "./FilterOptions/MedicalSuppliesComponent";
 import SchoolSuppliesComponent from "./FilterOptions/SchoolSuppliesComponent";
 import ToysComponent from "./FilterOptions/ToysComponent";
+import "./sidebarmenu.css"
 
 export default function SidebarMenu({
   handleValueClothesAgeChange,
@@ -106,7 +107,7 @@ export default function SidebarMenu({
   };
 
   return (
-    <Container>
+    <Container className="sidebarmenu">
       <Row>
         Select Filter Category
         <ListGroup>

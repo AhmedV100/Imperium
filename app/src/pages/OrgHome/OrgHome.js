@@ -20,7 +20,7 @@ function OrgHome() {
   return (
     <>
       <NavBarOrg></NavBarOrg>
-      <div className="container">
+      <div className="ORGcontainer">
         <div className="content">
           {organization ? (
             <div>
