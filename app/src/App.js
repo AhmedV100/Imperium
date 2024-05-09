@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register";
 import RegisterOrg from "./pages/RegisterOrg/RegisterOrg";
-
+import OrgHome from "./pages/OrgHome/OrgHome";
 import Donor from "./pages/Donor";
 
 import DonorBrowser from "./components/DonorBrowser";
@@ -54,6 +54,9 @@ function App() {
             path="/donor/browser/blood"
             element={<DonorBrowser filter={"blood"} />}
           />
+
+          <Route path="/organization/:orgId" element={<OrgHome />} />
+
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
         </Routes>
