@@ -33,6 +33,7 @@ export default function ClothesComponent({
   const handleFilterAge = () => {
     const newValue = age.toLowerCase();
     if (
+      newValue === "" ||
       newValue === "child" ||
       newValue === "adult" ||
       newValue === "teenager"
@@ -45,7 +46,7 @@ export default function ClothesComponent({
   };
   const handleFilterGender = () => {
     const newValue = gender.toLowerCase();
-    if (newValue === "male" || newValue === "female" || newValue === "both") {
+    if (newValue === "" ||newValue === "male" || newValue === "female" || newValue === "both") {
       setIsValidGender(true);
       onValueClothesGenderChange(newValue);
     } else {
@@ -55,6 +56,7 @@ export default function ClothesComponent({
   const handleFilterSeason = () => {
     const newValue = season.toLowerCase();
     if (
+      newValue === "" ||
       newValue === "summer" ||
       newValue === "winter" ||
       newValue === "fall" ||

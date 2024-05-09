@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.center-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.center-section p {
+  margin-bottom: 20px;
+}
+
+.center-section img {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  border-radius: 50%; /* Make the image circular */
+  margin-bottom: 20px;
+}
+
+.center-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.center-section button:hover {
+  background-color: #0056b3;
+}
