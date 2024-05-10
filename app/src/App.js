@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register";
+import SchedPickup from "./pages/SchedPickup";
 import RegisterOrg from "./pages/RegisterOrg/RegisterOrg";
 
 import Donor from "./pages/Donor";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/donor" element={<Donor />}></Route>
           <Route path="/donor/browser" element={<DonorBrowser />} />
+          <Route path="/schedPickup" element={<SchedPickup />}></Route>
           <Route
             path="/donor/browser/all"
             element={<DonorBrowser filter={"all"} />}
