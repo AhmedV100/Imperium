@@ -136,6 +136,8 @@ export default function MedicalSuppliesComponent({
       </InputGroup>
       <InputGroup className="mb-3">
         <InputGroup.Text id="inputGroup-sizing-default">
+          medication:
+          <br />
           medical use
         </InputGroup.Text>
         <Form.Control
@@ -148,6 +150,8 @@ export default function MedicalSuppliesComponent({
       </InputGroup>
       <InputGroup className="mb-3">
         <InputGroup.Text id="inputGroup-sizing-default">
+          case:
+          <br />
           governorate
         </InputGroup.Text>
         <Form.Control
@@ -159,7 +163,11 @@ export default function MedicalSuppliesComponent({
         <Button onClick={handleClickMedicalGovernorateFilter}>Filter</Button>
       </InputGroup>
       <InputGroup className="mb-3">
-        <InputGroup.Text id="inputGroup-sizing-default">area</InputGroup.Text>
+        <InputGroup.Text id="inputGroup-sizing-default">
+          case:
+          <br />
+          area
+        </InputGroup.Text>
         <Form.Control
           aria-label="Default"
           aria-describedby="inputGroup-sizing-default"
@@ -170,7 +178,9 @@ export default function MedicalSuppliesComponent({
       </InputGroup>
       <InputGroup className="mb-3">
         <InputGroup.Text id="inputGroup-sizing-default">
-          case:medical specialty
+          case:
+          <br />
+          medical specialty
         </InputGroup.Text>
         <Form.Control
           aria-label="Default"
@@ -182,6 +192,8 @@ export default function MedicalSuppliesComponent({
       </InputGroup>
       <InputGroup className="mb-3">
         <InputGroup.Text id="inputGroup-sizing-default">
+          case:
+          <br />
           organization name
         </InputGroup.Text>
         <Form.Control

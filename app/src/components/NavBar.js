@@ -2,13 +2,13 @@ import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import logo from './navIcon.ico';
 import "./hover.css";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
   const nav = useNavigate();
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: '70px'}}>
-      <Container style={{margin: '0'}}>
+      <Container style={{ margin: '0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Navbar.Brand href="/Home" style={{ paddingLeft: '2vw', paddingRight: '1vw', marginRight: '1.5vw', marginLeft: '2vw' }}>
           <img
             src={logo}
@@ -30,9 +30,9 @@ function NavBar() {
         </Navbar.Collapse>
         <div style={{ display:'flex', justifyContent: 'flex-end' }}>
           <Button type="button" onClick={()=>nav("/Login")} variant="outline-light" 
-          style={{ paddingLeft: '1.2vw', paddingRight: '1.2vw', paddingTop: '3px', paddingBottom: '5px', marginRight:'-10vw'}}>
+          style={{ paddingLeft: '1.2vw', paddingRight: '1.2vw', paddingTop: '3px', paddingBottom: '5px', marginRight:'-25vw'}}>
             Sign In</Button>
-          </div>
+        </div>
       </Container>
     </Navbar>
   );

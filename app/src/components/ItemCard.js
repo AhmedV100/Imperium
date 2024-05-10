@@ -119,26 +119,74 @@ export default function ItemCard({ item }) {
         </Card>
       );
     case "meds":
-      return (
-        <Card style={cardStyle}>
-          <Card.Img variant="top" src={item.image} />
-          <Card.Body>
-            <Card.Title>{item.device_type}</Card.Title>
-          </Card.Body>
-          <ListGroup className="list-group-flush">
-            <ListGroup.Item>use:{item.use}</ListGroup.Item>
-            <ListGroup.Item>quantity:{item.quantity}</ListGroup.Item>
-          </ListGroup>
-          <Card.Body>
-            <Button size="lg" variant="success">
-              Donate
-            </Button>{" "}
-            <Button size="lg" variant="info">
-              See more
-            </Button>{" "}
-          </Card.Body>
-        </Card>
-      );
+      switch (item.type) {
+        case "device":
+          return (
+            <Card style={cardStyle}>
+              <Card.Img variant="top" src={item.image} />
+              <Card.Body>
+                <Card.Title>{item.device_type}</Card.Title>
+              </Card.Body>
+              <ListGroup className="list-group-flush">
+                <ListGroup.Item>device_use:{item.use}</ListGroup.Item>
+                <ListGroup.Item>quantity:{item.quantity}</ListGroup.Item>
+              </ListGroup>
+              <Card.Body>
+                <Button size="lg" variant="success">
+                  Donate
+                </Button>{" "}
+                <Button size="lg" variant="info">
+                  See more
+                </Button>{" "}
+              </Card.Body>
+            </Card>
+          );
+        case "equipment":
+          return (
+            <Card style={cardStyle}>
+              <Card.Img variant="top" src={item.image} />
+              <Card.Body>
+                <Card.Title>{item.equipment_type}</Card.Title>
+              </Card.Body>
+              <ListGroup className="list-group-flush">
+                <ListGroup.Item>equipment_use:{item.use}</ListGroup.Item>
+                <ListGroup.Item>quantity:{item.quantity}</ListGroup.Item>
+              </ListGroup>
+              <Card.Body>
+                <Button size="lg" variant="success">
+                  Donate
+                </Button>{" "}
+                <Button size="lg" variant="info">
+                  See more
+                </Button>{" "}
+              </Card.Body>
+            </Card>
+          );
+        case "medication":
+          return (
+            <Card style={cardStyle}>
+              <Card.Img variant="top" src={item.image} />
+              <Card.Body>
+                <Card.Title>{item.medication_type}</Card.Title>
+              </Card.Body>
+              <ListGroup className="list-group-flush">
+                <ListGroup.Item>medication_use:{item.use}</ListGroup.Item>
+                <ListGroup.Item>quantity:{item.quantity}</ListGroup.Item>
+              </ListGroup>
+              <Card.Body>
+                <Button size="lg" variant="success">
+                  Donate
+                </Button>{" "}
+                <Button size="lg" variant="info">
+                  See more
+                </Button>{" "}
+              </Card.Body>
+            </Card>
+          );
+        default:
+          break;
+      }
+      break;
     case "stationaries":
       return (
         <Card style={cardStyle}>
@@ -167,9 +215,13 @@ export default function ItemCard({ item }) {
             <Card.Title>{"Teaching"}</Card.Title>
           </Card.Body>
           <ListGroup className="list-group-flush">
-            <ListGroup.Item>number of students:{item.number_of_students}</ListGroup.Item>
+            <ListGroup.Item>
+              number of students:{item.number_of_students}
+            </ListGroup.Item>
             <ListGroup.Item>address:{item.address}</ListGroup.Item>
-            <ListGroup.Item>subjects_to_be_taught:{item.subjects_to_be_taught}</ListGroup.Item>
+            <ListGroup.Item>
+              subjects_to_be_taught:{item.subjects_to_be_taught}
+            </ListGroup.Item>
           </ListGroup>
           <Card.Body>
             <Button size="lg" variant="success">
@@ -208,12 +260,12 @@ export default function ItemCard({ item }) {
         <Card style={cardStyle}>
           <Card.Img variant="top" src={example} />
           <Card.Body>
-            <Card.Title>{'....loading title...'}</Card.Title>
+            <Card.Title>{"....loading title..."}</Card.Title>
           </Card.Body>
           <ListGroup className="list-group-flush">
-            <ListGroup.Item>{'....loading details...'}</ListGroup.Item>
-            <ListGroup.Item>{'....loading details...'}</ListGroup.Item>
-            <ListGroup.Item>{'....loading details...'}</ListGroup.Item>
+            <ListGroup.Item>{"....loading details..."}</ListGroup.Item>
+            <ListGroup.Item>{"....loading details..."}</ListGroup.Item>
+            <ListGroup.Item>{"....loading details..."}</ListGroup.Item>
           </ListGroup>
           <Card.Body>
             <Button size="lg" variant="success" disabled="true">
