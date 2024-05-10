@@ -47,7 +47,14 @@ export default function ItemsVeiw({ filter }) {
   //TOYS_ FILTER OPTIONS
   const [TOYS_ageFilter, TOYS_setAgeFilter] = useState("");
   const [TOYS_genderFilter, TOYS_setGenderFilter] = useState("");
-  const [TOYS_categoriesFilter, TOYS_setCategoriesFilter] = useState([]);
+  const [TOYS_categoriesFilter, TOYS_setCategoriesFilter] = useState([
+    "board game",
+    "stuffed toy",
+    "dolls",
+    "sports",
+    "cars",
+    "outdoor",
+  ]);
   const handleValueToysAge = (newValue) => {
     TOYS_setAgeFilter(newValue);
   };

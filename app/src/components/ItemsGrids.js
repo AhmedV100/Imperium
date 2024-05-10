@@ -65,8 +65,7 @@ function applyCasesFilters(items, filters) {
 }
 function applyClothesFilters(items, filters) {
   return items.filter((item) => {
-    if (filters[0].trim() !== "" && 
-    item["age"].toLowerCase() !== filters[0]) {
+    if (filters[0].trim() !== "" && item["age"].toLowerCase() !== filters[0]) {
       return false;
     }
     if (
@@ -118,6 +117,44 @@ function applyMedsFilters(items, filters) {
       item["use"].toLowerCase() !== filters[3] &&
       item["type"].toLowerCase() === "medication"
     ) {
+      return false;
+    }
+    return true;
+  });
+}
+
+function applyTeachesFilters(items, filters) {
+  return items.filter((item) => {
+    if (
+      filters[1].trim() !== "" &&
+      !item["subjects_to_be_taught"].toLowerCase().includes(filters[1])
+    ) {
+      return false;
+    }
+    if (filters[2].trim() !== "" && item["area"].toLowerCase() !== filters[2]) {
+      return false;
+    }
+    if (
+      filters[3].trim() !== "" &&
+      item["government"].toLowerCase() !== filters[3]
+    ) {
+      return false;
+    }
+    return true;
+  });
+}
+function applyToysFilters(items, filters) {
+  return items.filter((item) => {
+    if (filters[0].trim() !== "" && item["age"].toLowerCase() !== filters[0]) {
+      return false;
+    }
+    if (
+      filters[1].trim() !== "" &&
+      item["gender"].toLowerCase() !== filters[1]
+    ) {
+      return false;
+    }
+    if (!filters[2].includes(item["type"].toLowerCase())) {
       return false;
     }
     return true;
@@ -221,35 +258,42 @@ export default function ItemsGrid({
               meds,
               filterOptionsForMedicalSupplies
             );
-            // const response_cases = applyCasesFilters(
-            //   cases,
-            //   filterOptionsForMedicalSupplies
-            // );
-            // const combinedData_medical = [...response_meds, ...response_cases];
-            // response = shuffleArray(combinedData_medical);
             response = response_meds;
             break;
           case "stationaries":
           case "stationary":
           case "school":
           case "school supplies":
-            const response_teaches = teaches;
+            const response_teaches = applyTeachesFilters(
+              teaches,
+              filterOptionsForSchoolSupplies
+            );
             const response_stationaries = stationaries;
             const response_books = books;
-            const combinedData_school = [
+            var combinedData_school = [
               ...response_teaches,
               ...response_stationaries,
               ...response_books,
             ];
+            if (filterOptionsForSchoolSupplies[0] === "books") {
+              combinedData_school = response_books;
+            } else if (filterOptionsForSchoolSupplies[0] === "stationaries") {
+              combinedData_school = response_stationaries;
+            }
             // response = shuffleArray(combinedData_school);
             response = combinedData_school;
             break;
           case "teach":
           case "teaching":
-            response = teaches;
+            response = applyTeachesFilters(
+              teaches,
+              filterOptionsForSchoolSupplies
+            );
             break;
           case "toys":
-            response = toys;
+          case "toy":
+            // response = toys;
+            response = applyToysFilters(toys, filterOptionsForToys);
             break;
           default:
             console.error("Invalid category:", category);
@@ -281,16 +325,18 @@ export default function ItemsGrid({
   // console.log(filterOptionsForClothes);
   // console.log(filterOptionsForToys);
   // console.log(filterOptionsForFoods[0]);
-  console.log(filterOptionsForMedicalSupplies);
+  // console.log(filterOptionsForMedicalSupplies);
   // console.log(filterOptionsForSchoolSupplies);
   // console.log(filterOptionsForBloodDonations);
-  console.log(currentItems);
+  // console.log(currentItems);
+  // console.log(category);
+
   return (
     <Container>
       <Row>
         {currentItems.map((item, index) => (
           <Col key={index} sm={4}>
-            <ItemCard item={item}></ItemCard>
+            <ItemCard item={item} index={index}></ItemCard>
           </Col>
         ))}
       </Row>

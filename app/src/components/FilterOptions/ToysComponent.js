@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
+import { InputGroup, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 export default function ToysComponent({
@@ -12,7 +12,14 @@ export default function ToysComponent({
   const [isMale, setMale] = useState(false);
   const [isFemale, setFemale] = useState(false);
   const [isUnisex, setUnisex] = useState(false);
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([
+    "board game",
+    "stuffed toy",
+    "dolls",
+    "sports",
+    "cars",
+    "outdoor",
+  ]);
   const [isValidAge, setIsValidAge] = useState(true);
 
   const handleInputClothesAgeChange = (event) => {
@@ -23,6 +30,7 @@ export default function ToysComponent({
   const handleFilterAge = () => {
     const newValue = age.toLowerCase();
     if (
+      newValue === "" ||
       newValue === "0+" ||
       newValue === "3+" ||
       newValue === "4+" ||
@@ -55,7 +63,7 @@ export default function ToysComponent({
   const handleCategoryChange = (event) => {
     const newValue = event.target.id;
     const isChecked = event.target.checked;
-    if (isChecked) {
+    if (isChecked && !categories.includes(newValue)) {
       const newChangedValuePostive = [...categories, newValue];
       setCategories(newChangedValuePostive);
       onValueToysCategoryChange(newChangedValuePostive);
@@ -68,10 +76,20 @@ export default function ToysComponent({
     }
   };
 
+  const ageTooltip = (
+    <Tooltip id="tooltip-age">"0+", "3+" or "4+" ...etc</Tooltip>
+  );
+
   return (
     <div>
       <InputGroup className="mb-3">
-        <InputGroup.Text id="inputGroup-sizing-default">Age</InputGroup.Text>
+        <OverlayTrigger
+          placement="top"
+          delay={{ show: 250, hide: 400 }}
+          overlay={ageTooltip}
+        >
+          <InputGroup.Text id="inputGroup-sizing-default">age</InputGroup.Text>
+        </OverlayTrigger>
         <Form.Control
           className={`${
             isValidAge
@@ -142,36 +160,42 @@ export default function ToysComponent({
         id="board game"
         label="Board Games"
         onChange={handleCategoryChange}
+        checked={categories.includes("board game")}
       />
       <Form.Check
         type="checkbox"
         id="stuffed toy"
         label="Stuffed Toys"
         onChange={handleCategoryChange}
+        checked={categories.includes("stuffed toy")}
       />
       <Form.Check
         type="checkbox"
         id="dolls"
         label="Dolls"
         onChange={handleCategoryChange}
+        checked={categories.includes("dolls")}
       />
       <Form.Check
         type="checkbox"
         id="sports"
         label="Sports"
         onChange={handleCategoryChange}
+        checked={categories.includes("sports")}
       />
       <Form.Check
         type="checkbox"
         id="cars"
         label="Cars"
         onChange={handleCategoryChange}
+        checked={categories.includes("cars")}
       />
       <Form.Check
         type="checkbox"
         id="outdoor"
         label="Outdoor"
         onChange={handleCategoryChange}
+        checked={categories.includes("outdoor")}
       />
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
+import { InputGroup, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 export default function ClothesComponent({
@@ -46,7 +46,12 @@ export default function ClothesComponent({
   };
   const handleFilterGender = () => {
     const newValue = gender.toLowerCase();
-    if (newValue === "" ||newValue === "male" || newValue === "female" || newValue === "both") {
+    if (
+      newValue === "" ||
+      newValue === "male" ||
+      newValue === "female" ||
+      newValue === "both"
+    ) {
       setIsValidGender(true);
       onValueClothesGenderChange(newValue);
     } else {
@@ -71,10 +76,30 @@ export default function ClothesComponent({
     }
   };
 
+  const ageTooltip = (
+    <Tooltip id="tooltip-age">"child", "teenager" or "adult"</Tooltip>
+  );
+
+  const genderTooltip = (
+    <Tooltip id="tooltip-gender">"male" or "female"</Tooltip>
+  );
+
+  const seasonTooltip = (
+    <Tooltip id="tooltip-season">"winter", "summer", "spring" ...etc  </Tooltip>
+  );
+
   return (
     <div>
       <InputGroup className="mb-3">
-        <InputGroup.Text id="inputGroup-sizing-default">age</InputGroup.Text>
+        <OverlayTrigger
+          placement="top"
+          delay={{ show: 250, hide: 400 }}
+          overlay={ageTooltip}
+        >
+          <InputGroup.Text id="inputGroup-sizing-default">
+            age
+          </InputGroup.Text>
+        </OverlayTrigger>
         <Form.Control
           className={isValidAge ? "" : "border border-danger"}
           aria-label="Default"
@@ -87,7 +112,15 @@ export default function ClothesComponent({
         <Button onClick={handleFilterAge}>Filter</Button>
       </InputGroup>
       <InputGroup className="mb-3">
-        <InputGroup.Text id="inputGroup-sizing-default">gender</InputGroup.Text>
+        <OverlayTrigger
+          placement="top"
+          delay={{ show: 250, hide: 400 }}
+          overlay={genderTooltip}
+        >
+          <InputGroup.Text id="inputGroup-sizing-default">
+            gender
+          </InputGroup.Text>
+        </OverlayTrigger>
         <Form.Control
           className={isValidGender ? "" : "border border-danger"}
           aria-label="Default"
@@ -100,7 +133,15 @@ export default function ClothesComponent({
         <Button onClick={handleFilterGender}>Filter</Button>
       </InputGroup>
       <InputGroup className="mb-3">
-        <InputGroup.Text id="inputGroup-sizing-default">season</InputGroup.Text>
+        <OverlayTrigger
+          placement="top"
+          delay={{ show: 250, hide: 400 }}
+          overlay={seasonTooltip}
+        >
+          <InputGroup.Text id="inputGroup-sizing-default">
+            season
+          </InputGroup.Text>
+        </OverlayTrigger>
         <Form.Control
           className={isValidSeason ? "" : "border border-danger"}
           aria-label="Default"
