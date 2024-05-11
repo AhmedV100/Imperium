@@ -1,37 +1,33 @@
-import React from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import logo from "./navIcon.ico";
 import "./hover.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import NotificationIcon  from "./NotificationIcon";
-import organizationsData from "../Data/Organizations.json";
-function NavBar() {
+function NavBar({ organization, updateOrganization }) {
   const nav = useNavigate();
   const { orgId } = useParams();
-  const [organization, setOrganization] = useState(null);
+
+  const [unreadNotificationsCount, setUnreadNotificationsCount] = useState(0);
+  useEffect(() => {
+    // Check if organization is defined before using it
+    if (organization) {
+      // Perform actions with organization data
+      console.log(organization);
+    }
+  }, [organization]);
 
   useEffect(() => {
-    // Simulating data fetching from JSON file
-    const org = organizationsData.organizations.find(
-      (org) => org.id === parseInt(orgId)
-    );
-    setOrganization(org);
-  }, [orgId]);
+    if (!organization) return;
 
-const [unreadNotificationsCount, setUnreadNotificationsCount] = useState(0);
+    const count = organization.posts.reduce((total, post) => {
+      return total + (post.fulfilled && !post.isCoordinateSet ? 1 : 0);
+    }, 0);
 
-useEffect(() => {
-  if (!organization) return;
-
-  const count = organization.posts.reduce((total, post) => {
-    return total + (post.fulfilled && !post.isCoordinateSet ? 1 : 0);
-  }, 0);
-
-  setUnreadNotificationsCount(count);
-}, [organization]);
+    setUnreadNotificationsCount(count);
+  }, [organization]);
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: "70px" }}>
@@ -64,21 +60,25 @@ useEffect(() => {
               Home
             </Nav.Link>
             <Nav.Link
-              href="#notifications"
+              href={`/organization/${orgId}/notifications`}
               className="nav-link"
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
               <NotificationIcon count={unreadNotificationsCount} />
             </Nav.Link>
             <Nav.Link
-              href="#view-posts"
+              as={Link}
+              to={{
+                pathname: `/organization/${orgId}/posts`,
+                state: { organization: organization },
+              }}
               className="nav-link"
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
               View Posts
             </Nav.Link>
             <Nav.Link
-              href="#settings"
+              href={`/organization/${orgId}/settings`}
               className="nav-link"
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
