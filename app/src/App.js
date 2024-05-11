@@ -83,7 +83,7 @@ function App() {
             element={<OrganizationNotifications />}
           /> */}
 
-            <Route path="/new-post" element={<MakePost />}></Route>
+            <Route path="/organization/:orgId/new-post" element={<MakePost />}></Route>
 
             <Route path="/login" element={<Login />}></Route>
             

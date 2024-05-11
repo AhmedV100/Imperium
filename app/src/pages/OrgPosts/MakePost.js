@@ -1,60 +1,195 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Form, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import "./MakePost.css"; // Import your CSS file for styling
-
+import "./MakePost.css"; 
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 let Categories = [
-  { name: "clothes", fields: ["Size", "Color", "Additional Info"] },
+  {
+    name: "clothes",
+    fields: [
+      { name: "type_of_clothing", type: "text" },
+      {
+        name: "age",
+        type: "dropdwon",
+        options: ["child", "teenager", "adult"],
+      },
+      { name: "gender", type: "dropdown", options: ["Male", "Female", "both"] },
+      {
+        name: "season",
+        type: "dropdown",
+        options: ["summer", "winter", "fall", "spring", "all seasons"],
+      },
+      { name: "material", type: "text" },
+      { name: "quantity", type: "text" },
+    ],
+  },
   {
     name: "toys",
     fields: [
-      "Type",
-      "Age",
-      "Gender",
-      "Category",
-      "Quantity",
-      "Additional Info",
+      {
+        name: "type",
+        type: "dropdown",
+        options: [
+          "board game",
+          "stuffed toy",
+          "dolls",
+          "sports",
+          "cars",
+          "outdoor",
+        ],
+      },
+      {
+        name: "age",
+        type: "dropdown",
+        options: [ "0+", "3+", "4+", "6+", "5+", "8+"],
+      },
+      {
+        name: "gender",
+        type: "dropdown",
+        options: ["Male", "Female", "Unisex"],
+      },
+      { name: "category", type: "text" },
+      { name: "quantity", type: "text" },
     ],
   },
-  { name: "food", fields: ["Name", "Quantity", "Type", "Additional Info"] },
-  { name: "medical supplies", fields: ["Type", "Quantity", "Additional Info"] },
   {
-    name: "school supplies",
-    fields: ["Type of Item", "Amount", "Additional Info"],
+    name: "foods",
+    fields: [
+      { name: "name", type: "text" },
+      { name: "quantity", type: "text" },
+      {
+        name: "type",
+        type: "dropdown",
+        options: ["fruits and vegetables", "canned", "fresh", "baked"],
+      },
+    ],
   },
   {
-    name: "blood donations",
+    name: "meds",
     fields: [
-      "Blood Type",
-      "Hospital Name",
-      "Hospital Address",
-      "Additional Info",
+      { name: "device_type", type: "text" },
+      { name: "use", type: "text" },
+      { name: "type", type: "text" },
+      { name: "equipment_type", type: "text" },
+      { name: "medication_type", type: "text" },
+      { name: "image", type: "text" },
+      { name: "quantity", type: "text" },
+    ],
+  },
+  {
+    name: "bloods",
+    fields: [
+      { name: "name", type: "text" },
+      { name: "blood_type", type: "dropdown", options: ["A", "B", "AB", "O"] },
+      { name: "hospital_name", type: "text" },
+      { name: "hospital_area", type: "text" },
+      { name: "governorate", type: "text" },
+      { name: "hospital_address", type: "text" },
+      { name: "google_maps_marker", type: "text" },
+    ],
+  },
+  {
+    name: "books",
+    fields: [
+      { name: "name", type: "text" },
+      { name: "author", type: "text" },
+      { name: "language", type: "text" },
+      { name: "edition", type: "text" },
+      { name: "summary", type: "text" },
+    //   { name: "picture", type: "text" },
+      { name: "quantity", type: "text" },
+    ],
+  },
+  {
+    name: "stationaries",
+    fields: [
+      { name: "type_of_item", type: "text" },
+      { name: "amount", type: "text" },
+    ],
+  },
+  {
+    name: "teaches",
+    fields: [
+      { name: "number_of_students", type: "text" },
+      { name: "address", type: "text" },
+      { name: "google_map_marker", type: "text" },
+      { name: "subjects_to_be_taught", type: "text" },
+      { name: "area", type: "text" },
+      { name: "government", type: "text" },
+    ],
+  },
+  {
+    name: "cases",
+    fields: [
+      { name: "patient_name", type: "text" },
+      { name: "age", type: "text" },
+      { name: "gender", type: "text" },
+      { name: "weight", type: "text" },
+      { name: "location", type: "text" },
+      { name: "address", type: "text" },
+      { name: "organization_name", type: "text" },
+      { name: "medical_specialty", type: "text" },
+      { name: "case_description", type: "text" },
     ],
   },
 ];
 
-const BloodTypes = ["A", "B", "AB", "O"];
+
 
 function MakePost() {
-    console.log(JSON.parse(localStorage.getItem('data')));
-
+  const { orgId } = useParams();
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [formData, setFormData] = useState({});
+  const nav = useNavigate();
 
   // Function to reset form fields
   const resetForm = () => {
     setFormData({});
   };
 
-  // Function to handle form field changes
   const handleFieldChange = (field, value) => {
     setFormData({ ...formData, [field]: value });
   };
 
-  // Function to handle category change
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
-    resetForm(); // Reset form fields when category changes
+    resetForm(); 
+  };
+
+  const validateForm = () => {
+    for (const category of Categories) {
+      if (category.name === selectedCategory) {
+        for (const field of category.fields) {
+          if (!formData[field.name]) {
+            return false; 
+          }
+        }
+        return true;
+      }
+    }
+    return false; 
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!selectedCategory || !validateForm()) {
+      alert("Please fill in all fields.");
+      return;
+    }
+     const existingPosts = JSON.parse(localStorage.getItem("posts")) || [];
+     
+     const newPost = {
+       id: existingPosts.length,
+       orgId: parseInt(orgId),
+       donorId: null,
+       category: selectedCategory,
+       fulfilled: false,
+       fields: formData,
+     };
+     const updatedPosts = [...existingPosts, newPost];
+     localStorage.setItem("posts", JSON.stringify(updatedPosts));
+     alert("Success!");
+     nav(`/organization/${orgId}`);
   };
 
   return (
@@ -88,44 +223,27 @@ function MakePost() {
                 (cat) => cat.name === selectedCategory
               ).fields.map((field, index) => (
                 <Row key={index} className="mb-3">
-                  <Form.Group as={Col} controlId={`form${field}`}>
-                    <Form.Label>{field}</Form.Label>
-                    {field === "Size" ? (
+                  <Form.Group as={Col} controlId={`form${field.name}`}>
+                    <Form.Label>{field.name}</Form.Label>
+                    {field.type === "dropdown" ? (
                       <Form.Select
                         onChange={(e) =>
-                          handleFieldChange(field, e.target.value)
+                          handleFieldChange(field.name, e.target.value)
                         }
                       >
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                      </Form.Select>
-                    ) : field === "Gender" && selectedCategory === "toys" ? (
-                      <Form.Select
-                        onChange={(e) =>
-                          handleFieldChange(field, e.target.value)
-                        }
-                      >
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                      </Form.Select>
-                    ) : field === "Blood Type" &&
-                      selectedCategory === "blood donations" ? (
-                      <Form.Select
-                        onChange={(e) =>
-                          handleFieldChange(field, e.target.value)
-                        }
-                      >
-                        {BloodTypes.map((type, index) => (
-                          <option key={index}>{type}</option>
+                        <option value="">Choose...</option>
+                        {field.options.map((option, index) => (
+                          <option key={index} value={option}>
+                            {option}
+                          </option>
                         ))}
                       </Form.Select>
                     ) : (
                       <Form.Control
-                        type="text"
-                        placeholder={`Enter ${field}`}
+                        type={field.type}
+                        placeholder={`Enter ${field.name}`}
                         onChange={(e) =>
-                          handleFieldChange(field, e.target.value)
+                          handleFieldChange(field.name, e.target.value)
                         }
                       />
                     )}
@@ -134,7 +252,7 @@ function MakePost() {
               ))}
             </>
           )}
-          <Button variant="primary" type="submit" className="submit-button">
+          <Button variant="primary" type="submit" onClick={handleSubmit} className="submit-button">
             Submit
           </Button>
         </Form>
