@@ -119,3 +119,8 @@ input::-webkit-inner-spin-button {
 .resgisteration a{
     color: rgb(0, 0, 0);
 }
+
+.box3 .error-message{
+    text-align: center;
+    margin-top: 10px;
+}

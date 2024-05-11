@@ -15,7 +15,9 @@ import MyPagination from "../components/MyPagination";
 export default function ItemsVeiw({ filter }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const [currentCategory, setCurrentCategory] = useState("Type Category to Browse...");
+  const [currentCategory, setCurrentCategory] = useState(
+    "Type Category to Browse..."
+  );
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -28,6 +30,7 @@ export default function ItemsVeiw({ filter }) {
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+
   //CLOTHES_ FILTER OPTIONS
   const [CLOTHES_ageFilter, CLOTHES_setAgeFilter] = useState("");
   const [CLOTHES_genderFilter, CLOTHES_setGenderFilter] = useState("");
@@ -44,7 +47,14 @@ export default function ItemsVeiw({ filter }) {
   //TOYS_ FILTER OPTIONS
   const [TOYS_ageFilter, TOYS_setAgeFilter] = useState("");
   const [TOYS_genderFilter, TOYS_setGenderFilter] = useState("");
-  const [TOYS_categoriesFilter, TOYS_setCategoriesFilter] = useState([]);
+  const [TOYS_categoriesFilter, TOYS_setCategoriesFilter] = useState([
+    "board game",
+    "stuffed toy",
+    "dolls",
+    "sports",
+    "cars",
+    "outdoor",
+  ]);
   const handleValueToysAge = (newValue) => {
     TOYS_setAgeFilter(newValue);
   };
@@ -55,7 +65,12 @@ export default function ItemsVeiw({ filter }) {
     TOYS_setCategoriesFilter(newValue);
   };
   //FOODS_ FILTER OPTIONS
-  const [FOODS_categoriesFilter, FOODS_setCategoriesFilter] = useState([]);
+  const [FOODS_categoriesFilter, FOODS_setCategoriesFilter] = useState([
+    "fruits and vegetables",
+    "canned",
+    "fresh",
+    "baked",
+  ]);
   const handleValueFoodsCategories = (newValue) => {
     FOODS_setCategoriesFilter(newValue);
   };

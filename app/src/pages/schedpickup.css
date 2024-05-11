@@ -1,0 +1,49 @@
+.wrappp{
+    background-image: url("../images/row3-donation.png");
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100%;
+}
+.boxx2{
+    height: 600px;
+    width: 500px;
+    background: transparent;
+    border: 3px solid rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(300px);
+    color: black;
+    border-radius: 50px;
+    padding: 25px 35px;
+}
+
+.boxx3{
+    width:fit-content;
+    font-size: 17px;
+    text-align:center;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    border: 0px solid rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(300px);
+    color: white;
+    border-radius: 50px;
+    padding: 15px 20px;
+    
+}
+.color
+{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.time{
+    width:80%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

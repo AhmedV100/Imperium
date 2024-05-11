@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register";
+import SchedPickup from "./pages/SchedPickup";
 import RegisterOrg from "./pages/RegisterOrg/RegisterOrg";
 import OrgHome from "./pages/OrgHome/OrgHome";
 import Donor from "./pages/Donor";
@@ -19,11 +20,8 @@ import MedicalSuppliesComponent from "./components/FilterOptions/MedicalSupplies
 import SchoolSuppliesComponent from "./components/FilterOptions/SchoolSuppliesComponent";
 import BloodDonationsComponent from "./components/FilterOptions/BloodDonationsComponent";
 import DataProvider from "./Provider/DataProvider";
-import Data from "./Data/Organizations.json";
-import { useState } from "react";
 
 function App() {
-  const [data,setData] = useState(Data);
   return (
     <div className="App">
       <DataProvider >
@@ -61,6 +59,7 @@ function App() {
               path="/donor/browser/blood"
               element={<DonorBrowser filter={"blood"} />}
             />
+     
 
             <Route path="/organization/:orgId" element={<OrgHome />} />
             {/* <Route
@@ -79,10 +78,14 @@ function App() {
             <Route path="/new-post" element={<MakePost />}></Route>
 
             <Route path="/login" element={<Login />}></Route>
+            
             <Route path="/register" element={<Register />}></Route>
+            <Route path="/registerOrg" element={<RegisterOrg></RegisterOrg>}></Route>
+
           </Routes>
         </BrowserRouter>
       </DataProvider>
+
     </div>
   );
 }
