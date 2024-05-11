@@ -22,6 +22,15 @@ let Categories = [
       },
       { name: "material", type: "text" },
       { name: "quantity", type: "text" },
+      {
+        name: "google_maps_marker",
+        type: "dropdown",
+        options: [
+          "New Cairo, 5th Settlement",
+          "Cairo, Tahrir Square",
+          "Sharkia, Zagazig, AlZera'a",
+        ],
+      },
     ],
   },
   {
@@ -42,7 +51,7 @@ let Categories = [
       {
         name: "age",
         type: "dropdown",
-        options: [ "0+", "3+", "4+", "6+", "5+", "8+"],
+        options: ["0+", "3+", "4+", "6+", "5+", "8+"],
       },
       {
         name: "gender",
@@ -51,6 +60,15 @@ let Categories = [
       },
       { name: "category", type: "text" },
       { name: "quantity", type: "text" },
+      {
+        name: "google_maps_marker",
+        type: "dropdown",
+        options: [
+          "New Cairo, 5th Settlement",
+          "Cairo, Tahrir Square",
+          "Sharkia, Zagazig, AlZera'a",
+        ],
+      },
     ],
   },
   {
@@ -62,6 +80,15 @@ let Categories = [
         name: "type",
         type: "dropdown",
         options: ["fruits and vegetables", "canned", "fresh", "baked"],
+      },
+      {
+        name: "google_maps_marker",
+        type: "dropdown",
+        options: [
+          "New Cairo, 5th Settlement",
+          "Cairo, Tahrir Square",
+          "Sharkia, Zagazig, AlZera'a",
+        ],
       },
     ],
   },
@@ -75,6 +102,15 @@ let Categories = [
       { name: "medication_type", type: "text" },
       { name: "image", type: "text" },
       { name: "quantity", type: "text" },
+      {
+        name: "google_maps_marker",
+        type: "dropdown",
+        options: [
+          "New Cairo, 5th Settlement",
+          "Cairo, Tahrir Square",
+          "Sharkia, Zagazig, AlZera'a",
+        ],
+      },
     ],
   },
   {
@@ -86,7 +122,15 @@ let Categories = [
       { name: "hospital_area", type: "text" },
       { name: "governorate", type: "text" },
       { name: "hospital_address", type: "text" },
-      { name: "google_maps_marker", type: "text" },
+      {
+        name: "google_maps_marker",
+        type: "dropdown",
+        options: [
+          "New Cairo, 5th Settlement",
+          "Cairo, Tahrir Square",
+          "Sharkia, Zagazig, AlZera'a",
+        ],
+      },
     ],
   },
   {
@@ -97,8 +141,16 @@ let Categories = [
       { name: "language", type: "text" },
       { name: "edition", type: "text" },
       { name: "summary", type: "text" },
-    //   { name: "picture", type: "text" },
       { name: "quantity", type: "text" },
+      {
+        name: "google_maps_marker",
+        type: "dropdown",
+        options: [
+          "New Cairo, 5th Settlement",
+          "Cairo, Tahrir Square",
+          "Sharkia, Zagazig, AlZera'a",
+        ],
+      },
     ],
   },
   {
@@ -106,6 +158,15 @@ let Categories = [
     fields: [
       { name: "type_of_item", type: "text" },
       { name: "amount", type: "text" },
+      {
+        name: "google_maps_marker",
+        type: "dropdown",
+        options: [
+          "New Cairo, 5th Settlement",
+          "Cairo, Tahrir Square",
+          "Sharkia, Zagazig, AlZera'a",
+        ],
+      },
     ],
   },
   {
@@ -117,6 +178,15 @@ let Categories = [
       { name: "subjects_to_be_taught", type: "text" },
       { name: "area", type: "text" },
       { name: "government", type: "text" },
+      {
+        name: "google_maps_marker",
+        type: "dropdown",
+        options: [
+          "New Cairo, 5th Settlement",
+          "Cairo, Tahrir Square",
+          "Sharkia, Zagazig, AlZera'a",
+        ],
+      },
     ],
   },
   {
@@ -131,6 +201,15 @@ let Categories = [
       { name: "organization_name", type: "text" },
       { name: "medical_specialty", type: "text" },
       { name: "case_description", type: "text" },
+      {
+        name: "google_maps_marker",
+        type: "dropdown",
+        options: [
+          "New Cairo, 5th Settlement",
+          "Cairo, Tahrir Square",
+          "Sharkia, Zagazig, AlZera'a",
+        ],
+      },
     ],
   },
 ];
@@ -176,7 +255,9 @@ function MakePost() {
       alert("Please fill in all fields.");
       return;
     }
+    const finalData = { ...formData, google_maps_marker:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"};
      const existingPosts = JSON.parse(localStorage.getItem("posts")) || [];
+     console.log("i am in MakePosts submit:",finalData);
      
      const newPost = {
        id: existingPosts.length,
@@ -184,7 +265,7 @@ function MakePost() {
        donorId: null,
        fulfilled: false,
        object_type: selectedCategory,
-       fields: formData,
+       fields: finalData,
      };
      const updatedPosts = [...existingPosts, newPost];
      localStorage.setItem("posts", JSON.stringify(updatedPosts));
