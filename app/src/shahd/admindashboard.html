@@ -1,0 +1,109 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" style.css="" />
+    
+    
+
+    
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    
+   
+    
+    <div class="admin-actions">
+        <h2>Admin Actions</h2>
+        <ul>
+            <li><a href="organizations.html ">View Organization</a></li>
+            <li><a href="#donor-list">View Donor List</a></li>
+        </ul>                           
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    
+    
+    <div class="admin-actions">
+        <h2>Admin Actions</h2>
+        <ul>
+            <li><a href="organizations.html">View Organization</a></li>
+            <li><button onclick="viewDonorsList()">View Donor's List</button></li>
+        </ul>
+    </div>
+
+    <script>
+        function viewDonorsList() {
+            window.location.href = "donors.html";
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    
+    
+    <div class="admin-actions">
+        <h2>Admin Actions</h2>
+        <ul>
+            <li><a href="organizations.html">View Organization</a></li>
+            <li><button onclick="redirectToSubmissionsPage()">Review Organization Submissions</button></li>
+        </ul>
+    </div>
+
+    <script>
+        function redirectToSubmissionsPage() {
+            window.location.href = "organization_submissions.html";
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    
+    
+    <div class="admin-actions">
+        
+        <ul>
+            <li><button onclick="manageOrganizationRequests()">Manage Organization Requests</button></li>
+            <li><button onclick="manageDonorRequests()">Manage Donor Requests</button></li>
+        </ul>
+    </div>
+
+    <script>
+        function manageOrganizationRequests() {
+            window.location.href = "manage_organization_requests.html";
+        }
+
+        function manageDonorRequests() {
+            window.location.href = "manage_donor_requests.html";
+        }
+    </script>
+</body>
+</html>
