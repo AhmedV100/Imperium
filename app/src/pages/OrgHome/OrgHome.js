@@ -7,15 +7,15 @@ import image from "../../images/Resala-logo.png";
 function OrgHome() {
   const { orgId } = useParams();
   const data = JSON.parse(localStorage.getItem("data"));
+ const [organizations, setOrganizations] = useState([]);
  const [organization, setOrganization] = useState(null);
 
- // State for posts
  const [posts, setPosts] = useState([]);
+ const [allPosts, setAllPosts] = useState([]);
 
 useEffect(() => {
   const storedOrganizations =
     JSON.parse(localStorage.getItem("organizations")) || [];
-  console.log("hi from the newest:",storedOrganizations);
   const storedOrganization = storedOrganizations.find(
     (org) => org.id === parseInt(orgId)
   );
@@ -27,49 +27,45 @@ useEffect(() => {
   setPosts(orgPosts);
 }, []);
 
+const updateOrganization = (updatedOrg) => {
+  // Update organization state
+  setOrganization(updatedOrg);
 
- const updateOrganization = (updatedOrg) => {
-   setOrganization(updatedOrg);
-   // Update local storage
-   const newData = {
-     ...data,
-     organizations: data.organizations.map((org) =>
-       org.id === updatedOrg.id ? updatedOrg : org
-     ),
-   };
-   localStorage.setItem("data", JSON.stringify(newData));
- };
+  // Update local storage
+  const newOrgs = organizations.map((org) =>
+    org.id === parseInt(orgId) ? updatedOrg : org
+  );
+  setOrganizations(newOrgs); // Fix this line
 
- // Function to update posts
- const updatePosts = (updatedPost) => {
+  localStorage.setItem("organizations", JSON.stringify(newOrgs));
+};
+
+// Function to update posts
+const updatePosts = (updatedPost) => {
+  // Update posts state
   const updatedPosts = posts.map((post) =>
     post.id === updatedPost.id ? updatedPost : post
   );
-   setPosts(updatedPosts);
-   // Update local storage
-   const newData = {
-     ...data,
-     posts: data.posts.map((post) =>
-       post.orgId === parseInt(orgId)
-         ? updatedPosts.find((updatedPost) => updatedPost.id === post.id) ||
-           post
-         : post
-     ),
-   };
-   localStorage.setItem("data", JSON.stringify(newData));
- };
+  setPosts(updatedPosts);
+
+  // Update allPosts state
+  const allNewPosts = allPosts.map((post) =>
+    post.id === updatedPost.id ? updatedPost : post
+  );
+  setAllPosts(allNewPosts);
+
+  localStorage.setItem("posts", JSON.stringify(allNewPosts));
+};
 
  // Function to delete a post
  const deletePost = (postId) => {
    const updatedPosts = posts.filter((post) => post.id !== postId);
-   updatePosts(updatedPosts);
+    setPosts(updatedPosts);
+   const allUpdatedPosts = allPosts.filter((post) => post.id !== postId);
 
-   // Update local storage
-   const newData = {
-     ...data,
-     posts: data.posts.filter((post) => post.id !== postId),
-   };
-   localStorage.setItem("data", JSON.stringify(newData));
+  setAllPosts(allUpdatedPosts);
+
+   localStorage.setItem("posts", JSON.stringify(allUpdatedPosts));
  };
 
 return (
@@ -89,7 +85,7 @@ return (
               <ul>
                 {posts.map((post) => (
                   <li key={post.id}>
-                    Category: {post.category}, Fulfilled:{" "}
+                    Category: {post.object_type}, Fulfilled:{" "}
                     {post.fulfilled ? "Yes" : "No"}{" "}
                     <button
                       onClick={() =>
