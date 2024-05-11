@@ -73,7 +73,6 @@ export default function ItemCard({ item, index }) {
       return (
         <div>
           <Card style={cardStyle}>
-            {console.log(item["picture"])}
             <Card.Img variant="top" src={bookExample} style={ImgCardStyle} />
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>
