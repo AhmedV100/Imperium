@@ -5,15 +5,15 @@ import Col from "react-bootstrap/Col";
 import ItemCard from "../components/ItemCard";
 
 // Import your data
-import bloods from "../Data/Bloods.json";
-import books from "../Data/Books.json";
-import cases from "../Data/Cases.json";
-import clothes from "../Data/Clothes.json";
-import foods from "../Data/Foods.json";
-import meds from "../Data/Meds.json";
-import stationaries from "../Data/Stationaries.json";
-import teaches from "../Data/Teaches.json";
-import toys from "../Data/Toys.json";
+// import bloods from "../Data/Bloods.json";
+// import books from "../Data/Books.json";
+// import cases from "../Data/Cases.json";
+// import clothes from "../Data/Clothes.json";
+// import foods from "../Data/Foods.json";
+// import meds from "../Data/Meds.json";
+// import stationaries from "../Data/Stationaries.json";
+// import teaches from "../Data/Teaches.json";
+// import toys from "../Data/Toys.json";
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -172,6 +172,16 @@ export default function ItemsGrid({
   filterOptionsForSchoolSupplies,
   filterOptionsForBloodDonations,
 }) {
+  const [bloods, setBloods] = useState();
+  const [books, setBooks] = useState();
+  const [cases, setCases] = useState();
+  const [clothes, setClothes] = useState();
+  const [foods, setFoods] = useState();
+  const [meds, setMeds] = useState();
+  const [stationaries, setStationaries] = useState();
+  const [teaches, setTeaches] = useState();
+  const [toys, setToys] = useState();
+
   const all = [
     ...bloods,
     ...books,
@@ -183,10 +193,39 @@ export default function ItemsGrid({
     ...teaches,
     ...toys,
   ];
-  const shuffledAll = shuffleArray(all);
 
+  const shuffledAll = shuffleArray(all);
   const [originalItems, setOriginalItems] = useState(shuffledAll);
   const [currentItems, setCurrentItems] = useState([]);
+
+  useEffect(() => {
+    const storedDataPosts = JSON.parse(localStorage.getItem("data")).posts;
+    setBloods(storedDataPosts.filter((post) => post.object_type === "bloods"));
+    setBooks(storedDataPosts.filter((post) => post.object_type === "books"));
+    setCases(storedDataPosts.filter((post) => post.object_type === "cases"));
+    setClothes(
+      storedDataPosts.filter((post) => post.object_type === "clothes")
+    );
+    setFoods(storedDataPosts.filter((post) => post.object_type === "foods"));
+    setMeds(storedDataPosts.filter((post) => post.object_type === "meds"));
+    setStationaries(
+      storedDataPosts.filter((post) => post.object_type === "stationaries")
+    );
+    setTeaches(
+      storedDataPosts.filter((post) => post.object_type === "teaches")
+    );
+    setToys(storedDataPosts.filter((post) => post.object_type === "toys"));
+  }, []);
+
+  console.log("bloods: ", bloods);
+  console.log("books: ", books);
+  console.log("cases: ", cases);
+  console.log("clothes: ", clothes);
+  console.log("foods: ", foods);
+  console.log("meds: ", meds);
+  console.log("stationaries: ", stationaries);
+  console.log("teaches: ", teaches);
+  console.log("toys: ", toys);
 
   const pageSize = 9;
 
@@ -314,6 +353,15 @@ export default function ItemsGrid({
     filterOptionsForMedicalSupplies,
     filterOptionsForSchoolSupplies,
     filterOptionsForBloodDonations,
+    bloods,
+    books,
+    cases,
+    clothes,
+    foods,
+    meds,
+    stationaries,
+    teaches,
+    toys,
   ]);
 
   useEffect(() => {
@@ -321,15 +369,6 @@ export default function ItemsGrid({
     const endIndex = startIndex + pageSize;
     setCurrentItems(originalItems.slice(startIndex, endIndex));
   }, [currentPage, originalItems]);
-
-  // console.log(filterOptionsForClothes);
-  // console.log(filterOptionsForToys);
-  // console.log(filterOptionsForFoods[0]);
-  // console.log(filterOptionsForMedicalSupplies);
-  // console.log(filterOptionsForSchoolSupplies);
-  // console.log(filterOptionsForBloodDonations);
-  // console.log(currentItems);
-  // console.log(category);
 
   return (
     <Container>
