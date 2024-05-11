@@ -19,11 +19,17 @@ import FoodComponent from "./components/FilterOptions/FoodComponent";
 import MedicalSuppliesComponent from "./components/FilterOptions/MedicalSuppliesComponent";
 import SchoolSuppliesComponent from "./components/FilterOptions/SchoolSuppliesComponent";
 import BloodDonationsComponent from "./components/FilterOptions/BloodDonationsComponent";
-import Data from "./Data/Organizations.json";
+import Organizations from "./Data/Organizations.json";
+import Posts from "./Data/Posts.json";
+// import Donors from "./Data/Donors.json";
+// import Admin from "./Data/Admin.json";
 function App() {
 
   const storeObjectInLocalStorage = () => {
-    localStorage.setItem("data", JSON.stringify(Data));
+    localStorage.setItem("organizations", JSON.stringify(Organizations));
+    localStorage.setItem("posts", JSON.stringify(Posts));
+    // localStorage.setItem("donors", JSON.stringify(Donors));
+    // localStorage.setItem("admin", JSON.stringify(Admin));
   };
 
   // Use useEffect to store the object when the component mounts

@@ -13,20 +13,21 @@ function OrgHome() {
  // State for posts
  const [posts, setPosts] = useState([]);
 
- // Fetch organization and posts
- useEffect(() => {
-   // Fetch organization
-   const tempOrganization = data.organizations.find(
-     (org) => org.id === parseInt(orgId)
-   );
-   setOrganization(tempOrganization);
+useEffect(() => {
+  const storedOrganizations =
+    JSON.parse(localStorage.getItem("organizations")) || [];
+  console.log("hi from the newest:",storedOrganizations);
+  const storedOrganization = storedOrganizations.find(
+    (org) => org.id === parseInt(orgId)
+  );
 
-   // Fetch posts
-   const tempPosts = data.posts.filter(
-     (post) => post.orgId === parseInt(orgId)
-   );
-   setPosts(tempPosts);
- }, [orgId]);
+  setOrganization(storedOrganization);
+
+  const storedPosts = JSON.parse(localStorage.getItem("posts")) || [];
+  const orgPosts = storedPosts.filter((post) => post.orgId === parseInt(orgId));
+  setPosts(orgPosts);
+}, []);
+
 
  const updateOrganization = (updatedOrg) => {
    setOrganization(updatedOrg);

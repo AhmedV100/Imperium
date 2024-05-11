@@ -182,14 +182,14 @@ function MakePost() {
        id: existingPosts.length,
        orgId: parseInt(orgId),
        donorId: null,
-       category: selectedCategory,
        fulfilled: false,
+       object_type: selectedCategory,
        fields: formData,
      };
      const updatedPosts = [...existingPosts, newPost];
      localStorage.setItem("posts", JSON.stringify(updatedPosts));
      alert("Success!");
-     nav(`/organization/${orgId}`);
+     nav(-1);
   };
 
   return (
