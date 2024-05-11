@@ -1,74 +1,21 @@
-{
-  "organizations": [
-    {
-      "id": 1,
-      "name": "Resala",
-      "logo": "../../images/Resala-logo.png",
-      "organizationType": "non profitable",
-      "address": "resala address",
-      "area": "west elbalad",
-      "governorate": "Cairo",
-      "posts": [
-        {
-          "id": 1,
-          "category": "blood donation",
-          "fulfilled": true,
-          "isCoordinateSet": false,
-          "donor": {
-            "name": "Reda",
-            "contactNumber": "",
-            "email": "",
-            "details": ""
-          }
-        },
-        {
-          "id": 2,
-          "category": "school supplies",
-          "fulfilled": false,
-          "isCoordinateSet": false,
-          "donor": {
-            "name": "",
-            "contactNumber": "",
-            "email": "",
-            "details": ""
-          }
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Masr Alkhair",
-      "logo": "../../images/Resala-logo.png",
-      "organizationType": "non profitable",
-      "address": "Masr Alkhair address",
-      "area": "west elbalad",
-      "governorate": "Cairo",
-      "posts": [
-        {
-          "id": 1,
-          "category": "clothes",
-          "fulfilled": true,
-          "isCoordinateSet": true,
-          "donor": {
-            "name": "Reda",
-            "contactNumber": "",
-            "email": "",
-            "details": ""
-          }
-        },
-        {
-          "id": 2,
-          "category": "school supplies",
-          "fulfilled": false,
-          "isCoordinateSet": false,
-          "donor": {
-            "name": "",
-            "contactNumber": "",
-            "email": "",
-            "details": ""
-          }
-        }
-      ]
-    }
-  ]
-}
+
+[
+  {
+    "id": 1,
+    "name": "Resala",
+    "logo": "../../images/Resala-logo.png",
+    "organizationType": "non profitable",
+    "address": "resala address",
+    "area": "west elbalad",
+    "governorate": "Cairo"
+  },
+  {
+    "id": 2,
+    "name": "Masr Alkhair",
+    "logo": "../../images/Resala-logo.png",
+    "organizationType": "non profitable",
+    "address": "Masr Alkhair address",
+    "area": "west elbalad",
+    "governorate": "Cairo"
+  }
+]

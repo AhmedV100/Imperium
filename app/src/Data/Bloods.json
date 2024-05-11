@@ -1,6 +1,6 @@
 [
   {
-    "object_type":"bloods",
+    "object_type": "bloods",
     "name": "John Doe",
     "blood_type": "A+",
     "hospital_name": "City General Hospital",
@@ -10,7 +10,7 @@
     "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
   },
   {
-    "object_type":"bloods",
+    "object_type": "bloods",
     "name": "Jane Smith",
     "blood_type": "O-",
     "hospital_name": "Metropolis Medical Center",
@@ -20,7 +20,7 @@
     "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
   },
   {
-    "object_type":"bloods",
+    "object_type": "bloods",
     "name": "David Johnson",
     "blood_type": "B+",
     "hospital_name": "Unity Hospital",
@@ -30,7 +30,7 @@
     "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
   },
   {
-    "object_type":"bloods",
+    "object_type": "bloods",
     "name": "Emily Wilson",
     "blood_type": "AB-",
     "hospital_name": "Central Medical Center",
@@ -40,7 +40,7 @@
     "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
   },
   {
-    "object_type":"bloods",
+    "object_type": "bloods",
     "name": "Michael Brown",
     "blood_type": "O+",
     "hospital_name": "Sunset Hospital",
@@ -50,7 +50,7 @@
     "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
   },
   {
-    "object_type":"bloods",
+    "object_type": "bloods",
     "name": "Sarah Lee",
     "blood_type": "A-",
     "hospital_name": "Oceanview Medical Center",
@@ -60,7 +60,7 @@
     "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
   },
   {
-    "object_type":"bloods",
+    "object_type": "bloods",
     "name": "Daniel Garcia",
     "blood_type": "B-",
     "hospital_name": "Hilltop Hospital",
@@ -70,7 +70,7 @@
     "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
   },
   {
-    "object_type":"bloods",
+    "object_type": "bloods",
     "name": "Olivia Martinez",
     "blood_type": "AB+",
     "hospital_name": "Mountain Medical Center",
@@ -80,7 +80,7 @@
     "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
   },
   {
-    "object_type":"bloods",
+    "object_type": "bloods",
     "name": "James Taylor",
     "blood_type": "O+",
     "hospital_name": "Valley Hospital",
@@ -90,7 +90,7 @@
     "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
   },
   {
-    "object_type":"bloods",
+    "object_type": "bloods",
     "name": "Emma Anderson",
     "blood_type": "A+",
     "hospital_name": "Riverfront Medical Center",

@@ -12,7 +12,7 @@ import SidebarMenu from "../components/SidebarMenu";
 import ItemsGrids from "./ItemsGrids";
 import MyPagination from "../components/MyPagination";
 
-export default function ItemsVeiw({ filter }) {
+export default function OrgPosts({ filter }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentCategory, setCurrentCategory] = useState(
@@ -47,7 +47,14 @@ export default function ItemsVeiw({ filter }) {
   //TOYS_ FILTER OPTIONS
   const [TOYS_ageFilter, TOYS_setAgeFilter] = useState("");
   const [TOYS_genderFilter, TOYS_setGenderFilter] = useState("");
-  const [TOYS_categoriesFilter, TOYS_setCategoriesFilter] = useState([]);
+  const [TOYS_categoriesFilter, TOYS_setCategoriesFilter] = useState([
+    "board game",
+    "stuffed toy",
+    "dolls",
+    "sports",
+    "cars",
+    "outdoor",
+  ]);
   const handleValueToysAge = (newValue) => {
     TOYS_setAgeFilter(newValue);
   };

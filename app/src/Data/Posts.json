@@ -1,0 +1,399 @@
+[
+  {
+    "id": 1,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "bloods",
+    "fields": {
+      "name": "John Doe",
+      "blood_type": "A+",
+      "hospital_name": "City General Hospital",
+      "hospital_area": "Downtown",
+      "governorate": "Metropolis",
+      "hospital_address": "123 Main Street, Downtown, Metropolis",
+      "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+    }
+  },
+  {
+    "id": 2,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": true,
+    "object_type": "bloods",
+    "fields": {
+      "name": "Jane Smith",
+      "blood_type": "O-",
+      "hospital_name": "Metropolis Medical Center",
+      "hospital_area": "Midtown",
+      "governorate": "Metropolis",
+      "hospital_address": "456 Oak Avenue, Midtown, Metropolis",
+      "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+    }
+  },
+  {
+    "id": 3,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "bloods",
+    "fields": {
+      "name": "David Johnson",
+      "blood_type": "B+",
+      "hospital_name": "Unity Hospital",
+      "hospital_area": "Uptown",
+      "governorate": "Metropolis",
+      "hospital_address": "789 Elm Street, Uptown, Metropolis",
+      "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+    }
+  },
+  {
+    "id": 4,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "bloods",
+    "fields": {
+      "name": "Emily Wilson",
+      "blood_type": "AB-",
+      "hospital_name": "Central Medical Center",
+      "hospital_area": "Downtown",
+      "governorate": "Capital City",
+      "hospital_address": "101 Pine Boulevard, Downtown, Capital City",
+      "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+    }
+  },
+  {
+    "id": 5,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "bloods",
+    "fields": {
+      "name": "Michael Brown",
+      "blood_type": "O+",
+      "hospital_name": "Sunset Hospital",
+      "hospital_area": "Beachside",
+      "governorate": "Coastal County",
+      "hospital_address": "321 Ocean Avenue, Beachside, Coastal County",
+      "google_maps_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus"
+    }
+  },
+  {
+    "id": 6,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "books",
+    "fields": {
+      "name": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "language": "English",
+      "edition": "1st",
+      "summary": "The novel explores the irrationality of adult attitudes towards race and class in the Deep South of the 1930s through the innocent viewpoint of a young girl.",
+      "picture": "../images/books/Mockingbird.png",
+      "quantity": 20
+    }
+  },
+  {
+    "id": 7,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "books",
+    "fields": {
+      "name": "1984",
+      "author": "George Orwell",
+      "language": "English",
+      "edition": "1st",
+      "summary": "Set in a dystopian future where critical thought is suppressed under a totalitarian regime, the novel follows the story of Winston Smith as he rebels against the oppressive government.",
+      "picture": "https://images.pexels.com/photos/733174/pexels-photo-733174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 15
+    }
+  },
+  {
+    "id": 8,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "books",
+    "fields": {
+      "name": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "language": "English",
+      "edition": "1st",
+      "summary": "The novel depicts the roaring twenties in America, focusing on the mysterious millionaire Jay Gatsby and his pursuit of the elusive Daisy Buchanan.",
+      "picture": "https://images.pexels.com/photos/693267/pexels-photo-693267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 25
+    }
+  },
+  {
+    "id": 9,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "books",
+    "fields": {
+      "name": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "language": "English",
+      "edition": "1st",
+      "summary": "The first book in the Harry Potter series follows the young wizard Harry as he discovers his magical heritage and battles the dark wizard Voldemort.",
+      "picture": "https://images.pexels.com/photos/1154738/pexels-photo-1154738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 30
+    }
+  },
+  {
+    "id": 10,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "cases",
+    "fields": {
+      "patient_name": "John Doe",
+      "age": 35,
+      "gender": "Male",
+      "weight": "75 kg",
+      "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+      "address": "123 Main Street, San Francisco, CA",
+      "organization_name": "ABC Hospital",
+      "medical_specialty": "Cardiology",
+      "case_description": "Patient presents with chest pain and shortness of breath."
+    }
+  },
+  {
+    "id": 11,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "cases",
+    "fields": {
+      "patient_name": "Jane Smith",
+      "age": 45,
+      "gender": "Female",
+      "weight": "65 kg",
+      "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+      "address": "456 Elm Street, San Francisco, CA",
+      "organization_name": "XYZ Clinic",
+      "medical_specialty": "Dermatology",
+      "case_description": "Patient has a persistent skin rash with itching."
+    }
+  },
+  {
+    "id": 12,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "cases",
+    "fields": {
+      "patient_name": "Alice Johnson",
+      "age": 25,
+      "gender": "Female",
+      "weight": "60 kg",
+      "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.029365549244!2d-122.41923694818485!3d37.77492952039736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080f087b713%3A0xe4f48a55b5b6508c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1631098152092!5m2!1sen!2suk",
+      "address": "789 Oak Avenue, San Francisco, CA",
+      "organization_name": "City Medical Center",
+      "medical_specialty": "Pediatrics",
+      "case_description": "Child with fever and cough."
+    }
+  },
+  {
+    "id": 13,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "clothes",
+    "fields": {
+      "type_of_clothing": "T-shirt",
+      "age": "Adult",
+      "gender": "Male",
+      "season": "Summer",
+      "material": "Cotton",
+      "quantity": 100
+    }
+  },
+  {
+    "id": 14,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "clothes",
+    "fields": {
+      "type_of_clothing": "Dress",
+      "age": "Adult",
+      "gender": "Female",
+      "season": "Spring",
+      "material": "Linen",
+      "quantity": 50
+    }
+  },
+  {
+    "id": 15,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "clothes",
+    "fields": {
+      "type_of_clothing": "Sweater",
+      "age": "Child",
+      "gender": "Unisex",
+      "season": "Winter",
+      "material": "Wool",
+      "quantity": 30
+    }
+  },
+  {
+    "id": 16,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "foods",
+    "fields": {
+      "name": "Apples",
+      "quantity": "5 kg",
+      "type": "fruits and vegetables"
+    }
+  },
+  {
+    "id": 17,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "foods",
+    "fields": {
+      "name": "Bananas",
+      "quantity": "2 bunches",
+      "type": "fresh"
+    }
+  },
+  {
+    "id": 18,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "meds",
+    "fields": {
+      "device_type": "Blood Pressure Monitor",
+      "use": "Measuring blood pressure",
+      "type": "device",
+      "equipment_type": "",
+      "medication_type": "",
+      "image": "https://images.pexels.com/photos/40568/medical-blood-pressure-meter-40568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 20
+    }
+  },
+  {
+    "id": 19,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "meds",
+    "fields": {
+      "device_type": "",
+      "use": "Measuring body temperature",
+      "type": "equipment",
+      "equipment_type": "Thermometer",
+      "medication_type": "",
+      "image": "https://images.pexels.com/photos/40663/thermometer-fever-temperature-measurement-40663.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 30
+    }
+  },
+  {
+    "id": 20,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "meds",
+    "fields": {
+      "device_type": "",
+      "use": "Protection against airborne particles",
+      "type": "equipment",
+      "equipment_type": "Surgical Mask",
+      "medication_type": "",
+      "image": "https://images.pexels.com/photos/5052805/pexels-photo-5052805.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 200
+    }
+  },
+  {
+    "id": 21,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "stationaries",
+    "fields": {
+      "type_of_item": "Ballpoint Pens",
+      "amount": 50
+    }
+  },
+  {
+    "id": 22,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "stationaries",
+    "fields": {
+      "type_of_item": "Notebooks",
+      "amount": 100
+    }
+  },
+  {
+    "id": 23,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "teaches",
+    "fields": {
+      "number_of_students": 30,
+      "address": "123 Main St, Cityville, USA",
+      "google_map_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.8547339884437!2d-122.41939268467548!3d37.77492997975463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858090b094f111%3A0x4a501367f076adff!2s123%20Main%20St%2C%20San%20Francisco%2C%20CA%2094104%2C%20USA!5e0!3m2!1sen!2suk!4v1642496428694!5m2!1sen!2suk",
+      "subjects_to_be_taught": ["Mathematics", "Science", "History"],
+      "area": "maadi",
+      "government": "aswan"
+    }
+  },
+  {
+    "id": 24,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "teaches",
+    "fields": {
+      "number_of_students": 25,
+      "address": "456 Elm St, Townsville, USA",
+      "google_map_marker": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.368187394391!2d-74.00600068457268!3d40.71277513244632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a15455a5dcd%3A0x4e4861fc78d5974f!2s456%20Elm%20St%2C%20New%20York%2C%20NY%2010018%2C%20USA!5e0!3m2!1sen!2suk!4v1642496558918!5m2!1sen!2suk",
+      "subjects_to_be_taught": ["English", "Art", "Physical Education"],
+      "area": "area 1",
+      "government": "aswan"
+    }
+  },
+  {
+    "id": 25,
+    "orgId": 1,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "toys",
+    "fields": {
+      "type": "Dolls",
+      "age": "5+",
+      "gender": "Unisex",
+      "category": "Building Blocks",
+      "picture": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 20
+    }
+  },
+  {
+    "id": 26,
+    "orgId": 2,
+    "donorId": null,
+    "fulfilled": false,
+    "object_type": "toys",
+    "fields": {
+      "type": "Dolls",
+      "age": "3+",
+      "gender": "Female",
+      "category": "Dolls",
+      "picture": "https://images.pexels.com/photos/614033/pexels-photo-614033.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "quantity": 15
+    }
+  }
+]

@@ -1,7 +1,7 @@
 [
   {
     "object_type": "toys",
-    "type": "LEGO Set",
+    "type": "Dolls",
     "age": "5+",
     "gender": "Unisex",
     "category": "Building Blocks",
@@ -28,7 +28,7 @@
   },
   {
     "object_type": "toys",
-    "type": "Puzzle",
+    "type": "Outdoor",
     "age": "6+",
     "gender": "Unisex",
     "category": "Educational",
@@ -64,7 +64,7 @@
   },
   {
     "object_type": "toys",
-    "type": "Action Figure",
+    "type": "Dolls",
     "age": "4+",
     "gender": "Male",
     "category": "Figures",

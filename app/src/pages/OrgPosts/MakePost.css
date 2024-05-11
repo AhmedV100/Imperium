@@ -1,0 +1,28 @@
+.make-post-container {
+  background-image: url("../../images/row3-donation.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Make the container full screen */
+}
+
+.make-post-frame {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%; /* Adjusted width */
+  color: rgb(206, 28, 99); /* Color for the text */
+}
+
+.submit-button {
+  width: 100%; /* Make the button width same as the form */
+  margin-top: 20px; /* Add some margin from the form */
+}
+
+.title-of-category{
+    text-align: center;
+}
