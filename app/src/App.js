@@ -10,7 +10,7 @@ import OrgHome from "./pages/OrgHome/OrgHome";
 import Donor from "./pages/Donor";
 // import OrganizationPosts  from "./pages/OrgPosts/OrganizationPosts";
 import MakePost from "./pages/OrgPosts/MakePost";
-
+import { useEffect } from "react";
 import DonorBrowser from "./components/DonorBrowser";
 
 import ClothesComponent from "./components/FilterOptions/ClothesComponent";
@@ -19,12 +19,20 @@ import FoodComponent from "./components/FilterOptions/FoodComponent";
 import MedicalSuppliesComponent from "./components/FilterOptions/MedicalSuppliesComponent";
 import SchoolSuppliesComponent from "./components/FilterOptions/SchoolSuppliesComponent";
 import BloodDonationsComponent from "./components/FilterOptions/BloodDonationsComponent";
-import DataProvider from "./Provider/DataProvider";
-
+import Data from "./Data/Organizations.json";
 function App() {
-  return (
+
+  const storeObjectInLocalStorage = () => {
+    localStorage.setItem("data", JSON.stringify(Data));
+  };
+
+  // Use useEffect to store the object when the component mounts
+  useEffect(() => {
+    storeObjectInLocalStorage();
+  }, []);
+ 
+ return (
     <div className="App">
-      <DataProvider >
         <BrowserRouter>
           <Routes>
             <Route index element={<Home />}></Route>
@@ -84,8 +92,6 @@ function App() {
 
           </Routes>
         </BrowserRouter>
-      </DataProvider>
-
     </div>
   );
 }

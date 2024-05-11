@@ -12,7 +12,7 @@ import SidebarMenu from "../components/SidebarMenu";
 import ItemsGrids from "./ItemsGrids";
 import MyPagination from "../components/MyPagination";
 
-export default function ItemsVeiw({ filter }) {
+export default function OrgPosts({ filter }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentCategory, setCurrentCategory] = useState(

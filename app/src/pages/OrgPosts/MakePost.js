@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import "./MakePost.css"; // Import your CSS file for styling
-import { useAppContext } from "../../Provider/DataProvider";
 
 let Categories = [
   { name: "clothes", fields: ["Size", "Color", "Additional Info"] },
@@ -37,10 +36,7 @@ let Categories = [
 const BloodTypes = ["A", "B", "AB", "O"];
 
 function MakePost() {
-  const contextValue = useAppContext();
-  console.log("Context Value:", contextValue);
-
-  //const [data, setData] = contextValue; 
+    console.log(JSON.parse(localStorage.getItem('data')));
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [formData, setFormData] = useState({});

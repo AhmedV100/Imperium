@@ -6,28 +6,27 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import NotificationIcon  from "./NotificationIcon";
-function NavBar({ organization, updateOrganization }) {
+function NavBar({posts}) {
   const nav = useNavigate();
   const { orgId } = useParams();
 
+
+   // end of paste
+
   const [unreadNotificationsCount, setUnreadNotificationsCount] = useState(0);
-  useEffect(() => {
-    // Check if organization is defined before using it
-    if (organization) {
-      // Perform actions with organization data
-      console.log(organization);
-    }
-  }, [organization]);
+ 
 
   useEffect(() => {
-    if (!organization) return;
 
-    const count = organization.posts.reduce((total, post) => {
-      return total + (post.fulfilled && !post.isCoordinateSet ? 1 : 0);
+    const count = posts.reduce((total, post) => {
+      if (post.donorId && !post.fulfilled) {
+        return total + 1;
+      }
+      return total;
     }, 0);
 
     setUnreadNotificationsCount(count);
-  }, [organization]);
+  }, [posts]);
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: "70px" }}>
@@ -67,11 +66,7 @@ function NavBar({ organization, updateOrganization }) {
               <NotificationIcon count={unreadNotificationsCount} />
             </Nav.Link>
             <Nav.Link
-              as={Link}
-              to={{
-                pathname: `/organization/${orgId}/posts`,
-                state: { organization: organization },
-              }}
+              href={`/organization/${orgId}/posts`}
               className="nav-link"
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
