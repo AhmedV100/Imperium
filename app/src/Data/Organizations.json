@@ -1,115 +1,20 @@
-{
-  "organizations": [
-    {
-      "id": 1,
-      "name": "Resala",
-      "logo": "../../images/Resala-logo.png",
-      "organizationType": "non profitable",
-      "address": "resala address",
-      "area": "west elbalad",
-      "governorate": "Cairo"
-      
-    },
-    {
-      "id": 2,
-      "name": "Masr Alkhair",
-      "logo": "../../images/Resala-logo.png",
-      "organizationType": "non profitable",
-      "address": "Masr Alkhair address",
-      "area": "west elbalad",
-      "governorate": "Cairo"
-     
-    }
-  ],
-
-
-
-
-
-  "posts": [ 
-    {
-      "id": 1,
-      "orgId": 1,
-      "donorId": 1,
-      "category": "clothes",
-      "fields": {
-        "Size": "Medium",
-        "Color": "Blue",
-        "Additional Info": "Brand: XYZ"
-      },
-      "fulfilled": false
-    },
-    {
-      "id": 2,
-      "orgId": 1,
-      "donorId": null,
-      "category": "toys",
-      "fields": {
-        "Type": "Action Figure",
-        "Age": "5+",
-        "Gender": "Male",
-        "Category": "Action Figures",
-        "Quantity": 3,
-        "Additional Info": "Brand: ABC"
-      },
-      "fulfilled": false
-    },
-    {
-      "id": 3,
-      "orgId": 2,
-      "donorId": 1,
-      "category": "food",
-      "fields": {
-        "Name": "Apples",
-        "Quantity": "5",
-        "Type": "Fresh",
-        "Additional Info": ""
-      },
-      "fulfilled": true
-    },
-    {
-      "id": 4,
-      "orgId": 2,
-      "donorId": null,
-      "category": "medical supplies",
-      "fields": {
-        "Type": "Bandages",
-        "Quantity": "10",
-        "Additional Info": ""
-      },
-      "fulfilled": false
-    },
-    {
-      "id": 5,
-      "orgId": 1,
-      "donorId": 1,
-      "category": "school supplies",
-      "fields": {
-        "Type of Item": "Notebooks",
-        "Amount": "5",
-        "Additional Info": ""
-      },
-      "fulfilled": false
-    },
-    {
-      "id": 6,
-      "orgId": 2,
-      "donorId": 2,
-      "category": "blood donations",
-      "fields": {
-        "Blood Type": "AB",
-        "Hospital Name": "General Hospital",
-        "Hospital Address": "123 Main St",
-        "Additional Info": ""
-      },
-      "fulfilled": false
-    }
-  ]
-,
-"donors":[
-  
+[
+  {
+    "id": 1,
+    "name": "Resala",
+    "logo": "../../images/Resala-logo.png",
+    "organizationType": "non profitable",
+    "address": "resala address",
+    "area": "west elbalad",
+    "governorate": "Cairo"
+  },
+  {
+    "id": 2,
+    "name": "Masr Alkhair",
+    "logo": "../../images/Resala-logo.png",
+    "organizationType": "non profitable",
+    "address": "Masr Alkhair address",
+    "area": "west elbalad",
+    "governorate": "Cairo"
+  }
 ]
-
-
-
-}
