@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import { useNavigate, useParams } from "react-router-dom";
 
 function FloatingCard({ item, show, handleClose }) {
+  const nav = useNavigate();
+  const { donorId } = useParams();
   const [donationQuantity, setDonationQuantity] = useState(0);
   const [validQuantity, setValidQuantity] = useState(true);
 
-  
   const hardcodedfornowandpray =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.622999652575!2d-74.0000000010245!3d40.00000000293648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI5JzU1LjEiTiA3NMKwMTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1630419451337!5m2!1sen!2sus";
 
@@ -14,7 +16,7 @@ function FloatingCard({ item, show, handleClose }) {
     const value = parseInt(event.target.value);
     setDonationQuantity(value);
 
-    if (value >= item.quantity || value >= item.amount) {
+    if ((item.quantity && value > 0) || (item.amount && value > 0)) {
       setValidQuantity(true);
     } else {
       setValidQuantity(false);
@@ -22,8 +24,11 @@ function FloatingCard({ item, show, handleClose }) {
   };
 
   const handleDonate = () => {
-    if (donationQuantity >= item.quantity || donationQuantity >= item.amount) {
-      // Perform donation action
+    if (
+      (item.quantity && donationQuantity > 0) ||
+      (item.amount && donationQuantity > 0)
+    ) {
+      nav(`/donor/${donorId}/schedpickup`);
     }
   };
 

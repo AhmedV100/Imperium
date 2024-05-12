@@ -18,8 +18,6 @@ function Login({ registered }) {
 
   var users = [...admins, ...organizations, ...donors];
 
-  console.log("users: ", users);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -27,8 +25,6 @@ function Login({ registered }) {
       (user) => user.username === username && user.password === password
       
     );
-
-    console.log("user: ", user);
 
     if (user) {
       if (user.object_type === "admin") {

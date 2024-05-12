@@ -13,16 +13,18 @@ function SchedPickup() {
   const [selectedDate, setSelectedDate] = useState(null); // State to store the selected date
   const [selectedTime, setSelectedTime] = useState("00:00"); // State to store the selected time, defaulting to 9 am
   const navigate = useNavigate();
+  const { donorId } = useParams();
+
   const handleSubmit = () => {
     if (!selectedVehicle || !selectedDate || !selectedTime) {
       alert("Please fill all fields.");
     } else {
       alert("Donation accepted!");
-      navigate("/donor/donationhistory");
+      navigate(`/donor/${donorId}/donationhistory`);
     }
   };
   const handleCancel = () => {
-    navigate("/donor/browser");
+    navigate(`/donor/${donorId}/browser`);
   };
 
   return (

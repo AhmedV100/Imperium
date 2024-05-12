@@ -250,7 +250,7 @@
     "object_type": "foods",
     "fields": {
       "name": "Apples",
-      "quantity": "5 kg",
+      "quantity": 5,
       "type": "fruits and vegetables"
     }
   },
@@ -262,7 +262,7 @@
     "object_type": "foods",
     "fields": {
       "name": "Bananas",
-      "quantity": "2 bunches",
+      "quantity": 20,
       "type": "fresh"
     }
   },

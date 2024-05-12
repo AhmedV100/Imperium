@@ -110,5 +110,3 @@ export default function NavBarOrg({ posts }) {
     </Navbar>
   );
 }
-
-
