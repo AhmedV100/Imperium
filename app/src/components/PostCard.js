@@ -135,36 +135,34 @@ const updatePost = (updatedFields) => {
               <ListGroup.Item>language: {item.language}</ListGroup.Item>
               <ListGroup.Item>edition: {item.edition}</ListGroup.Item>
             </ListGroup>
-            <Card.Body>
-              {item.donorId && (
-                <Button size="lg" onClick={handleShowDonor} variant="primary">
-                  Donor Info
-                </Button>
-              )}{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                update
-              </Button>{" "}
-              <Button size="lg" onClick={handleDeleteCard} variant="danger">
-                Delete
-              </Button>{" "}
-            </Card.Body>
+            <PostsButtons
+              item={item}
+              postId={postId}
+              donorId={donorId}
+              handleShowDonor={handleShowDonor}
+              handleShowCard={handleShowCard}
+              handleDeleteCard={handleDeleteCard}
+              handleShowPostUpdate={handleShowPostUpdate}
+            />
           </Card>
           <FloatingPost
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
           />
-          <FloatingDonor
-            item={donor}
-            show={showDonor}
-            handleClose={handleCloseDonor}
+          {donor && (
+            <FloatingDonor
+              item={donor}
+              show={showDonor}
+              handleClose={handleCloseDonor}
+            />
+          )}
+          <FloatingPostUpdate
+            item={item}
+            show={showPostUpdate}
+            handleClose={handleClosePostUpdate}
+            updatePost={updatePost}
           />
-          
-
-     
         </div>
       );
     case "cases":
@@ -180,32 +178,33 @@ const updatePost = (updatedFields) => {
               <ListGroup.Item>gender: {item.gender}</ListGroup.Item>
               <ListGroup.Item>weight: {item.weight}</ListGroup.Item>
             </ListGroup>
-            <Card.Body>
-              {donorId && (
-                <Button size="lg" onClick={handleShowDonor} variant="primary">
-                  Donor Info
-                </Button>
-              )}{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                update
-              </Button>{" "}
-              <Button size="lg" onClick={handleDeleteCard} variant="danger">
-                Delete
-              </Button>{" "}
-            </Card.Body>
+            <PostsButtons
+              item={item}
+              postId={postId}
+              donorId={donorId}
+              handleShowDonor={handleShowDonor}
+              handleShowCard={handleShowCard}
+              handleDeleteCard={handleDeleteCard}
+              handleShowPostUpdate={handleShowPostUpdate}
+            />
           </Card>
           <FloatingPost
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
           />
-          <FloatingDonor
-            item={donor}
-            show={showDonor}
-            handleClose={handleCloseDonor}
+          {donor && (
+            <FloatingDonor
+              item={donor}
+              show={showDonor}
+              handleClose={handleCloseDonor}
+            />
+          )}
+          <FloatingPostUpdate
+            item={item}
+            show={showPostUpdate}
+            handleClose={handleClosePostUpdate}
+            updatePost={updatePost}
           />
         </div>
       );
@@ -222,32 +221,33 @@ const updatePost = (updatedFields) => {
               <ListGroup.Item>gender: {item.gender}</ListGroup.Item>
               <ListGroup.Item>season: {item.season}</ListGroup.Item>
             </ListGroup>
-            <Card.Body>
-              {item.donorId && (
-                <Button size="lg" onClick={handleShowDonor} variant="primary">
-                  Donor Info
-                </Button>
-              )}{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                update
-              </Button>{" "}
-              <Button size="lg" onClick={handleDeleteCard} variant="danger">
-                Delete
-              </Button>{" "}
-            </Card.Body>
+            <PostsButtons
+              item={item}
+              postId={postId}
+              donorId={donorId}
+              handleShowDonor={handleShowDonor}
+              handleShowCard={handleShowCard}
+              handleDeleteCard={handleDeleteCard}
+              handleShowPostUpdate={handleShowPostUpdate}
+            />
           </Card>
           <FloatingPost
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
           />
-          <FloatingDonor
-            item={donor}
-            show={showDonor}
-            handleClose={handleCloseDonor}
+          {donor && (
+            <FloatingDonor
+              item={donor}
+              show={showDonor}
+              handleClose={handleCloseDonor}
+            />
+          )}
+          <FloatingPostUpdate
+            item={item}
+            show={showPostUpdate}
+            handleClose={handleClosePostUpdate}
+            updatePost={updatePost}
           />
         </div>
       );
@@ -263,32 +263,33 @@ const updatePost = (updatedFields) => {
               <ListGroup.Item>quantity: {item.quantity}</ListGroup.Item>
               <ListGroup.Item>type: {item.type}</ListGroup.Item>
             </ListGroup>
-            <Card.Body>
-              {item.donorId && (
-                <Button size="lg" onClick={handleShowDonor} variant="primary">
-                  Donor Info
-                </Button>
-              )}{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                update
-              </Button>{" "}
-              <Button size="lg" onClick={handleDeleteCard} variant="danger">
-                Delete
-              </Button>{" "}
-            </Card.Body>
+            <PostsButtons
+              item={item}
+              postId={postId}
+              donorId={donorId}
+              handleShowDonor={handleShowDonor}
+              handleShowCard={handleShowCard}
+              handleDeleteCard={handleDeleteCard}
+              handleShowPostUpdate={handleShowPostUpdate}
+            />
           </Card>
           <FloatingPost
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
           />
-          <FloatingDonor
-            item={donor}
-            show={showDonor}
-            handleClose={handleCloseDonor}
+          {donor && (
+            <FloatingDonor
+              item={donor}
+              show={showDonor}
+              handleClose={handleCloseDonor}
+            />
+          )}
+          <FloatingPostUpdate
+            item={item}
+            show={showPostUpdate}
+            handleClose={handleClosePostUpdate}
+            updatePost={updatePost}
           />
         </div>
       );
@@ -310,36 +311,33 @@ const updatePost = (updatedFields) => {
                   <ListGroup.Item>device_use: {item.use}</ListGroup.Item>
                   <ListGroup.Item>quantity: {item.quantity}</ListGroup.Item>
                 </ListGroup>
-                <Card.Body>
-                  {item.donorId && (
-                    <Button
-                      size="lg"
-                      onClick={handleShowDonor}
-                      variant="primary"
-                    >
-                      Donor Info
-                    </Button>
-                  )}{" "}
-                  <Button size="lg" onClick={handleShowCard} variant="info">
-                    See more
-                  </Button>{" "}
-                  <Button size="lg" onClick={handleShowCard} variant="info">
-                    update
-                  </Button>{" "}
-                  <Button size="lg" onClick={handleDeleteCard} variant="danger">
-                    Delete
-                  </Button>{" "}
-                </Card.Body>
+                <PostsButtons
+                  item={item}
+                  postId={postId}
+                  donorId={donorId}
+                  handleShowDonor={handleShowDonor}
+                  handleShowCard={handleShowCard}
+                  handleDeleteCard={handleDeleteCard}
+                  handleShowPostUpdate={handleShowPostUpdate}
+                />
               </Card>
               <FloatingPost
                 item={item}
                 show={showCard}
                 handleClose={handleCloseCard}
               />
-              <FloatingDonor
-                item={donor}
-                show={showDonor}
-                handleClose={handleCloseDonor}
+              {donor && (
+                <FloatingDonor
+                  item={donor}
+                  show={showDonor}
+                  handleClose={handleCloseDonor}
+                />
+              )}
+              <FloatingPostUpdate
+                item={item}
+                show={showPostUpdate}
+                handleClose={handleClosePostUpdate}
+                updatePost={updatePost}
               />
             </div>
           );
@@ -359,36 +357,33 @@ const updatePost = (updatedFields) => {
                   <ListGroup.Item>equipment_use: {item.use}</ListGroup.Item>
                   <ListGroup.Item>quantity: {item.quantity}</ListGroup.Item>
                 </ListGroup>
-                <Card.Body>
-                  {item.donorId && (
-                    <Button
-                      size="lg"
-                      onClick={handleShowDonor}
-                      variant="primary"
-                    >
-                      Donor Info
-                    </Button>
-                  )}{" "}
-                  <Button size="lg" onClick={handleShowCard} variant="info">
-                    See more
-                  </Button>{" "}
-                  <Button size="lg" onClick={handleShowCard} variant="info">
-                    update
-                  </Button>{" "}
-                  <Button size="lg" onClick={handleDeleteCard} variant="danger">
-                    Delete
-                  </Button>{" "}
-                </Card.Body>
+                <PostsButtons
+                  item={item}
+                  postId={postId}
+                  donorId={donorId}
+                  handleShowDonor={handleShowDonor}
+                  handleShowCard={handleShowCard}
+                  handleDeleteCard={handleDeleteCard}
+                  handleShowPostUpdate={handleShowPostUpdate}
+                />
               </Card>
               <FloatingPost
                 item={item}
                 show={showCard}
                 handleClose={handleCloseCard}
               />
-              <FloatingDonor
-                item={donor}
-                show={showDonor}
-                handleClose={handleCloseDonor}
+              {donor && (
+                <FloatingDonor
+                  item={donor}
+                  show={showDonor}
+                  handleClose={handleCloseDonor}
+                />
+              )}
+              <FloatingPostUpdate
+                item={item}
+                show={showPostUpdate}
+                handleClose={handleClosePostUpdate}
+                updatePost={updatePost}
               />
             </div>
           );
@@ -408,36 +403,33 @@ const updatePost = (updatedFields) => {
                   <ListGroup.Item>medication_use: {item.use}</ListGroup.Item>
                   <ListGroup.Item>quantity: {item.quantity}</ListGroup.Item>
                 </ListGroup>
-                <Card.Body>
-                  {item.donorId && (
-                    <Button
-                      size="lg"
-                      onClick={handleShowDonor}
-                      variant="primary"
-                    >
-                      Donor Info
-                    </Button>
-                  )}{" "}
-                  <Button size="lg" onClick={handleShowCard} variant="info">
-                    See more
-                  </Button>{" "}
-                  <Button size="lg" onClick={handleShowCard} variant="info">
-                    update
-                  </Button>{" "}
-                  <Button size="lg" onClick={handleDeleteCard} variant="danger">
-                    Delete
-                  </Button>{" "}
-                </Card.Body>
+                <PostsButtons
+                  item={item}
+                  postId={postId}
+                  donorId={donorId}
+                  handleShowDonor={handleShowDonor}
+                  handleShowCard={handleShowCard}
+                  handleDeleteCard={handleDeleteCard}
+                  handleShowPostUpdate={handleShowPostUpdate}
+                />
               </Card>
               <FloatingPost
                 item={item}
                 show={showCard}
                 handleClose={handleCloseCard}
               />
-              <FloatingDonor
-                item={donor}
-                show={showDonor}
-                handleClose={handleCloseDonor}
+              {donor && (
+                <FloatingDonor
+                  item={donor}
+                  show={showDonor}
+                  handleClose={handleCloseDonor}
+                />
+              )}
+              <FloatingPostUpdate
+                item={item}
+                show={showPostUpdate}
+                handleClose={handleClosePostUpdate}
+                updatePost={updatePost}
               />
             </div>
           );
@@ -460,32 +452,33 @@ const updatePost = (updatedFields) => {
             <ListGroup className="list-group-flush">
               <ListGroup.Item>amount: {item.amount}</ListGroup.Item>
             </ListGroup>
-            <Card.Body>
-              {item.donorId && (
-                <Button size="lg" onClick={handleShowDonor} variant="primary">
-                  Donor Info
-                </Button>
-              )}{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                update
-              </Button>{" "}
-              <Button size="lg" onClick={handleDeleteCard} variant="danger">
-                Delete
-              </Button>{" "}
-            </Card.Body>
+            <PostsButtons
+              item={item}
+              postId={postId}
+              donorId={donorId}
+              handleShowDonor={handleShowDonor}
+              handleShowCard={handleShowCard}
+              handleDeleteCard={handleDeleteCard}
+              handleShowPostUpdate={handleShowPostUpdate}
+            />
           </Card>
           <FloatingPost
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
           />
-          <FloatingDonor
-            item={donor}
-            show={showDonor}
-            handleClose={handleCloseDonor}
+          {donor && (
+            <FloatingDonor
+              item={donor}
+              show={showDonor}
+              handleClose={handleCloseDonor}
+            />
+          )}
+          <FloatingPostUpdate
+            item={item}
+            show={showPostUpdate}
+            handleClose={handleClosePostUpdate}
+            updatePost={updatePost}
           />
         </div>
       );
@@ -506,32 +499,33 @@ const updatePost = (updatedFields) => {
                 subjects_to_be_taught: {item.subjects_to_be_taught}
               </ListGroup.Item>
             </ListGroup>
-            <Card.Body>
-              {item.donorId && (
-                <Button size="lg" onClick={handleShowDonor} variant="primary">
-                  Donor Info
-                </Button>
-              )}{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                update
-              </Button>{" "}
-              <Button size="lg" onClick={handleDeleteCard} variant="danger">
-                Delete
-              </Button>{" "}
-            </Card.Body>
+            <PostsButtons
+              item={item}
+              postId={postId}
+              donorId={donorId}
+              handleShowDonor={handleShowDonor}
+              handleShowCard={handleShowCard}
+              handleDeleteCard={handleDeleteCard}
+              handleShowPostUpdate={handleShowPostUpdate}
+            />
           </Card>
           <FloatingPost
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
           />
-          <FloatingDonor
-            item={donor}
-            show={showDonor}
-            handleClose={handleCloseDonor}
+          {donor && (
+            <FloatingDonor
+              item={donor}
+              show={showDonor}
+              handleClose={handleCloseDonor}
+            />
+          )}
+          <FloatingPostUpdate
+            item={item}
+            show={showPostUpdate}
+            handleClose={handleClosePostUpdate}
+            updatePost={updatePost}
           />
         </div>
       );
@@ -548,32 +542,33 @@ const updatePost = (updatedFields) => {
               <ListGroup.Item>gender: {item.gender}</ListGroup.Item>
               <ListGroup.Item>quantity: {item.quantity}</ListGroup.Item>
             </ListGroup>
-            <Card.Body>
-              {item.donorId && (
-                <Button size="lg" onClick={handleShowDonor} variant="primary">
-                  Donor Info
-                </Button>
-              )}{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                update
-              </Button>{" "}
-              <Button size="lg" onClick={handleDeleteCard} variant="danger">
-                Delete
-              </Button>{" "}
-            </Card.Body>
+            <PostsButtons
+              item={item}
+              postId={postId}
+              donorId={donorId}
+              handleShowDonor={handleShowDonor}
+              handleShowCard={handleShowCard}
+              handleDeleteCard={handleDeleteCard}
+              handleShowPostUpdate={handleShowPostUpdate}
+            />
           </Card>
           <FloatingPost
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
           />
-          <FloatingDonor
-            item={donor}
-            show={showDonor}
-            handleClose={handleCloseDonor}
+          {donor && (
+            <FloatingDonor
+              item={donor}
+              show={showDonor}
+              handleClose={handleCloseDonor}
+            />
+          )}
+          <FloatingPostUpdate
+            item={item}
+            show={showPostUpdate}
+            handleClose={handleClosePostUpdate}
+            updatePost={updatePost}
           />
         </div>
       );
@@ -590,32 +585,33 @@ const updatePost = (updatedFields) => {
               <ListGroup.Item>{"....loading details..."}</ListGroup.Item>
               <ListGroup.Item>{"....loading details..."}</ListGroup.Item>
             </ListGroup>
-            <Card.Body>
-              {item.donorId && (
-                <Button size="lg" onClick={handleShowDonor} variant="primary">
-                  Donor Info
-                </Button>
-              )}{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                update
-              </Button>{" "}
-              <Button size="lg" onClick={handleDeleteCard} variant="danger">
-                Delete
-              </Button>{" "}
-            </Card.Body>
+            <PostsButtons
+              item={item}
+              postId={postId}
+              donorId={donorId}
+              handleShowDonor={handleShowDonor}
+              handleShowCard={handleShowCard}
+              handleDeleteCard={handleDeleteCard}
+              handleShowPostUpdate={handleShowPostUpdate}
+            />
           </Card>
           <FloatingPost
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
           />
-          <FloatingDonor
-            item={donor}
-            show={showDonor}
-            handleClose={handleCloseDonor}
+          {donor && (
+            <FloatingDonor
+              item={donor}
+              show={showDonor}
+              handleClose={handleCloseDonor}
+            />
+          )}
+          <FloatingPostUpdate
+            item={item}
+            show={showPostUpdate}
+            handleClose={handleClosePostUpdate}
+            updatePost={updatePost}
           />
         </div>
       );
