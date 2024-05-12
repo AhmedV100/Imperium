@@ -33,7 +33,7 @@ const handleDeleteOrganization = () => {
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: "70px" }}>
-      <Container style={{ margin: "0" }}>
+      <Container style={{ margin: "0", maxWidth: "100%" }}>
         <Navbar.Brand
           href="/home"
           style={{
@@ -122,7 +122,7 @@ const handleDeleteOrganization = () => {
               </a>
             </div>
           </div>
-         
+         {/* <*/}
         </Navbar.Collapse>
       </Container>
     </Navbar>
