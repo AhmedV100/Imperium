@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import logo from "./navIcon.ico";
 import "./hover.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 
 export default function NavBarDonor() {
   const nav = useNavigate();
@@ -31,13 +31,9 @@ export default function NavBarDonor() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" style={{ margin: "0" }}>
           <Nav className="ml-auto" style={{ margin: "0" }}>
-            <Nav.Link
-              href={`/donor/${donorId}`}
-              className="nav-link"
-              style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
-            >
-              Home
-            </Nav.Link>
+             <NavLink to="/Home" className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Home</NavLink>
+             <NavLink to={`/donor#${donorId}`} className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Donate</NavLink>
+             <NavLink to="/faqs" className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>FAQs</NavLink>
           </Nav>
           <Button
             className="ms-auto"

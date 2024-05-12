@@ -49,28 +49,28 @@ export default function NavBarOrg({ posts }) {
           <Nav className="mr-auto" style={{ margin: "0" }}>
             <Nav.Link
               href={`/organization/${orgId}`}
-              className="nav-link"
+              className={`nav-link`} activeClassName={`active`}
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
               Home
             </Nav.Link>
             <Nav.Link
               href={`/organization/${orgId}/notifications`}
-              className="nav-link"
+              className={`nav-link`} activeClassName={`active`}
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
               <NotificationIcon count={unreadNotificationsCount} />
             </Nav.Link>
             <Nav.Link
               href={`/organization/${orgId}/all-posts`}
-              className="nav-link"
+              className={`nav-link`} activeClassName={`active`}
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
               View Posts
             </Nav.Link>
             <Nav.Link
               href={`/organization/${orgId}/settings`}
-              className="nav-link"
+              className={`nav-link`} activeClassName={`active`}
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
               Settings

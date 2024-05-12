@@ -28,8 +28,10 @@ function NavBar(isLoggedIn) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" style={{ margin: '0' }}>
           <Nav className="ml-auto" style={{ margin: '0' }}>
-            <Nav.Link href="/Home" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Home</Nav.Link>
-            {/* <Nav.Link href="/donor" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Donate</Nav.Link> */}
+            <NavLink to="/Home" className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Home</NavLink>
+            <NavLink to="/donor/browser" className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Donate</NavLink>
+            <NavLink to="/faqs" className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>FAQs</NavLink>
+            {/* Add more Nav.Link components for additional pages */}
           </Nav>
             <Button className="ms-auto" type="button" onClick={() => nav("/Login")} variant="outline-light"
             style={{ paddingLeft: '1.2vw', paddingRight: '1.2vw', paddingTop: '3px', paddingBottom: '5px', marginRight: '4vw' }}>

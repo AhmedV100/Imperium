@@ -26,7 +26,7 @@ export default function ItemCard({ category, item, index }) {
   const handleShowCard = () => setShowCard(true);
   const handleCloseCard = () => setShowCard(false);
 
-  switch (item.object_type) {
+  switch (category) {
     case "bloods":
       return (
         <div>

@@ -18,6 +18,7 @@ export default function SlideShow() {
         {/* Set interval to 12000 milliseconds (12 seconds) */}
         <Carousel.Item>
           <Image
+            style={{imageResolution: '210dpi'}}
             src={slide1DonationImage}
             alt="slide1-donation"
             className="carousel-img"

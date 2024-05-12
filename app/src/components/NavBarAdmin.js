@@ -31,14 +31,14 @@ function NavBar() {
           <Nav className="ml-auto" style={{ margin: "0" }}>
             <Nav.Link
               href="/home"
-              className="nav-link"
+              className={`nav-link`} activeClassName={`active`}
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
               Home
             </Nav.Link>
             <Nav.Link
               href="/admindashboard"
-              className="nav-link"
+              className={`nav-link`} activeClassName={`active`}
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
               Dashboard
