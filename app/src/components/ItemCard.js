@@ -19,7 +19,7 @@ import stationaryExample from "../images/stationaries/example.png";
 import teachExample from "../images/teaches/example.png";
 import toyExample from "../images/toys/example.png";
 
-export default function ItemCard({ item, index }) {
+export default function ItemCard({ category, item, index }) {
   const [showCard, setShowCard] = useState(false);
 
   const handleShowCard = () => setShowCard(true);
@@ -35,7 +35,7 @@ export default function ItemCard({ item, index }) {
     objectFit: "cover",
   };
 
-  switch (item.object_type) {
+  switch (category) {
     case "bloods":
       return (
         <div>
@@ -402,6 +402,7 @@ export default function ItemCard({ item, index }) {
             </Card.Body>
           </Card>
           <FloatingCard
+            categoryf={category}
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
