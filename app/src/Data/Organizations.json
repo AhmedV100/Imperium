@@ -1,8 +1,9 @@
-
 [
   {
     "id": 1,
     "name": "Resala",
+    "username": "Resala",
+    "password": "org",
     "logo": "../../images/Resala-logo.png",
     "organizationType": "non profitable",
     "address": "resala address",
@@ -12,6 +13,8 @@
   {
     "id": 2,
     "name": "Masr Alkhair",
+    "username": "Masr Alkhair",
+    "password": "org",
     "logo": "../../images/Resala-logo.png",
     "organizationType": "non profitable",
     "address": "Masr Alkhair address",

@@ -1,8 +1,8 @@
 [
-{   
-    "id":1,
-    "username": "Ahmed Doe",
-    "password": "guc1"
-}
-
+  {
+    "id": 0,
+    "object_type": "admin",
+    "username": "admin",
+    "password": "admin"
+  }
 ]

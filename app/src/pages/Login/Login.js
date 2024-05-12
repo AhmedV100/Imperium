@@ -1,17 +1,22 @@
 import React, { useState } from "react";
-import "./login.css";
+import { useNavigate } from "react-router-dom";
 import { RiUserHeartLine } from "react-icons/ri";
 import { FaLock } from "react-icons/fa";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/footer";
-import { useNavigate } from "react-router-dom";
-import users from "../../Data/users.json";
+import "./login.css";
 
 function Login({ registered }) {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+
+  const admins = JSON.parse(localStorage.getItem("admins"));
+  const organizations = JSON.parse(localStorage.getItem("organizations"));
+  const donors = JSON.parse(localStorage.getItem("donors"));
+
+  var users = [...admins, ...organizations, ...donors];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,13 +28,13 @@ function Login({ registered }) {
     if (user) {
       if (user.object_type === "admin") {
         console.log("Login successful");
-        navigate("/home");
+        navigate(`/admindashboard/${user.id}`);
       } else if (user.object_type === "organization") {
         console.log("Login successful");
-        navigate("/organization/:orgId");
-      } else {
+        navigate(`/organization/${user.id}`);
+      } else if (user.object_type === "donor"){
         console.log("Login successful");
-        navigate("/donor");
+        navigate(`/donor/${user.id}`);
       }
     } else {
       setErrorMessage("Invalid username or password");

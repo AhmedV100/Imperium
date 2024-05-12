@@ -39,7 +39,9 @@ import Admin from "./Data/Admin.json";
 
 function App() {
   const storeObjectInLocalStorage = () => {
+    localStorage.setItem("admins", JSON.stringify(Admin));
     localStorage.setItem("organizations", JSON.stringify(Organizations));
+    localStorage.setItem("donors", JSON.stringify(Donors));
     localStorage.setItem("posts", JSON.stringify(Posts));
     localStorage.setItem("donors", JSON.stringify(Donors));
     localStorage.setItem("admin", JSON.stringify(Admin));
@@ -55,18 +57,27 @@ function App() {
         <Routes>
           <Route index element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
-          <Route path="/donor" element={<Donor />}></Route>
+
+          <Route path="/donor/:donorId" element={<Donor />}></Route>
           <Route
-            path="/donor/deliveryandnotifications"
+            path="/donor/:donorId/deliveryandnotifications"
             element={<DeliveryAndNotifications />}
           />
-          <Route path="/donor/donationhistory" element={<DonationHistory />} />
           <Route
-            path="/donor/donationnotification"
+            path="/donor/:donorId/donationhistory"
+            element={<DonationHistory />}
+          />
+          <Route
+            path="/donor/:donorId/donationnotification"
             element={<DonationNotification />}
           />
-          <Route path="/donor/browser" element={<DonorBrowser />} />
+          <Route path="/donor/:donorId/browser" element={<DonorBrowser />} />
           <Route
+            path="/donor/:donorId/schedpickup"
+            element={<SchedPickup />}
+          ></Route>
+
+          {/* <Route
             path="/donor/browser/all"
             element={<DonorBrowser filter={"all"} />}
           />
@@ -93,7 +104,7 @@ function App() {
           <Route
             path="/donor/browser/blood"
             element={<DonorBrowser filter={"blood"} />}
-          />
+          /> */}
 
           {/* organization posts */}
           <Route
@@ -133,12 +144,12 @@ function App() {
           {/* <Route
             path="/organization/:orgId/posts"
             element={<OrganizationPosts />}
-          />
-          <Route
+            />
+            <Route
             path="/organization/:orgId/settings"
             element={<OrganizationSettings />}
-          />
-          <Route
+            />
+            <Route
             path="/organization/:orgId/notifications"
             element={<OrganizationNotifications />}
           /> */}
@@ -149,7 +160,6 @@ function App() {
           ></Route>
 
           <Route path="/login" element={<Login />}></Route>
-          <Route path="/schedpickup" element={<SchedPickup />}></Route>
 
           <Route path="/register" element={<Register />}></Route>
           <Route
@@ -164,6 +174,7 @@ function App() {
           <Route path="/donor_OrgRequests" element={<Donor_OrgRequests/>}></Route>
           <Route path="/accountSettings" element={<AccountSettings/>}> </Route>
           <Route path="/admindashboard" element={<AdminDashboard />}></Route>
+
           <Route path="/donorList" element={<DonorList />}></Route>
         </Routes>
       </BrowserRouter>

@@ -69,22 +69,12 @@ export default function footer() {
                     height: "2px",
                   }}
                 />
-                <p>
-                  <a class="text-white">IBM</a>
-                </p>
-                <p>
-                  <a class="text-white">MAXIMO</a>
-                </p>
-                <p>
-                  <a class="text-white">BENTLEY</a>
-                </p>
-                <p>
-                  <a class="text-white">ORACLE</a>
-                </p>
+                <p>Reasla</p>
+                <p>Masr Alkhair</p>
               </div>
 
               <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 class="text-uppercase fw-bold">Useful links</h6>
+                <h6 class="text-uppercase fw-bold">Useful Actions</h6>
                 <hr
                   class="mb-4 mt-0 d-inline-block mx-auto"
                   style={{
@@ -93,15 +83,9 @@ export default function footer() {
                     height: "2px",
                   }}
                 />
-                <p>
-                  <a class="text-white">Your Account</a>
-                </p>
-                <p>
-                  <a class="text-white">Donate Now!</a>
-                </p>
-                <p>
-                  <a class="text-white">Support</a>
-                </p>
+                <p>Browse Donation Requests!</p>
+                <p>Donate Now!</p>
+                <p>Enjoy!</p>
               </div>
 
               <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">

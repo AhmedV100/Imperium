@@ -65,7 +65,10 @@ function applyCasesFilters(items, filters) {
 }
 function applyClothesFilters(items, filters) {
   return items.filter((item) => {
-    if (filters[0].trim() !== "" && item.fields["age"].toLowerCase() !== filters[0]) {
+    if (
+      filters[0].trim() !== "" &&
+      item.fields["age"].toLowerCase() !== filters[0]
+    ) {
       return false;
     }
     if (
@@ -131,7 +134,10 @@ function applyTeachesFilters(items, filters) {
     ) {
       return false;
     }
-    if (filters[2].trim() !== "" && item.fields["area"].toLowerCase() !== filters[2]) {
+    if (
+      filters[2].trim() !== "" &&
+      item.fields["area"].toLowerCase() !== filters[2]
+    ) {
       return false;
     }
     if (
@@ -145,7 +151,10 @@ function applyTeachesFilters(items, filters) {
 }
 function applyToysFilters(items, filters) {
   return items.filter((item) => {
-    if (filters[0].trim() !== "" && item.fields["age"].toLowerCase() !== filters[0]) {
+    if (
+      filters[0].trim() !== "" &&
+      item.fields["age"].toLowerCase() !== filters[0]
+    ) {
       return false;
     }
     if (
@@ -200,7 +209,6 @@ export default function ItemsGrid({
 
   useEffect(() => {
     const storedDataPosts = JSON.parse(localStorage.getItem("posts"));
-    console.log("storedDataPosts", storedDataPosts);
     setBloods(storedDataPosts.filter((post) => post.object_type === "bloods"));
     setBooks(storedDataPosts.filter((post) => post.object_type === "books"));
     setCases(storedDataPosts.filter((post) => post.object_type === "cases"));
@@ -216,6 +224,9 @@ export default function ItemsGrid({
       storedDataPosts.filter((post) => post.object_type === "teaches")
     );
     setToys(storedDataPosts.filter((post) => post.object_type === "toys"));
+
+    console.log("storedDataPosts", storedDataPosts);
+    console.log("storedDataPostsFoods", foods);
   }, []);
 
   const pageSize = 9;

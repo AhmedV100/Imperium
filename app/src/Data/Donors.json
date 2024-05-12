@@ -1,24 +1,28 @@
 [
   {
-    "id": 1,
-    "username": "Jane Doe",
-    "password": "guc123"
+    "id": 3,
+    "object_type": "donor",
+    "username": "donor3",
+    "password": "donor3"
   },
   {
     "id": 4,
-    "username": "John Doe",
-    "password": "guc1234"
+    "object_type": "donor",
+    "username": "donor4",
+    "password": "donor4"
   },
 
   {
     "id": 5,
-    "username": "Mostafa Doe",
-    "password": "guc12345"
+    "object_type": "donor",
+    "username": "donor5",
+    "password": "donor5"
   },
 
   {
     "id": 6,
-    "username": "Alan Smith",
-    "password": "guc123456"
+    "object_type": "donor",
+    "username": "donor6",
+    "password": "donor6"
   }
 ]

@@ -22,13 +22,13 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav" style={{ margin: '0' }}>
           <Nav className="ml-auto" style={{ margin: '0' }}>
             <Nav.Link href="/Home" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Home</Nav.Link>
-            {/* <Nav.Link href="/donor" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Donate</Nav.Link> */}
+            <Nav.Link href="/admindashboard" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Dashboard</Nav.Link>
+            {/* Add more Nav.Link components for additional pages */}
           </Nav>
-          <Button className="ms-auto" type="button" onClick={()=>nav("/Login")} variant="outline-light" 
+          <Button className="ms-auto" type="button" variant="outline-light" 
           style={{ paddingLeft: '1.2vw', paddingRight: '1.2vw', paddingTop: '3px', paddingBottom: '5px', marginRight: '4vw' }}>
-            Sign In</Button>
-        </Navbar.Collapse>
-          
+            Signed in</Button>
+        </Navbar.Collapse> 
       </Container>
     </Navbar>
   );

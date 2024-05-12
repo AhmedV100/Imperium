@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useParams } from "react-router-dom";
 
 import "./Cards.css";
 
@@ -8,16 +8,17 @@ import donationImage1 from "../images/Deliverygif.gif";
 import donationImage2 from "../images/notificationbell.gif";
 
 function DeliveryCardOptions() {
+  const { donorId } = useParams();
 
   const navigate = useNavigate();
 
   const handleBrowserCardClick = () => {
-    navigate("/donor/donationhistory");
+    navigate(`/donor/${parseInt(donorId)}/donationhistory`);
   };
 
 
   const handleDeliveryCardClick = () => {
-    navigate("/donor/donationnotification");
+    navigate(`/donor/${parseInt(donorId)}/donationnotification`);
   };
 
   return (

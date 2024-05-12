@@ -5,19 +5,16 @@ import { useNavigate, Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
-import NotificationIcon  from "./NotificationIcon";
-function NavBar({posts}) {
+import NotificationIcon from "./NotificationIcon";
+function NavBar({ posts }) {
   const nav = useNavigate();
   const { orgId } = useParams();
 
-
-   // end of paste
+  // end of paste
 
   const [unreadNotificationsCount, setUnreadNotificationsCount] = useState(0);
- 
 
   useEffect(() => {
-
     const count = posts.reduce((total, post) => {
       if (post.donorId && !post.fulfilled) {
         return total + 1;

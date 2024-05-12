@@ -1,40 +1,46 @@
 [
     {   
-        "id":1,
+        "id":0,
         "object_type": "admin",
-        "username": "Ahmed Doe",
-        "password": "guc1"
+        "username": "admin",
+        "password": "admin"
+    },
+    {
+        "id":1,
+        "object_type": "organization",
+        "username": "Resala",
+        "password": "org"
     },
     {
         "id":2,
         "object_type": "organization",
-        "username": "Mohamed Doe",
-        "password": "guc12"
+        "username": "Masr Alkhair",
+        "password": "org"
     },
     {
         "id":3,
         "object_type": "donor",
-        "username": "Jane Doe",
-        "password": "guc123"
+        "username": "donor3",
+        "password": "donor3"
     },
     {   
         "id":4,
         "object_type":"donor",
-        "username": "John Doe",
-        "password": "guc1234"
+        "username": "donor4",
+        "password": "donor4"
     },
     
     {   
         "id":5,
         "object_type":"donor",
-        "username": "Mostafa Doe",
-        "password": "guc12345"
+        "username": "donor5",
+        "password": "donor5"
     },
     
     {   
         "id":6,
         "object_type":"donor",
-        "username": "Alan Smith",
-        "password": "guc123456"
+        "username": "donor6",
+        "password": "donor6"
     }
 ]
