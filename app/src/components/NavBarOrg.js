@@ -80,7 +80,7 @@ function NavBar({ posts }) {
           </Nav>
           <Button
             type="button"
-            onClick={() => nav("/NewPost")}
+            onClick={() => nav(`/organization/${orgId}/new-post`)}
             variant="outline-light"
             style={{
               paddingLeft: "1.2vw",
