@@ -31,7 +31,7 @@ function ViewRegisteredOrganizations() {
         <>
         <NavBar/>
         <div className="wopper">
-            <h1>View Registered Organizations</h1>
+            <h1>Organization List</h1>
             <div className="wrapping">
                 <input
                     type="text"
