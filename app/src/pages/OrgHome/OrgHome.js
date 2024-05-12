@@ -28,14 +28,12 @@ useEffect(() => {
 }, []);
 
 const updateOrganization = (updatedOrg) => {
-  // Update organization state
   setOrganization(updatedOrg);
 
-  // Update local storage
   const newOrgs = organizations.map((org) =>
     org.id === parseInt(orgId) ? updatedOrg : org
   );
-  setOrganizations(newOrgs); // Fix this line
+  setOrganizations(newOrgs);
 
   localStorage.setItem("organizations", JSON.stringify(newOrgs));
 };
@@ -105,13 +103,7 @@ return (
           ) : (
             <p>Loading...</p>
           )}
-          <div className="center-section">
-            <p>This is the center section.</p>
-            {organization && organization.logo && (
-              <img src={image} alt="Example" />
-            )}
-            <button>Create New Post</button>
-          </div>
+         
         </div>
       </div>
     </div>
