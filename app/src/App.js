@@ -32,6 +32,7 @@ import AccountSettings from "./shahd/AccountSettings"
 // import Admin from "./Data/Admin.json";
 
 import ViewNotificationPosts from "./pages/OrgPosts/ViewNotificationPosts";
+import ViewAllPosts from "./pages/OrgPosts/ViewAllPosts";
 
 import Donors from "./Data/Donors.json";
 import Admin from "./Data/Admin.json";
@@ -100,48 +101,12 @@ function App() {
             path="/organization/:orgId/notifications"
             element={<ViewNotificationPosts />}
           />
-          {/* <Route
-            path="/oragnization/:orgId/notifications/all"
-            element={<ViewNotificationPosts filter={"all"} />}
-          />
           <Route
-            path="/oragnization/:orgId/notifications/clothes"
-            element={<ViewNotificationPosts filter={"clothes"} />}
+            path="/organization/:orgId/all-posts"
+            element={<ViewAllPosts />}
           />
-          <Route
-            path="/oragnization/:orgId/notifications/toys"
-            element={<ViewNotificationPosts filter={"toys"} />}
-          />
-          <Route
-            path="/oragnization/:orgId/notifications/food"
-            element={<ViewNotificationPosts filter={"food"} />}
-          />
-          <Route
-            path="/oragnization/:orgId/notifications/medical"
-            element={<ViewNotificationPosts filter={"medical"} />}
-          />
-          <Route
-            path="/oragnization/:orgId/notifications/school"
-            element={<ViewNotificationPosts filter={"school"} />}
-          />
-          <Route
-            path="/oragnization/:orgId/notifications/blood"
-            element={<ViewNotificationPosts filter={"blood"} />}
-          /> */}
 
           <Route path="/organization/:orgId" element={<OrgHome />} />
-          {/* <Route
-            path="/organization/:orgId/posts"
-            element={<OrganizationPosts />}
-          />
-          <Route
-            path="/organization/:orgId/settings"
-            element={<OrganizationSettings />}
-          />
-          <Route
-            path="/organization/:orgId/notifications"
-            element={<OrganizationNotifications />}
-          /> */}
 
           <Route
             path="/organization/:orgId/new-post"
@@ -157,12 +122,23 @@ function App() {
             element={<RegisterOrg></RegisterOrg>}
           ></Route>
 
-          <Route path="/admindashboard" element={<AdminDashboard/>}></Route>
-          <Route path="/donorList" element={<DonorList/>}></Route>
-          <Route path="/donor_OrgSubmissions" element={<Donor_OrgSubmissions/>}></Route>
-          <Route path="/organizationList" element={<OrganizationList/>}></Route>
-          <Route path="/donor_OrgRequests" element={<Donor_OrgRequests/>}></Route>
-          <Route path="/accountSettings" element={<AccountSettings/>}> </Route>
+          <Route path="/admindashboard" element={<AdminDashboard />}></Route>
+          <Route path="/donorList" element={<DonorList />}></Route>
+          <Route
+            path="/donor_OrgSubmissions"
+            element={<Donor_OrgSubmissions />}
+          ></Route>
+          <Route
+            path="/organizationList"
+            element={<OrganizationList />}
+          ></Route>
+          <Route
+            path="/donor_OrgRequests"
+            element={<Donor_OrgRequests />}
+          ></Route>
+          <Route path="/accountSettings" element={<AccountSettings />}>
+            {" "}
+          </Route>
           <Route path="/admindashboard" element={<AdminDashboard />}></Route>
           <Route path="/donorList" element={<DonorList />}></Route>
         </Routes>

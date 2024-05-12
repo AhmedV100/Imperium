@@ -8,6 +8,7 @@ function PostsButtons({
   handleShowDonor,
   handleShowCard,
   handleDeleteCard,
+  handleShowPostUpdate,
 }) {
   return (
     <Card.Body>
@@ -27,7 +28,7 @@ function PostsButtons({
       </Row>
       <Row>
         <Col>
-          <Button size="lg" onClick={handleShowCard} variant="info" block>
+          <Button size="lg" onClick={handleShowPostUpdate} variant="info" block>
             Update
           </Button>
         </Col>

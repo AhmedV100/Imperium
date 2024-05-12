@@ -13,7 +13,7 @@ function FloatingDonor({ item, show, handleClose }) {
       </Modal.Header>
       <Modal.Body>
         <ul>
-          {Object.entries(item).map(([key, value]) => {
+          { item && Object.entries(item).map(([key, value]) => {
             if (
               !value ||
               [

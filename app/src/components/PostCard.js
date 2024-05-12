@@ -19,6 +19,7 @@ import stationaryExample from "../images/stationaries/example.png";
 import teachExample from "../images/teaches/example.png";
 import toyExample from "../images/toys/example.png";
 import PostsButtons from "./PostsButtons";
+import FloatingPostUpdate from "./FloatingPostUpadte";
 // TODO handle update post
 export default function PostCard({
   item,
@@ -30,6 +31,7 @@ export default function PostCard({
 }) {
   const [showCard, setShowCard] = useState(false);
   const [showDonor, setShowDonor] = useState(false);
+  const [showPostUpdate, setShowPostUpdate] = useState(false);
   const donors = JSON.parse(localStorage.getItem("donors"));
   console.log("i am in postCard and donors are:", donors);
   let donor = donors.find((don) => don.id === donorId);
@@ -44,9 +46,20 @@ export default function PostCard({
     localStorage.setItem("posts", JSON.stringify(updatedPosts));
     toggleBoolValue();
   };
+const updatePost = (updatedFields) => {
+  const posts = JSON.parse(localStorage.getItem("posts"));
+    const updatedPosts = posts.map((post) => {
+        return (post.id !== postId)? post:
+        {...post,fields: updatedFields};
+    });
+    localStorage.setItem("posts", JSON.stringify(updatedPosts));
+    toggleBoolValue();
+    };
 
   const handleShowCard = () => setShowCard(true);
   const handleCloseCard = () => setShowCard(false);
+  const handleShowPostUpdate = () => setShowPostUpdate(true);
+  const handleClosePostUpdate = () => setShowPostUpdate(false);
   const handleShowDonor = () => setShowDonor(true);
   const handleCloseDonor = () => setShowDonor(false);
   const handleDeleteCard = () => deletePost();
@@ -86,6 +99,7 @@ export default function PostCard({
               handleShowDonor={handleShowDonor}
               handleShowCard={handleShowCard}
               handleDeleteCard={handleDeleteCard}
+              handleShowPostUpdate={handleShowPostUpdate}
             />
           </Card>
           <FloatingPost
@@ -93,10 +107,18 @@ export default function PostCard({
             show={showCard}
             handleClose={handleCloseCard}
           />
-          <FloatingDonor
-            item={donor}
-            show={showDonor}
-            handleClose={handleCloseDonor}
+          {donor && (
+            <FloatingDonor
+              item={donor}
+              show={showDonor}
+              handleClose={handleCloseDonor}
+            />
+          )}
+          <FloatingPostUpdate
+            item={item}
+            show={showPostUpdate}
+            handleClose={handleClosePostUpdate}
+            updatePost={updatePost}
           />
         </div>
       );
@@ -140,6 +162,9 @@ export default function PostCard({
             show={showDonor}
             handleClose={handleCloseDonor}
           />
+          
+
+     
         </div>
       );
     case "cases":
