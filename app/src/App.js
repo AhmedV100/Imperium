@@ -26,16 +26,19 @@ import AdminDashboard from "./shahd/Admindashboard";
 import DonorList from "./shahd/DonorList";
 import DonorSubmissions from "./shahd/DonorSubmissions";
 import OrganizationList from "./shahd/OrganizationList"
-// import Donors from "./Data/Donors.json";
-// import Admin from "./Data/Admin.json";
+
+import ViewNotificationPosts from "./pages/OrgPosts/ViewNotificationPosts";
+
+import Donors from "./Data/Donors.json";
+import Admin from "./Data/Admin.json";
 
 
 function App() {
   const storeObjectInLocalStorage = () => {
     localStorage.setItem("organizations", JSON.stringify(Organizations));
     localStorage.setItem("posts", JSON.stringify(Posts));
-    // localStorage.setItem("donors", JSON.stringify(Donors));
-    // localStorage.setItem("admin", JSON.stringify(Admin));
+    localStorage.setItem("donors", JSON.stringify(Donors));
+    localStorage.setItem("admin", JSON.stringify(Admin));
   };
 
   useEffect(() => {
@@ -49,9 +52,15 @@ function App() {
           <Route index element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/donor" element={<Donor />}></Route>
-          <Route path="/donor/deliveryandnotifications" element={<DeliveryAndNotifications />} />
+          <Route
+            path="/donor/deliveryandnotifications"
+            element={<DeliveryAndNotifications />}
+          />
           <Route path="/donor/donationhistory" element={<DonationHistory />} />
-          <Route path="/donor/donationnotification" element={<DonationNotification />} />
+          <Route
+            path="/donor/donationnotification"
+            element={<DonationNotification />}
+          />
           <Route path="/donor/browser" element={<DonorBrowser />} />
           <Route
             path="/donor/browser/all"
@@ -82,6 +91,40 @@ function App() {
             element={<DonorBrowser filter={"blood"} />}
           />
 
+          {/* organization posts */}
+          <Route
+            path="/organization/:orgId/notifications"
+            element={<ViewNotificationPosts />}
+          />
+          {/* <Route
+            path="/oragnization/:orgId/notifications/all"
+            element={<ViewNotificationPosts filter={"all"} />}
+          />
+          <Route
+            path="/oragnization/:orgId/notifications/clothes"
+            element={<ViewNotificationPosts filter={"clothes"} />}
+          />
+          <Route
+            path="/oragnization/:orgId/notifications/toys"
+            element={<ViewNotificationPosts filter={"toys"} />}
+          />
+          <Route
+            path="/oragnization/:orgId/notifications/food"
+            element={<ViewNotificationPosts filter={"food"} />}
+          />
+          <Route
+            path="/oragnization/:orgId/notifications/medical"
+            element={<ViewNotificationPosts filter={"medical"} />}
+          />
+          <Route
+            path="/oragnization/:orgId/notifications/school"
+            element={<ViewNotificationPosts filter={"school"} />}
+          />
+          <Route
+            path="/oragnization/:orgId/notifications/blood"
+            element={<ViewNotificationPosts filter={"blood"} />}
+          /> */}
+
           <Route path="/organization/:orgId" element={<OrgHome />} />
           {/* <Route
             path="/organization/:orgId/posts"
@@ -96,7 +139,10 @@ function App() {
             element={<OrganizationNotifications />}
           /> */}
 
-            <Route path="/organization/:orgId/new-post" element={<MakePost />}></Route>
+          <Route
+            path="/organization/:orgId/new-post"
+            element={<MakePost />}
+          ></Route>
 
           <Route path="/login" element={<Login />}></Route>
           <Route path="/schedpickup" element={<SchedPickup />}></Route>
@@ -107,12 +153,16 @@ function App() {
             element={<RegisterOrg></RegisterOrg>}
           ></Route>
 
-          <Route path="/admindashboard" element={<AdminDashboard/>}></Route>
-          <Route path="/donorList" element={<DonorList/>}></Route>
-          <Route path="/donorSubmissions" element={<DonorSubmissions/>}></Route>
-          <Route path="/organizationList" element={<OrganizationList/>}></Route>
-
-
+          <Route path="/admindashboard" element={<AdminDashboard />}></Route>
+          <Route path="/donorList" element={<DonorList />}></Route>
+          <Route
+            path="/donorSubmissions"
+            element={<DonorSubmissions />}
+          ></Route>
+          <Route
+            path="/organizationList"
+            element={<OrganizationList />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </div>

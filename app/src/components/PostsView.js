@@ -9,11 +9,10 @@ import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 
 import SidebarMenu from "../components/SidebarMenu";
-import ItemsGrids from "./ItemsGrids";
 import MyPagination from "../components/MyPagination";
 import PostsGrid from "./PostsGrid";
 
-export default function OrgPosts({ filter }) {
+export default function OrgPosts({ filter , isAll}) {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentCategory, setCurrentCategory] = useState(
@@ -200,6 +199,7 @@ export default function OrgPosts({ filter }) {
           </Navbar>
           <Row xl={"auto"}>
             <PostsGrid
+            isAll ={ isAll}
               filterOptionsForClothes={[
                 CLOTHES_ageFilter,
                 CLOTHES_genderFilter,

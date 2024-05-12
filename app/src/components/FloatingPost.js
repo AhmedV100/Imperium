@@ -78,7 +78,7 @@ function FloatingPost({ item, show, handleClose }) {
           })}
         </ul>
         {renderAdditionalComponent(item)}
-        {/* {(item.quantity || item.amount) && (
+        {(item.quantity || item.amount) && (
           <div>
             <label htmlFor="donationQuantity">Enter donation quantity:</label>
             <input
@@ -92,17 +92,9 @@ function FloatingPost({ item, show, handleClose }) {
               }}
             />
           </div>
-        )} */}
+        )}
       </Modal.Body>
       <Modal.Footer className="d-flex justify-content-between">
-        {/* <Button
-          size="lg"
-          variant="success"
-          onClick={handleDonate}
-          disabled={!validQuantity}
-        >
-          Donate
-        </Button> */}
         <Button variant="secondary" onClick={handleClose}>
           Close
         </Button>

@@ -13,6 +13,7 @@ import PostCard from "./PostCard";
 // import stationaries from "../Data/Stationaries.json";
 // import teaches from "../Data/Teaches.json";
 // import toys from "../Data/Toys.json";
+import { useParams } from "react-router-dom";
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -161,6 +162,7 @@ function applyToysFilters(items, filters) {
 }
 
 export default function PostsGrid({
+  isAll,
   category,
   currentPage,
   onPageChange,
@@ -171,15 +173,15 @@ export default function PostsGrid({
   filterOptionsForSchoolSupplies,
   filterOptionsForBloodDonations,
 }) {
-  const [bloods, setBloods] = useState();
-  const [books, setBooks] = useState();
-  const [cases, setCases] = useState();
-  const [clothes, setClothes] = useState();
-  const [foods, setFoods] = useState();
-  const [meds, setMeds] = useState();
-  const [stationaries, setStationaries] = useState();
-  const [teaches, setTeaches] = useState();
-  const [toys, setToys] = useState();
+  const [bloods, setBloods] = useState([]);
+  const [books, setBooks] = useState([]);
+  const [cases, setCases] = useState([]);
+  const [clothes, setClothes] = useState([]);
+  const [foods, setFoods] = useState([]);
+  const [meds, setMeds] = useState([]);
+  const [stationaries, setStationaries] = useState([]);
+  const [teaches, setTeaches] = useState([]);
+  const [toys, setToys] = useState([]);
 
   const all = [
     ...bloods,
@@ -196,10 +198,19 @@ export default function PostsGrid({
   const shuffledAll = shuffleArray(all);
   const [originalItems, setOriginalItems] = useState(shuffledAll);
   const [currentItems, setCurrentItems] = useState([]);
-  const orgId = "1";
+  const {orgId} = useParams();
+
   useEffect(() => {
-    const posts = JSON.parse(localStorage.getItem('posts'));
-    const storedDataPosts = posts.filter((post)=>post.orgId === parseInt(orgId));
+
+    const allPosts = JSON.parse(localStorage.getItem('posts'));
+    const storedDataPosts = isAll
+      ? allPosts.filter((post) => post.orgId === parseInt(orgId))
+      : allPosts.filter(
+          (post) =>
+            post.orgId === parseInt(orgId) && post.donorId !== null && !post.fulfilled
+        );
+    console.log("i am in postsGrid:",storedDataPosts);
+
     setBloods(storedDataPosts.filter((post) => post.object_type === "bloods"));
     setBooks(storedDataPosts.filter((post) => post.object_type === "books"));
     setCases(storedDataPosts.filter((post) => post.object_type === "cases"));
