@@ -20,27 +20,36 @@ import teachExample from "../images/teaches/example.png";
 import toyExample from "../images/toys/example.png";
 import PostsButtons from "./PostsButtons";
 // TODO handle update post
-export default function PostCard({ item, index }) {
+export default function PostCard({
+  item,
+  index,
+  category,
+  postId,
+  donorId,
+  toggleBoolValue,
+}) {
   const [showCard, setShowCard] = useState(false);
   const [showDonor, setShowDonor] = useState(false);
   const donors = JSON.parse(localStorage.getItem("donors"));
   console.log("i am in postCard and donors are:", donors);
-let donor = donors.find((don) => don.id === item.donorId);
-    console.log('Also in postCard and donor is:',donor);
-if (typeof donor === "undefined") {
-  donor = null;
-}
-  const deletePost = (postId) => {
+  let donor = donors.find((don) => don.id === donorId);
+  if (typeof donor === "undefined") {
+    donor = null;
+  }
+  console.log("Also in postCard and donor is:", donor);
+
+  const deletePost = () => {
     const posts = JSON.parse(localStorage.getItem("posts"));
     const updatedPosts = posts.filter((post) => post.id !== postId);
     localStorage.setItem("posts", JSON.stringify(updatedPosts));
+    toggleBoolValue();
   };
 
-    const handleShowCard = () => setShowCard(true);
-    const handleCloseCard = () => setShowCard(false);
-    const handleShowDonor = () => setShowDonor(true);
-    const handleCloseDonor = () => setShowDonor(false);
-    const handleDeleteCard = () => deletePost(item.id);
+  const handleShowCard = () => setShowCard(true);
+  const handleCloseCard = () => setShowCard(false);
+  const handleShowDonor = () => setShowDonor(true);
+  const handleCloseDonor = () => setShowDonor(false);
+  const handleDeleteCard = () => deletePost();
 
   const cardStyle = {
     width: "18rem",
@@ -52,7 +61,7 @@ if (typeof donor === "undefined") {
     objectFit: "cover",
   };
 
-  switch (item.object_type) {
+  switch (category) {
     case "bloods":
       return (
         <div>
@@ -62,18 +71,18 @@ if (typeof donor === "undefined") {
               <Card.Title>{item.name}</Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush">
+              <ListGroup.Item>blood type: {item.blood_type}</ListGroup.Item>
               <ListGroup.Item>
-                blood type: {item.fields.blood_type}
+                hospital name: {item.hospital_name}
               </ListGroup.Item>
               <ListGroup.Item>
-                hospital name: {item.fields.hospital_name}
-              </ListGroup.Item>
-              <ListGroup.Item>
-                hospital_area: {item.fields.hospital_area}
+                hospital_area: {item.hospital_area}
               </ListGroup.Item>
             </ListGroup>
             <PostsButtons
               item={item}
+              postId={postId}
+              donorId={donorId}
               handleShowDonor={handleShowDonor}
               handleShowCard={handleShowCard}
               handleDeleteCard={handleDeleteCard}
@@ -100,9 +109,9 @@ if (typeof donor === "undefined") {
               <Card.Title>{item.name}</Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush">
-              <ListGroup.Item>author: {item.fields.author}</ListGroup.Item>
-              <ListGroup.Item>language: {item.fields.language}</ListGroup.Item>
-              <ListGroup.Item>edition: {item.fields.edition}</ListGroup.Item>
+              <ListGroup.Item>author: {item.author}</ListGroup.Item>
+              <ListGroup.Item>language: {item.language}</ListGroup.Item>
+              <ListGroup.Item>edition: {item.edition}</ListGroup.Item>
             </ListGroup>
             <Card.Body>
               {item.donorId && (
@@ -142,12 +151,12 @@ if (typeof donor === "undefined") {
               <Card.Title>{item.patient_name}</Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush">
-              <ListGroup.Item>age: {item.fields.age}</ListGroup.Item>
-              <ListGroup.Item>gender: {item.fields.gender}</ListGroup.Item>
-              <ListGroup.Item>weight: {item.fields.weight}</ListGroup.Item>
+              <ListGroup.Item>age: {item.age}</ListGroup.Item>
+              <ListGroup.Item>gender: {item.gender}</ListGroup.Item>
+              <ListGroup.Item>weight: {item.weight}</ListGroup.Item>
             </ListGroup>
             <Card.Body>
-              {item.donorId && (
+              {donorId && (
                 <Button size="lg" onClick={handleShowDonor} variant="primary">
                   Donor Info
                 </Button>
@@ -184,9 +193,9 @@ if (typeof donor === "undefined") {
               <Card.Title>{item.type_of_clothing}</Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush">
-              <ListGroup.Item>age: {item.fields.age}</ListGroup.Item>
-              <ListGroup.Item>gender: {item.fields.gender}</ListGroup.Item>
-              <ListGroup.Item>season: {item.fields.season}</ListGroup.Item>
+              <ListGroup.Item>age: {item.age}</ListGroup.Item>
+              <ListGroup.Item>gender: {item.gender}</ListGroup.Item>
+              <ListGroup.Item>season: {item.season}</ListGroup.Item>
             </ListGroup>
             <Card.Body>
               {item.donorId && (
@@ -226,8 +235,8 @@ if (typeof donor === "undefined") {
               <Card.Title>{item.name}</Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush">
-              <ListGroup.Item>quantity: {item.fields.quantity}</ListGroup.Item>
-              <ListGroup.Item>type: {item.fields.type}</ListGroup.Item>
+              <ListGroup.Item>quantity: {item.quantity}</ListGroup.Item>
+              <ListGroup.Item>type: {item.type}</ListGroup.Item>
             </ListGroup>
             <Card.Body>
               {item.donorId && (
@@ -270,13 +279,11 @@ if (typeof donor === "undefined") {
                   style={ImgCardStyle}
                 />
                 <Card.Body>
-                  <Card.Title>{item.fields.device_type}</Card.Title>
+                  <Card.Title>{item.device_type}</Card.Title>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                  <ListGroup.Item>device_use: {item.fields.use}</ListGroup.Item>
-                  <ListGroup.Item>
-                    quantity: {item.fields.quantity}
-                  </ListGroup.Item>
+                  <ListGroup.Item>device_use: {item.use}</ListGroup.Item>
+                  <ListGroup.Item>quantity: {item.quantity}</ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
                   {item.donorId && (
@@ -321,15 +328,11 @@ if (typeof donor === "undefined") {
                   style={ImgCardStyle}
                 />
                 <Card.Body>
-                  <Card.Title>{item.fields.equipment_type}</Card.Title>
+                  <Card.Title>{item.equipment_type}</Card.Title>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                  <ListGroup.Item>
-                    equipment_use: {item.fields.use}
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    quantity: {item.fields.quantity}
-                  </ListGroup.Item>
+                  <ListGroup.Item>equipment_use: {item.use}</ListGroup.Item>
+                  <ListGroup.Item>quantity: {item.quantity}</ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
                   {item.donorId && (
@@ -374,15 +377,11 @@ if (typeof donor === "undefined") {
                   style={ImgCardStyle}
                 />
                 <Card.Body>
-                  <Card.Title>{item.fields.medication_type}</Card.Title>
+                  <Card.Title>{item.medication_type}</Card.Title>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                  <ListGroup.Item>
-                    medication_use: {item.fields.use}
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    quantity: {item.fields.quantity}
-                  </ListGroup.Item>
+                  <ListGroup.Item>medication_use: {item.use}</ListGroup.Item>
+                  <ListGroup.Item>quantity: {item.quantity}</ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
                   {item.donorId && (
@@ -431,10 +430,10 @@ if (typeof donor === "undefined") {
               style={ImgCardStyle}
             />
             <Card.Body>
-              <Card.Title>{item.fields.type_of_item}</Card.Title>
+              <Card.Title>{item.type_of_item}</Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush">
-              <ListGroup.Item>amount: {item.fields.amount}</ListGroup.Item>
+              <ListGroup.Item>amount: {item.amount}</ListGroup.Item>
             </ListGroup>
             <Card.Body>
               {item.donorId && (
@@ -475,11 +474,11 @@ if (typeof donor === "undefined") {
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroup.Item>
-                number of students: {item.fields.number_of_students}
+                number of students: {item.number_of_students}
               </ListGroup.Item>
-              <ListGroup.Item>address: {item.fields.address}</ListGroup.Item>
+              <ListGroup.Item>address: {item.address}</ListGroup.Item>
               <ListGroup.Item>
-                subjects_to_be_taught: {item.fields.subjects_to_be_taught}
+                subjects_to_be_taught: {item.subjects_to_be_taught}
               </ListGroup.Item>
             </ListGroup>
             <Card.Body>
@@ -517,12 +516,12 @@ if (typeof donor === "undefined") {
           <Card style={cardStyle}>
             <Card.Img variant="top" src={toyExample} style={ImgCardStyle} />
             <Card.Body>
-              <Card.Title>{item.fields.type}</Card.Title>
+              <Card.Title>{item.type}</Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush">
-              <ListGroup.Item>age: {item.fields.age}</ListGroup.Item>
-              <ListGroup.Item>gender: {item.fields.gender}</ListGroup.Item>
-              <ListGroup.Item>quantity: {item.fields.quantity}</ListGroup.Item>
+              <ListGroup.Item>age: {item.age}</ListGroup.Item>
+              <ListGroup.Item>gender: {item.gender}</ListGroup.Item>
+              <ListGroup.Item>quantity: {item.quantity}</ListGroup.Item>
             </ListGroup>
             <Card.Body>
               {item.donorId && (
