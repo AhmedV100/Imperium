@@ -4,20 +4,20 @@ import { useNavigate } from "react-router-dom";
 
 import "./Cards.css";
 
-import donationImage1 from "../images/row1-donation.png";
-import donationImage2 from "../images/row3-donation.png";
+import donationImage1 from "../images/Deliverygif.gif";
+import donationImage2 from "../images/notificationbell.gif";
 
-function DonorCardOptions() {
+function DeliveryCardOptions() {
 
   const navigate = useNavigate();
 
   const handleBrowserCardClick = () => {
-    navigate("/donor/browser");
+    navigate("/donor/donationhistory");
   };
 
 
   const handleDeliveryCardClick = () => {
-    navigate("/donor/DeliveryAndNotifications");
+    navigate("/donor/donationnotification");
   };
 
   return (
@@ -27,11 +27,11 @@ function DonorCardOptions() {
           <Card.Img variant="top" onClick={handleBrowserCardClick} src={donationImage1} className="card-img" />
         </a>
         <Card.Body>
-          <Card.Title>Browser</Card.Title>
-          <Card.Text>Browse Items needs to donated now !</Card.Text>
+          <Card.Title>Donation History</Card.Title>
+          <Card.Text>Check your donated items</Card.Text>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">Last updated 1 hr ago</small>
+          <small className="text-muted">Last updated 2 hr ago</small>
         </Card.Footer>
       </Card>
       <Card className="card">
@@ -39,15 +39,15 @@ function DonorCardOptions() {
           <Card.Img variant="top" onClick={handleDeliveryCardClick} src={donationImage2} className="card-img" />
         </a>
         <Card.Body>
-          <Card.Title>Delivery</Card.Title>
-          <Card.Text>Check your delivery!. </Card.Text>
+          <Card.Title>Notifications</Card.Title>
+          <Card.Text>Updates on your delivery.</Card.Text>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">Last updated 40 mins ago</small>
+          <small className="text-muted">Last updated 10 mins ago</small>
         </Card.Footer>
       </Card>
     </CardGroup>
   );
 }
 
-export default DonorCardOptions;
+export default DeliveryCardOptions;

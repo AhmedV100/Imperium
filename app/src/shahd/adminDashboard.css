@@ -1,0 +1,56 @@
+.admin-container {
+    display: flex;
+    background-image: url("../images/row3-donation.png");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .admin-box {
+    height: 540px;
+    width: 400px;
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(300px);
+    color: black;
+    border-radius: 10px;
+    padding: 25px 35px;
+  }
+  
+  .admin-actions h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .admin-actions ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .admin-actions li {
+    margin-bottom: 10px;
+  }
+  
+  .admin-actions button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    transition: transform 0.3s ease;
+  }
+  
+  .admin-actions button:hover {
+    transform: scale(1.09);
+  }
