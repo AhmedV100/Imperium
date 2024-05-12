@@ -25,16 +25,16 @@ function AdminDashboard() {
               <button onClick={() => redirectToPage('/donorList')}>View Donor List</button>
             </li>
             <li>
-              <button onClick={() => redirectToPage('/organizationSubmissions')}>Review Organization Submissions</button>
+              <button onClick={() => redirectToPage('/donor_OrgSubmissions')}>Review Donor/Organization Submissions</button>
             </li>
             <li>
-              <button onClick={() => redirectToPage('/donorSubmissions')}>Review Donor Submissions</button>
+              <button onClick={() => redirectToPage('/donor_OrgRequests')}>Manage Donor/Organization Requests</button>
             </li>
             <li>
-              <button onClick={() => redirectToPage('/organizationRequests')}>Manage Organization Requests</button>
+              <button onClick={() => redirectToPage('')}>Manage Users Account</button>
             </li>
             <li>
-              <button onClick={() => redirectToPage('/donorRequests')}>Manage Donor Requests</button>
+              <button onClick={() => redirectToPage('/accountSettings')}>Account Settings</button>
             </li>
           </ul>
         </div>

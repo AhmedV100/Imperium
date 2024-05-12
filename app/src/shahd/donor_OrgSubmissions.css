@@ -1,0 +1,71 @@
+.wrapSubmit {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    background-image: url("../images/row3-donation.png");
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.wrapSubmit h1 {
+    text-align: center;
+    color: #333;
+}
+.orgSubmission hr{
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #000000;
+
+}
+
+.orgSubmission hr{
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #000000;
+
+}
+
+.donorSubmission hr{
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #000000;
+}
+
+.submission {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.submission h2 {
+    margin-top: 0;
+}
+
+.submission p {
+    margin-bottom: 10px;
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+.actions button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.actions button.accept {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.actions button.reject {
+    background-color: #f44336;
+    color: white;
+}

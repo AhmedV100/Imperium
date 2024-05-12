@@ -1,0 +1,66 @@
+.wrapSettings {
+    display: flex;
+    background-image: url("../images/row3-donation.png");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .boxAccount {
+    margin-left: 37%;
+    height: 418px;
+    width: 410px;
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(300px);
+    color: black;
+    border-radius: 10px;
+    padding: 25px 35px;
+    
+  }
+
+  .boxAccount h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+
+  .boxAccount .inputs4{
+    position: relative;
+    width: 100%;
+    height: 45px;
+}
+
+.inputs4 input{
+    margin-top: 20px;
+    padding: 5px 10px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.541);
+    outline: none;
+    border-radius: 35px;
+    color: #000;
+    background: transparent;
+}
+
+.inputs4 input::placeholder{ 
+    color: #000;
+}
+  
+  .boxAccount button {
+    margin-top: 25px;
+    width: 100%;
+    height: 35px;
+    background: white;
+    border: none;
+    color: #000;
+    font-weight: 750;
+    border-radius: 35px;
+  }
+  .boxAccount button:hover {
+    background-color: #f0f0f0; /* Change to your desired hover color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover */
+}
