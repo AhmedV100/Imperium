@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card, Nav } from 'react-bootstrap';
 import "./DonationNotification.css";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBarDonor";
 import Footer from "../components/footer";
 
 function DonationNotification() {

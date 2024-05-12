@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBarDonor";
 import Footer from "../components/footer";
 import "./schedpickup.css";
 import { Container, Button, Form, Row, Stack } from "react-bootstrap";

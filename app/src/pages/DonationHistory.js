@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBarDonor";
 import Footer from "../components/footer";
 import { Card, CardGroup } from "react-bootstrap";
 import "./DonationCards.css";
