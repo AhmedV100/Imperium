@@ -24,7 +24,13 @@ function Login({ registered }) {
 
     const user = users.find(
       (user) => user.username === username && user.password === password
+      
     );
+
+    console.log("user: ", user);
+
+
+
 
     if (user) {
       if (user.object_type === "admin") {
