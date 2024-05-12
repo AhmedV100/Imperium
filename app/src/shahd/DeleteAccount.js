@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import NavBar from "../components/NavBarAdmin";
 import Footer from "../components/footer";
+import "./deleteAccount.css"
+
 
 function DeleteAccount() {
 
