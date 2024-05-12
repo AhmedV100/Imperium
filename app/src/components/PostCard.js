@@ -4,8 +4,8 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 
-import FloatingCard from "./FloatingCard";
-
+import FloatingPost from "./FloatingPost";
+import FloatingDonor from "./FloatingDonor"
 import example from "../images/example.png";
 import bloodExample from "../images/bloods/example.png";
 import bookExample from "../images/books/example.png";
@@ -18,7 +18,7 @@ import medicationExample from "../images/meds/example_medication.png";
 import stationaryExample from "../images/stationaries/example.png";
 import teachExample from "../images/teaches/example.png";
 import toyExample from "../images/toys/example.png";
-
+// TODO handle update post
 export default function PostCard({ item, index }) {
   const [showCard, setShowCard] = useState(false);
   const [showDonor, setShowDonor] = useState(false);
@@ -77,12 +77,15 @@ if (typeof donor === "undefined") {
               <Button size="lg" onClick={handleShowCard} variant="info">
                 See more
               </Button>{" "}
+              <Button size="lg" onClick={handleShowCard} variant="info">
+                update
+              </Button>{" "}
               <Button size="lg" onClick={handleDeleteCard} variant="danger">
                 Delete
               </Button>{" "}
             </Card.Body>
           </Card>
-          <FloatingCard
+          <FloatingPost
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
