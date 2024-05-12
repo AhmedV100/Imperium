@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBarDonor";
 import Footer from "../components/footer";
 
 import DeliveryCardOptions from "../components/DeliveryCardOptions";
