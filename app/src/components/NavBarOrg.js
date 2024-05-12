@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import NotificationIcon from "./NotificationIcon";
 import defaultProfile from "../images/default user profile.png";
+let subMenu = document.getElementById("subMenu");
 
 export default function NavBarOrg({ posts }) {
   const nav = useNavigate();
@@ -77,7 +78,7 @@ const handleDeleteOrganization = () => {
             >
               View Posts
             </Nav.Link>
-           
+
             {/* Add more Nav.Link components for additional pages */}
           </Nav>
           <Button
@@ -93,32 +94,40 @@ const handleDeleteOrganization = () => {
           >
             New Post
           </Button>
+          <img
+            src={defaultProfile}
+            className="ms-auto user-profile"
+            onClick={toggleMenu}
+          />
           <div className="user-dropdown-wrap" id="subMenu">
             <div className="user-dropdown">
               <div className="user-info">
                 <img src={defaultProfile} />
-                <p style={{ fontSize: "20px", marginTop: "10px" }}>Resala</p>
+                <p style={{ fontSize: "20px", marginTop: "10px" }}>
+                  James Angelo
+                </p>
               </div>
               <hr />
+              
               <a href="/Home" class="dropdown-link">
                 <p style={{ marginTop: "18px", fontSize: "18px" }}> Log out</p>{" "}
                 <span>{">"}</span>
               </a>
               <hr />
-              <a
-                href="/Home"
-                class="dropdown-link"
-                onClick={handleDeleteOrganization}
-              >
+              <a href="#" class="dropdown-link">
                 <p style={{ marginTop: "18px", fontSize: "18px" }}>
-                  Delete Organization
+                  Delete user
                 </p>{" "}
                 <br /> <span>{">"}</span>
               </a>
             </div>
           </div>
+         
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
+}
+function toggleMenu() {
+  subMenu.classList.toggle("open-menu");
 }
