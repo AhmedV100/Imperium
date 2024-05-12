@@ -63,7 +63,7 @@ function NavBar({ posts }) {
               <NotificationIcon count={unreadNotificationsCount} />
             </Nav.Link>
             <Nav.Link
-              href={`/organization/${orgId}/posts`}
+              href={`/organization/${orgId}/all-posts`}
               className="nav-link"
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
