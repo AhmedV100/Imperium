@@ -110,7 +110,7 @@ export default function ItemCard({ category, item, index }) {
         <div>
           <Card className="card">
             <a onClick={handleShowCard}>
-              <Card.Img variant="top" src={bloodExample} className="card-img" />
+              <Card.Img variant="top" src={clothExample} className="card-img" />
             </a>
             <Card.Body>
               <Card.Title>{item.type_of_clothing}</Card.Title>
