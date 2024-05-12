@@ -3,10 +3,17 @@ import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import logo from "./navIcon.ico";
 import "./hover.css";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
+import defaultProfile from "../images/default user profile.png";
+
+let subMenu = document.getElementById("subMenu");
 
 export default function NavBarDonor() {
   const nav = useNavigate();
   const { donorId } = useParams();
+
+  const handleDeliveryCardClick = () => {
+    nav(`/donor/${parseInt(donorId)}/deliveryandnotifications`);
+  };
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: "70px" }}>
@@ -35,7 +42,28 @@ export default function NavBarDonor() {
              <NavLink to={`/donor#${donorId}`} className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Donate</NavLink>
              <NavLink to="/faqs" className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>FAQs</NavLink>
           </Nav>
-          <Button
+          <img src={defaultProfile} className="ms-auto user-profile" onClick={toggleMenu}/>
+          <div className="user-dropdown-wrap" id="subMenu">
+            <div className="user-dropdown">
+              <div className="user-info">
+                <img src={defaultProfile}/>
+                <p style={{fontSize:'20px', marginTop:'10px'}}>James Angelo</p>
+              </div>
+              <hr/>
+              <a onClick={handleDeliveryCardClick} class="dropdown-link">
+                <p style={{marginTop: '18px', fontSize:'18px'}}>Check delivery</p> <span>{'>'}</span>
+              </a>
+              <a href="/Home" class="dropdown-link">
+                <p style={{marginTop: '18px', fontSize:'18px'}}> Log out</p> <span>{'>'}</span>
+              </a>
+              <hr/>
+                <a href="#" class="dropdown-link">
+              <p style={{marginTop: '18px', fontSize:'18px'}}>Delete user</p> <br /> <span>{'>'}</span>
+              </a>
+            </div>
+          </div>
+
+          {/* <Button
             className="ms-auto"
             type="button"
             variant="outline-light"
@@ -49,9 +77,13 @@ export default function NavBarDonor() {
             }}
           >
             logout
-          </Button>
+          </Button> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
+}
+
+function toggleMenu() {
+  subMenu.classList.toggle("open-menu");
 }

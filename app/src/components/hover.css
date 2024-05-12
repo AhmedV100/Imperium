@@ -18,6 +18,90 @@
   animation: drawLine 1s ease forwards;
 }
 
+.user-profile {
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 6vw;
+  z-index: 2;
+}
+
+.user-dropdown-wrap {
+  position: absolute;
+  top: 100%;
+  right: 4%;
+  width: 320px;
+  z-index: 2;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.user-dropdown-wrap.open-menu {
+  max-height: 400px;
+}
+
+.user-dropdown {
+  background-color: #f4f2f7;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 5px;
+}
+
+.user-info {
+  background-color: #f4f2f7;
+  padding: 25px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.user-info h3 {
+  font-weight: 500;
+  z-index: 2;
+}
+
+.user-info img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  z-index: 2;
+}
+
+.user-dropdown hr {
+  border: 0;
+  height: 1.5px;
+  width: 100%;
+  background: #171717;
+  margin: 10px 0 10px;
+}
+
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #525252;
+  margin: 12px 0;
+}
+
+.dropdown-link p {
+  width: 100%;
+}
+
+.dropdown-link span {
+  font-size: 20px;
+  transition: transform 0.6s;
+}
+
+.dropdown-link:hover span {
+  transform: translateX(6px);
+}
+
+.dropdown-link:hover p {
+  font-weight: 600;
+}
 
 @keyframes drawLine {
   from {
