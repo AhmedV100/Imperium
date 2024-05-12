@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './donor_OrgRequests.css';
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBarAdmin";
 import Footer from "../components/footer";
 
 function Submission({ type, name, contact, profession, email,onViewDocuments, onAccept, onReject }) {

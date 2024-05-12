@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBarAdmin";
 import Footer from "../components/footer";
 import "./accountSettings.css"
 

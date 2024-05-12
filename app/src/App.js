@@ -30,6 +30,7 @@ import Donor_OrgRequests from "./shahd/Donor_OrgRequests"
 import AccountSettings from "./shahd/AccountSettings"
 import ViewNotificationPosts from "./pages/OrgPosts/ViewNotificationPosts";
 import ViewAllPosts from "./pages/OrgPosts/ViewAllPosts";
+import DeleteAccount from "./shahd/DeleteAccount"
 
 
 import Donors from "./Data/Donors.json";
@@ -158,6 +159,8 @@ function App() {
             {" "}
           </Route>
           <Route path="/admindashboard" element={<AdminDashboard />}></Route>
+          <Route path="/deleteAccount" element={<DeleteAccount/>}></Route>
+
 
           <Route path="/donorList" element={<DonorList />}></Route>
         </Routes>
