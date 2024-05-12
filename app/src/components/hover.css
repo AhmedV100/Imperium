@@ -1,5 +1,29 @@
-
 .nav-link:hover {
-    background-color: #343a40; /* Darker background color on hover */
-    color: #ffffff; /* Text color on hover */
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.nav-link.active {
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  animation: drawLine 1s ease forwards;
+}
+
+
+@keyframes drawLine {
+  from {
+      width: 0;
   }
+  to {
+      width: 100%;
+  }
+}

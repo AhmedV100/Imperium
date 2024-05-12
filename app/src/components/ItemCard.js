@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Card from "react-bootstrap/Card";
+import './Cards.css'
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 
@@ -25,44 +26,30 @@ export default function ItemCard({ category, item, index }) {
   const handleShowCard = () => setShowCard(true);
   const handleCloseCard = () => setShowCard(false);
 
-  const cardStyle = {
-    width: "18rem",
-  };
-  const ImgCardStyle = {
-    width: "100%",
-    height: "auto",
-    maxHeight: "150px",
-    objectFit: "cover",
-  };
-
-  switch (category) {
+  switch (item.object_type) {
     case "bloods":
       return (
         <div>
-          <Card style={cardStyle}>
-            <Card.Img variant="top" src={bloodExample} style={ImgCardStyle} />
-            <Card.Body>
-              <Card.Title>{item.name}</Card.Title>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>blood type:{item.blood_type}</ListGroup.Item>
-              <ListGroup.Item>
-                hospital name:{item.hospital_name}
-              </ListGroup.Item>
-              <ListGroup.Item>
-                hospital_area:{item.hospital_area}
-              </ListGroup.Item>
-            </ListGroup>
-            <Card.Body>
-              <Button size="lg" variant="success">
-                Donate
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-            </Card.Body>
-          </Card>
-          <FloatingCard
+          <Card className="card">
+        <a onClick={handleShowCard}>
+          <Card.Img variant="top"
+            src={bloodExample}
+            className="card-img"
+          />
+        </a>
+        <Card.Body>
+          <Card.Title>item.name</Card.Title>
+          <Card.Text>
+          blood type: {item.blood_type} <br />
+          hospital name: {item.hospital_name} <br />
+          hospital_area: {item.hospital_area}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <FloatingCard
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
@@ -72,26 +59,26 @@ export default function ItemCard({ category, item, index }) {
     case "books":
       return (
         <div>
-          <Card style={cardStyle}>
-            <Card.Img variant="top" src={bookExample} style={ImgCardStyle} />
-            <Card.Body>
-              <Card.Title>{item.name}</Card.Title>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>author:{item.author}</ListGroup.Item>
-              <ListGroup.Item>language:{item.language}</ListGroup.Item>
-              <ListGroup.Item>edition:{item.edition}</ListGroup.Item>
-            </ListGroup>
-            <Card.Body>
-              <Button size="lg" variant="success">
-                Donate
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-            </Card.Body>
-          </Card>
-          <FloatingCard
+           <Card className="card">
+        <a onClick={handleShowCard}>
+          <Card.Img variant="top"
+            src={bookExample}
+            className="card-img"
+          />
+        </a>
+        <Card.Body>
+          <Card.Title>item.name</Card.Title>
+          <Card.Text>
+          author: {item.author} <br />
+          language: {item.language} <br />
+          edition: {item.edition}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <FloatingCard
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
@@ -101,26 +88,26 @@ export default function ItemCard({ category, item, index }) {
     case "cases":
       return (
         <div>
-          <Card style={cardStyle}>
-            <Card.Img variant="top" src={caseExample} />
-            <Card.Body>
-              <Card.Title>{item.patient_name}</Card.Title>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>age:{item.age}</ListGroup.Item>
-              <ListGroup.Item>gender:{item.gender}</ListGroup.Item>
-              <ListGroup.Item>weight:{item.weight}</ListGroup.Item>
-            </ListGroup>
-            <Card.Body>
-              <Button size="lg" variant="success">
-                Donate
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-            </Card.Body>
-          </Card>
-          <FloatingCard
+          <Card className="card">
+          <a onClick={handleShowCard}>
+            <Card.Img variant="top"
+              src={caseExample}
+              className="card-img"
+            />
+          </a>
+          <Card.Body>
+            <Card.Title>item.patient_name</Card.Title>
+            <Card.Text>
+            age: {item.age} <br />
+            gender: {item.gender} <br />
+            weight: {item.weight}
+          </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted">Last updated 3 mins ago</small>
+          </Card.Footer>
+        </Card>
+        <FloatingCard
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
@@ -130,26 +117,26 @@ export default function ItemCard({ category, item, index }) {
     case "clothes":
       return (
         <div>
-          <Card style={cardStyle}>
-            <Card.Img variant="top" src={clothExample} />
-            <Card.Body>
-              <Card.Title>{item.type_of_clothing}</Card.Title>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>age:{item.age}</ListGroup.Item>
-              <ListGroup.Item>gender:{item.gender}</ListGroup.Item>
-              <ListGroup.Item>season:{item.season}</ListGroup.Item>
-            </ListGroup>
-            <Card.Body>
-              <Button size="lg" variant="success">
-                Donate
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-            </Card.Body>
-          </Card>
-          <FloatingCard
+          <Card className="card">
+        <a onClick={handleShowCard}>
+          <Card.Img variant="top"
+            src={bloodExample}
+            className="card-img"
+          />
+        </a>
+        <Card.Body>
+          <Card.Title>item.type_of_clothing</Card.Title>
+          <Card.Text>
+          age: {item.age} <br />
+          gender: {item.gender} <br />
+          season: {item.season}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <FloatingCard
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
@@ -159,25 +146,25 @@ export default function ItemCard({ category, item, index }) {
     case "foods":
       return (
         <div>
-          <Card style={cardStyle}>
-            <Card.Img variant="top" src={foodExample} />
-            <Card.Body>
-              <Card.Title>{item.name}</Card.Title>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>quantity:{item.quantity}</ListGroup.Item>
-              <ListGroup.Item>type:{item.type}</ListGroup.Item>
-            </ListGroup>
-            <Card.Body>
-              <Button size="lg" variant="success">
-                Donate
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-            </Card.Body>
-          </Card>
-          <FloatingCard
+          <Card className="card">
+        <a onClick={handleShowCard}>
+          <Card.Img variant="top"
+            src={foodExample}
+            className="card-img"
+          />
+        </a>
+        <Card.Body>
+          <Card.Title>item.name</Card.Title>
+          <Card.Text>
+          quantity: {item.quantity} <br />
+          type: {item.type}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <FloatingCard
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
@@ -189,97 +176,85 @@ export default function ItemCard({ category, item, index }) {
         case "device":
           return (
             <div>
-              <Card style={cardStyle}>
-                <Card.Img
-                  variant="top"
-                  src={deviceExample}
-                  style={ImgCardStyle}
-                />
-                <Card.Body>
-                  <Card.Title>{item.device_type}</Card.Title>
-                </Card.Body>
-                <ListGroup className="list-group-flush">
-                  <ListGroup.Item>device_use:{item.use}</ListGroup.Item>
-                  <ListGroup.Item>quantity:{item.quantity}</ListGroup.Item>
-                </ListGroup>
-                <Card.Body>
-                  <Button size="lg" variant="success">
-                    Donate
-                  </Button>{" "}
-                  <Button size="lg" onClick={handleShowCard} variant="info">
-                    See more
-                  </Button>{" "}
-                </Card.Body>
-              </Card>
-              <FloatingCard
-                item={item}
-                show={showCard}
-                handleClose={handleCloseCard}
-              />
+          <Card className="card">
+        <a onClick={handleShowCard}>
+          <Card.Img variant="top"
+            src={deviceExample}
+            className="card-img"
+          />
+        </a>
+        <Card.Body>
+          <Card.Title>item.device_type</Card.Title>
+          <Card.Text>
+          device_use: {item.use} <br />
+          quantity: {item.quantity}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <FloatingCard
+            item={item}
+            show={showCard}
+            handleClose={handleCloseCard}
+          />
             </div>
           );
         case "equipment":
           return (
             <div>
-              <Card style={cardStyle}>
-                <Card.Img
-                  variant="top"
-                  src={equipmentExample}
-                  style={ImgCardStyle}
-                />
-                <Card.Body>
-                  <Card.Title>{item.equipment_type}</Card.Title>
-                </Card.Body>
-                <ListGroup className="list-group-flush">
-                  <ListGroup.Item>equipment_use:{item.use}</ListGroup.Item>
-                  <ListGroup.Item>quantity:{item.quantity}</ListGroup.Item>
-                </ListGroup>
-                <Card.Body>
-                  <Button size="lg" variant="success">
-                    Donate
-                  </Button>{" "}
-                  <Button size="lg" onClick={handleShowCard} variant="info">
-                    See more
-                  </Button>{" "}
-                </Card.Body>
-              </Card>
-              <FloatingCard
-                item={item}
-                show={showCard}
-                handleClose={handleCloseCard}
-              />
+          <Card className="card">
+        <a onClick={handleShowCard}>
+          <Card.Img variant="top"
+            src={equipmentExample}
+            className="card-img"
+          />
+        </a>
+        <Card.Body>
+          <Card.Title>item.equipment_type</Card.Title>
+          <Card.Text>
+          equipment_use: {item.use} <br />
+          quantity: {item.quantity}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <FloatingCard
+            item={item}
+            show={showCard}
+            handleClose={handleCloseCard}
+          />
             </div>
           );
         case "medication":
           return (
             <div>
-              <Card style={cardStyle}>
-                <Card.Img
-                  variant="top"
-                  src={medicationExample}
-                  style={ImgCardStyle}
-                />
-                <Card.Body>
-                  <Card.Title>{item.medication_type}</Card.Title>
-                </Card.Body>
-                <ListGroup className="list-group-flush">
-                  <ListGroup.Item>medication_use:{item.use}</ListGroup.Item>
-                  <ListGroup.Item>quantity:{item.quantity}</ListGroup.Item>
-                </ListGroup>
-                <Card.Body>
-                  <Button size="lg" variant="success">
-                    Donate
-                  </Button>{" "}
-                  <Button size="lg" onClick={handleShowCard} variant="info">
-                    See more
-                  </Button>{" "}
-                </Card.Body>
-              </Card>
-              <FloatingCard
-                item={item}
-                show={showCard}
-                handleClose={handleCloseCard}
-              />
+              <Card className="card">
+        <a onClick={handleShowCard}>
+          <Card.Img variant="top"
+            src={medicationExample}
+            className="card-img"
+          />
+        </a>
+        <Card.Body>
+          <Card.Title>item.medication_type</Card.Title>
+          <Card.Text>
+          medication_use: {item.use} <br />
+          quantity: {item.quantity}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <FloatingCard
+            item={item}
+            show={showCard}
+            handleClose={handleCloseCard}
+          />
             </div>
           );
         default:
@@ -289,28 +264,24 @@ export default function ItemCard({ category, item, index }) {
     case "stationaries":
       return (
         <div>
-          <Card style={cardStyle}>
-            <Card.Img
-              variant="top"
-              src={stationaryExample}
-              style={ImgCardStyle}
-            />
-            <Card.Body>
-              <Card.Title>{item.type_of_item}</Card.Title>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>amount:{item.amount}</ListGroup.Item>
-            </ListGroup>
-            <Card.Body>
-              <Button size="lg" variant="success">
-                Donate
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-            </Card.Body>
-          </Card>
-          <FloatingCard
+          <Card className="card">
+        <a onClick={handleShowCard}>
+          <Card.Img variant="top"
+            src={stationaryExample}
+            className="card-img"
+          />
+        </a>
+        <Card.Body>
+          <Card.Title>item.type_of_item</Card.Title>
+          <Card.Text>
+          amount: {item.amount}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <FloatingCard
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
@@ -320,30 +291,26 @@ export default function ItemCard({ category, item, index }) {
     case "teaches":
       return (
         <div>
-          <Card style={cardStyle}>
-            <Card.Img variant="top" src={teachExample} style={ImgCardStyle} />
-            <Card.Body>
-              <Card.Title>{"Teaching"}</Card.Title>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>
-                number of students:{item.number_of_students}
-              </ListGroup.Item>
-              <ListGroup.Item>address:{item.address}</ListGroup.Item>
-              <ListGroup.Item>
-                subjects_to_be_taught:{item.subjects_to_be_taught}
-              </ListGroup.Item>
-            </ListGroup>
-            <Card.Body>
-              <Button size="lg" variant="success">
-                Donate
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-            </Card.Body>
-          </Card>
-          <FloatingCard
+             <Card className="card">
+        <a onClick={handleShowCard}>
+          <Card.Img variant="top"
+            src={teachExample}
+            className="card-img"
+          />
+        </a>
+        <Card.Body>
+          <Card.Title>Education</Card.Title>
+          <Card.Text>
+          number of students: {item.number_of_students} <br />
+          address: {item.address} <br />
+          subjects_to_be_taught: {item.subjects_to_be_taught}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <FloatingCard
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
@@ -353,26 +320,26 @@ export default function ItemCard({ category, item, index }) {
     case "toys":
       return (
         <div>
-          <Card style={cardStyle}>
-            <Card.Img variant="top" src={toyExample} style={ImgCardStyle} />
-            <Card.Body>
-              <Card.Title>{item.type}</Card.Title>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>age:{item.age}</ListGroup.Item>
-              <ListGroup.Item>gender:{item.gender}</ListGroup.Item>
-              <ListGroup.Item>quantity:{item.quantity}</ListGroup.Item>
-            </ListGroup>
-            <Card.Body>
-              <Button size="lg" variant="success">
-                Donate
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-            </Card.Body>
-          </Card>
-          <FloatingCard
+          <Card className="card">
+        <a onClick={handleShowCard}>
+          <Card.Img variant="top"
+            src={toyExample}
+            className="card-img"
+          />
+        </a>
+        <Card.Body>
+          <Card.Title>{item.type}</Card.Title>
+          <Card.Text>
+          age: {item.age} <br />
+          gender: {item.gender} <br />
+          quantity: {item.quantity}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <FloatingCard
             item={item}
             show={showCard}
             handleClose={handleCloseCard}
@@ -381,33 +348,22 @@ export default function ItemCard({ category, item, index }) {
       );
     default:
       return (
-        <div>
-          <Card style={cardStyle}>
-            <Card.Img variant="top" src={example} style={ImgCardStyle} />
-            <Card.Body>
-              <Card.Title>{"....loading title..."}</Card.Title>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroup.Item>{"....loading details..."}</ListGroup.Item>
-              <ListGroup.Item>{"....loading details..."}</ListGroup.Item>
-              <ListGroup.Item>{"....loading details..."}</ListGroup.Item>
-            </ListGroup>
-            <Card.Body>
-              <Button size="lg" variant="success" disabled="true">
-                Donate
-              </Button>{" "}
-              <Button size="lg" onClick={handleShowCard} variant="info">
-                See more
-              </Button>{" "}
-            </Card.Body>
-          </Card>
-          <FloatingCard
-            categoryf={category}
-            item={item}
-            show={showCard}
-            handleClose={handleCloseCard}
-          />
-        </div>
+        <div class="card" aria-hidden="true">
+  <img src="..." class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </h5>
+    <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+  </div>
+</div>
       );
   }
 }

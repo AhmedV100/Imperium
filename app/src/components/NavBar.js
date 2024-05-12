@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import logo from './navIcon.ico';
-import "./hover.css";
-import { useNavigate } from "react-router-dom";
+import './hover.css';
 
-function NavBar() {
+function NavBar(isLoggedIn) {
+  const location = useLocation();
   const nav = useNavigate();
+  const [activeLink, setActiveLink] = useState('');
+
+  useEffect(() => {
+    // Extract the pathname from the current location and set the active link accordingly
+    const pathname = location.pathname;
+    if (pathname === '/Home') setActiveLink('Home');
+    else if (pathname === '/donor/browser') setActiveLink('Donate');
+    else if (pathname === '/faqs') setActiveLink('FAQs');
+    // Add more conditions for additional pages
+  }, [location.pathname]);
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: '70px' }}>
       <Container style={{ maxWidth: '100%' }}>
         <Navbar.Brand href="/Home" style={{ paddingLeft: '2vw', paddingRight: '1vw', marginRight: '1.5vw', marginLeft: '2vw' }}>
-          <img
-            src={logo}
-            height="30"
-            className="d-inline-block align-top"
-            alt="Logo"
-          />
+          <img src={logo} height="30" className="d-inline-block align-top" alt="Logo" />
           {' Imperium'}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,11 +31,11 @@ function NavBar() {
             <Nav.Link href="/Home" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Home</Nav.Link>
             {/* <Nav.Link href="/donor" className="nav-link" style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Donate</Nav.Link> */}
           </Nav>
-          <Button className="ms-auto" type="button" onClick={()=>nav("/Login")} variant="outline-light" 
-          style={{ paddingLeft: '1.2vw', paddingRight: '1.2vw', paddingTop: '3px', paddingBottom: '5px', marginRight: '4vw' }}>
-            Sign In</Button>
+            <Button className="ms-auto" type="button" onClick={() => nav("/Login")} variant="outline-light"
+            style={{ paddingLeft: '1.2vw', paddingRight: '1.2vw', paddingTop: '3px', paddingBottom: '5px', marginRight: '4vw' }}>
+            Sign In
+          </Button>
         </Navbar.Collapse>
-          
       </Container>
     </Navbar>
   );
