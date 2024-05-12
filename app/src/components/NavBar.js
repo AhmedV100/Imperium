@@ -38,11 +38,25 @@ function NavBar(isLoggedIn) {
           {" Imperium"}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" style={{ margin: '0' }}>
-          <Nav className="ml-auto" style={{ margin: '0' }}>
-            <NavLink to="/Home" className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Home</NavLink>
-            <NavLink to="/donor/browser" className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>Donate</NavLink>
-            <NavLink to="/faqs" className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>FAQs</NavLink>
+        <Navbar.Collapse id="basic-navbar-nav" style={{ margin: "0" }}>
+          <Nav className="ml-auto" style={{ margin: "0" }}>
+            <NavLink
+              to="/Home"
+              className={`nav-link`}
+              activeClassName={`active`}
+              style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/login"
+              className={`nav-link`}
+              activeClassName={`active`}
+              style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
+            >
+              Donate
+            </NavLink>
+            {/* <NavLink to="/faqs" className={`nav-link`} activeClassName={`active`} style={{ paddingLeft: '1vw', paddingRight: '1vw', margin: '0' }}>FAQs</NavLink> */}
           </Nav>
           <Button
             className="ms-auto"

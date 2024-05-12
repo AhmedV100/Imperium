@@ -1,4 +1,5 @@
-import React, { useState, useParams } from "react";
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/footer";
 import "./schedpickup.css";

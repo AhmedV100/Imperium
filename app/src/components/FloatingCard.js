@@ -28,7 +28,12 @@ function FloatingCard({ item, show, handleClose }) {
       (item.quantity && donationQuantity > 0) ||
       (item.amount && donationQuantity > 0)
     ) {
+      console.log(donorId);
       nav(`/donor/${donorId}/schedpickup`);
+    } else if (!item.amount && !item.quantity) {
+      nav(`/donor/${donorId}/schedpickup`);
+    }else{
+      alert("Can not donate!");
     }
   };
 
