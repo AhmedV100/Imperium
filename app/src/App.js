@@ -28,11 +28,7 @@ import Donor_OrgSubmissions from "./shahd/Donor_OrgSubmissions";
 import OrganizationList from "./shahd/OrganizationList"
 import Donor_OrgRequests from "./shahd/Donor_OrgRequests"
 import AccountSettings from "./shahd/AccountSettings"
-// import Donors from "./Data/Donors.json";
-// import Admin from "./Data/Admin.json";
-
 import ViewNotificationPosts from "./pages/OrgPosts/ViewNotificationPosts";
-
 import Donors from "./Data/Donors.json";
 import Admin from "./Data/Admin.json";
 
@@ -43,8 +39,6 @@ function App() {
     localStorage.setItem("organizations", JSON.stringify(Organizations));
     localStorage.setItem("donors", JSON.stringify(Donors));
     localStorage.setItem("posts", JSON.stringify(Posts));
-    localStorage.setItem("donors", JSON.stringify(Donors));
-    localStorage.setItem("admin", JSON.stringify(Admin));
   };
 
   useEffect(() => {

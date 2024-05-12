@@ -18,6 +18,7 @@ function Login({ registered }) {
 
   var users = [...admins, ...organizations, ...donors];
 
+  console.log("users: ", users);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -32,7 +33,7 @@ function Login({ registered }) {
       } else if (user.object_type === "organization") {
         console.log("Login successful");
         navigate(`/organization/${user.id}`);
-      } else if (user.object_type === "donor"){
+      } else if (user.object_type === "donor") {
         console.log("Login successful");
         navigate(`/donor/${user.id}`);
       }
