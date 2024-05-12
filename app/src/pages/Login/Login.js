@@ -80,9 +80,9 @@ function Login({ registered }) {
                   <input type="checkbox" /> Remember Me
                 </label>
               </div>
-              <div className="forgotBox">
+              {/* <div className="forgotBox">
                 <a href="#"> Forgot Password? </a>
-              </div>
+              </div> */}
             </div>
             <button type="submit">Login</button>
             <div className="error-message">{errorMessage}</div>
