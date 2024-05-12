@@ -1,7 +1,5 @@
 .wopper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
     min-height: 100vh;
     min-width: 100%;
     padding: 20px;
@@ -11,23 +9,26 @@
 
 /* Header styles */
 .wopper h1 {
-    color: #3f51b5;
+    color: #000000;
     margin-bottom: 20px;
     text-align: center;
 }
 
 /* Search input styles */
 .wrapping {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.wrapping {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Add margin to separate it from the header */
+
+.hrStyle hr{
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #000000;
+
 }
 
 .wrapping input {
@@ -38,26 +39,29 @@
     font-size: 16px; 
     outline: none;
 }
-/* Organization list styles */
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
 
-li.organization {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 4px;
+
+.organization-card {
+    background-color: #d41052;    
+    border: 1px solid #880430;
+    padding: 20px;
+    margin: 50px 50px 50px 145px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
     cursor: pointer;
+    display: inline-block; /* Display cards inline */
+    min-width: 220px; /* Set minimum width for cards */
+    color: #ffffff; /* Set text color to dark */
 }
 
-li.organization:hover {
-    background-color: #f0f0f0;
+.organization-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.organization-card p {
+    font-size: 18px; /* Increase font size */
 }
 
 /* Popup styles */

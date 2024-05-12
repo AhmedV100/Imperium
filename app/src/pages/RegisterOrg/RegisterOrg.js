@@ -70,7 +70,7 @@ function RegisterOrg() {
         setTermsAccepted(false);
 
         console.log('User registered successfully');
-        navigate("/organization/id:"+newUser.id);
+        navigate("/login");
     };
 
     return (

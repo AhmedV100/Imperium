@@ -3,7 +3,6 @@ import "./register.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
-import users from "../Data/users.json";
 
 export default function Register({ onRegisteredUsersChange }) {
   const navigate = useNavigate();
@@ -71,7 +70,7 @@ export default function Register({ onRegisteredUsersChange }) {
     setTermsAccepted(false); 
 
     console.log("User registered successfully");
-    navigate("/donor/id:" + newUser.id);
+    navigate("/login");
   };
 
   return (

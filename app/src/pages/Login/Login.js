@@ -29,7 +29,7 @@ function Login({ registered }) {
     if (user) {
       if (user.object_type === "admin") {
         console.log("Login successful");
-        navigate(`/admindashboard/${user.id}`);
+        navigate(`/admindashboard`);
       } else if (user.object_type === "organization") {
         console.log("Login successful");
         navigate(`/organization/${user.id}`);
