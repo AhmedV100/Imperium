@@ -28,22 +28,22 @@ import Donor_OrgSubmissions from "./shahd/Donor_OrgSubmissions";
 import OrganizationList from "./shahd/OrganizationList"
 import Donor_OrgRequests from "./shahd/Donor_OrgRequests"
 import AccountSettings from "./shahd/AccountSettings"
-// import Donors from "./Data/Donors.json";
-// import Admin from "./Data/Admin.json";
-
 import ViewNotificationPosts from "./pages/OrgPosts/ViewNotificationPosts";
+<<<<<<< HEAD
 import ViewAllPosts from "./pages/OrgPosts/ViewAllPosts";
 
+=======
+>>>>>>> 7e8adaf4988475b34c25a605c1f804d9ac1a8565
 import Donors from "./Data/Donors.json";
 import Admin from "./Data/Admin.json";
 
 
 function App() {
   const storeObjectInLocalStorage = () => {
+    localStorage.setItem("admins", JSON.stringify(Admin));
     localStorage.setItem("organizations", JSON.stringify(Organizations));
-    localStorage.setItem("posts", JSON.stringify(Posts));
     localStorage.setItem("donors", JSON.stringify(Donors));
-    localStorage.setItem("admin", JSON.stringify(Admin));
+    localStorage.setItem("posts", JSON.stringify(Posts));
   };
 
   useEffect(() => {
@@ -56,18 +56,27 @@ function App() {
         <Routes>
           <Route index element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
-          <Route path="/donor" element={<Donor />}></Route>
+
+          <Route path="/donor/:donorId" element={<Donor />}></Route>
           <Route
-            path="/donor/deliveryandnotifications"
+            path="/donor/:donorId/deliveryandnotifications"
             element={<DeliveryAndNotifications />}
           />
-          <Route path="/donor/donationhistory" element={<DonationHistory />} />
           <Route
-            path="/donor/donationnotification"
+            path="/donor/:donorId/donationhistory"
+            element={<DonationHistory />}
+          />
+          <Route
+            path="/donor/:donorId/donationnotification"
             element={<DonationNotification />}
           />
-          <Route path="/donor/browser" element={<DonorBrowser />} />
+          <Route path="/donor/:donorId/browser" element={<DonorBrowser />} />
           <Route
+            path="/donor/:donorId/schedpickup"
+            element={<SchedPickup />}
+          ></Route>
+
+          {/* <Route
             path="/donor/browser/all"
             element={<DonorBrowser filter={"all"} />}
           />
@@ -94,7 +103,7 @@ function App() {
           <Route
             path="/donor/browser/blood"
             element={<DonorBrowser filter={"blood"} />}
-          />
+          /> */}
 
           {/* organization posts */}
           <Route
@@ -107,6 +116,21 @@ function App() {
           />
 
           <Route path="/organization/:orgId" element={<OrgHome />} />
+<<<<<<< HEAD
+=======
+          {/* <Route
+            path="/organization/:orgId/posts"
+            element={<OrganizationPosts />}
+            />
+            <Route
+            path="/organization/:orgId/settings"
+            element={<OrganizationSettings />}
+            />
+            <Route
+            path="/organization/:orgId/notifications"
+            element={<OrganizationNotifications />}
+          /> */}
+>>>>>>> 7e8adaf4988475b34c25a605c1f804d9ac1a8565
 
           <Route
             path="/organization/:orgId/new-post"
@@ -114,7 +138,6 @@ function App() {
           ></Route>
 
           <Route path="/login" element={<Login />}></Route>
-          <Route path="/schedpickup" element={<SchedPickup />}></Route>
 
           <Route path="/register" element={<Register />}></Route>
           <Route
@@ -140,6 +163,7 @@ function App() {
             {" "}
           </Route>
           <Route path="/admindashboard" element={<AdminDashboard />}></Route>
+
           <Route path="/donorList" element={<DonorList />}></Route>
         </Routes>
       </BrowserRouter>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Organization Requests</title>
+</head>
+<body>
+    <h2>Organization Requests</h2>
+    <p>As an Admin, you can view a list of all organizations requesting to use the application to assess partnership opportunities and expand the platform's network of collaborators.</p>
+    
+    <ul>
+        <li>Organization ABC</li>
+        <li>Organization XYZ</li>
+        <li>Organization 123</li>
+        <!-- Add more organizations here -->
+    </ul>
+</body>
+</html>
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Organization Submissions</title>
+</head>
+<body>
+    <h2>Review Organization Submissions</h2>
+    <p>As an admin, you can view and download the information submitted by organizations to decide whether to accept or reject their request to join. This ensures that only credible and aligned organizations are onboarded, maintaining the platform's integrity.</p>
+    
+    <!-- Add your review process and organization submissions display here -->
+</body>
+</html>
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Registered Organizations</title>
+</head>
+<body>
+
+    <h2>Search Registered Organizations</h2>
+    <input type="text" id="searchInput" onkeyup="searchOrganizations()" placeholder="Search organizations...">
+
+    <ul id="organizationList">
+        <li>Organization ABC</li>
+        <li>Organization XYZ</li>
+        <li>Organization 123</li>
+        <!-- Example list items -->
+    </ul>
+</body>
+</html>
+</head>
+<body>
+
+    <h2>Organization Details</h2>
+    
+    <!-- Contact Details -->
+    <h3>Contact Details</h3>
+    <p>Name: Organization Name</p>
+    <p>Email: organization@example.com</p>
+    <p>Phone: +1234567890</p>
+    
+    <!-- Address and Location -->
+    <h3>Address and Location</h3>
+    <p>Address: 123 Main Street, City, Country</p>
+    <!-- Google Maps container -->
+    <div id="map"></div>
+
+    <!-- Organization Type -->
+    <h3>Organization Type</h3>
+    <p>Type: Non-Profit Organization</p>
+
+    <script>
+        // Initialize and display Google Map with marker
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 0, lng: 0}, // Set initial map center
+                zoom: 15 // Set initial zoom level
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 0, lng: 0}, // Set marker position
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+   
+    <div class="admin-actions">
+        <h2>Admin Actions</h2>
+        <ul>
+            <li><a href="organizations.html">View Organization</a></li>
+            <li><a href="#donor-list">View Donor List</a></li>
+            <!-- Add the Account Management button -->
+            <li><a href="account_management.html">Account Management</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization List</title>
+</head>
+<body>
+    <h1>Organization List</h1>
+    <ul id="organization-list">
+        <!-- Dummy organization data -->
+        <li onclick="viewOrganizationDetails(1)">Organization A</li>
+        <li onclick="viewOrganizationDetails(2)">Organization B</li>
+        <li onclick="viewOrganizationDetails(3)">Organization C</li>
+    </ul>
+
+    <script>
+        function viewOrganizationDetails(organizationId) {
+            // Here you can redirect to a page or display details dynamically
+            // For demonstration, let's just show an alert with the organization ID
+            alert("Viewing details for organization with ID: " + organizationId);
+        }
+    </script>
+</body>
+</html>
+
+
+
