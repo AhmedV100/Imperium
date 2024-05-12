@@ -15,6 +15,12 @@ export default function NavBarDonor() {
     nav(`/donor/${parseInt(donorId)}/deliveryandnotifications`);
   };
 
+  const handleDeleteDonor = () => {
+    const Donors = JSON.parse(localStorage.getItem("donors"));
+    const updatedDonors = Donors.filter((donor)=>donor.id !== parseInt(donorId));
+    localStorage.setItem("Donors",JSON.stringify(updatedDonors));
+};
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: "70px" }}>
       <Container style={{ maxWidth: "100%" }}>
@@ -57,7 +63,7 @@ export default function NavBarDonor() {
                 <p style={{marginTop: '18px', fontSize:'18px'}}> Log out</p> <span>{'>'}</span>
               </a>
               <hr/>
-                <a href="#" class="dropdown-link">
+                <a href="/Home" onClick={handleDeleteDonor} class="dropdown-link">
               <p style={{marginTop: '18px', fontSize:'18px'}}>Delete user</p> <br /> <span>{'>'}</span>
               </a>
             </div>

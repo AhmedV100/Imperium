@@ -114,7 +114,7 @@ const handleDeleteOrganization = () => {
                 <span>{">"}</span>
               </a>
               <hr />
-              <a href="#" class="dropdown-link">
+              <a href="/Home" onClick={handleDeleteOrganization} class="dropdown-link">
                 <p style={{ marginTop: "18px", fontSize: "18px" }}>
                   Delete user
                 </p>{" "}
