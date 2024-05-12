@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './donorList.css';
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBarAdmin";
 import Footer from "../components/footer";
 
 function DonorList() {

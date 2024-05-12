@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBarAdmin";
 import Footer from "../components/footer";
 import './adminDashboard.css';
 
@@ -31,7 +31,7 @@ function AdminDashboard() {
               <button onClick={() => redirectToPage('/donor_OrgRequests')}>Manage Donor/Organization Requests</button>
             </li>
             <li>
-              <button onClick={() => redirectToPage('')}>Manage Users Account</button>
+              <button onClick={() => redirectToPage('/deleteAccount')}>Manage Users Account</button>
             </li>
             <li>
               <button onClick={() => redirectToPage('/accountSettings')}>Account Settings</button>
