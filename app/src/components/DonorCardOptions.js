@@ -4,8 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import "./Cards.css";
 
-import donationImage1 from "../images/row1-donation.png";
-import donationImage2 from "../images/row3-donation.png";
+import donationImage1 from "../images/donation image.jpg";
+import donationImage2 from "../images/delivery.png";
 
 function DonorCardOptions() {
   const { donorId } = useParams();
@@ -31,9 +31,6 @@ function DonorCardOptions() {
           <Card.Title>Browser</Card.Title>
           <Card.Text>Browse Items needs to donated now !</Card.Text>
         </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 1 hr ago</small>
-        </Card.Footer>
       </Card>
       <Card className="card">
         <a >
@@ -43,9 +40,6 @@ function DonorCardOptions() {
           <Card.Title>Delivery</Card.Title>
           <Card.Text>Check your delivery!. </Card.Text>
         </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 40 mins ago</small>
-        </Card.Footer>
       </Card>
     </CardGroup>
   );
