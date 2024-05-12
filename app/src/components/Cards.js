@@ -2,64 +2,52 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import './Cards.css'
 
-import donationImage1 from "../images/row1-donation.png";
-import donationImage2 from "../images/row3-donation.png";
+import bloodExample from "../images/bloods/example.png";
+import bookExample from "../images/books/example.png";
+import clothExample from "../images/clothes/example.png";
 
 function UnfeaturedCards() {  
   return (
     <CardGroup style={{ scale: '0.93', width: '100%', marginBottom: '4%' }}>
       <Card className="card">
-        <a href="Donation1">
+        <a href="/Login">
           <Card.Img variant="top"
-            src={donationImage1}
+            src={bloodExample}
             className="card-img"
           />
         </a>
         <Card.Body>
           <Card.Title>Donation 1</Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
+            Help the ones in needs of more blood donations.
           </Card.Text>
         </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
       </Card>
       <Card className="card">
-        <a href="Donation2">
-          <Card.Img variant="top" src={donationImage2}
+        <a href="/Login">
+          <Card.Img variant="top" src={bookExample}
             className="card-img"
           />
         </a>
         <Card.Body>
-          <Card.Title>Donation 2</Card.Title>
+          <Card.Title>Books</Card.Title>
           <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.{' '}
+            You can give books to assist people in need of more education.{' '}
           </Card.Text>
         </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
       </Card>
       <Card className="card">
-        <a href="Donation3">
-          <Card.Img variant="top" src={donationImage1}
+        <a href="/Login">
+          <Card.Img variant="top" src={clothExample}
             className="card-img"
           />
         </a>
         <Card.Body>
-          <Card.Title>Donation 3</Card.Title>
+          <Card.Title>Clothes</Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
+            Some people cannot even affoct proper clothing, you can make a difference here.
           </Card.Text>
         </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
       </Card>
     </CardGroup>
   );
