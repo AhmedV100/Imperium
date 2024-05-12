@@ -1,0 +1,91 @@
+.donor-list-container {
+    
+    background-image: url("../images/row3-donation.png");
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100%;
+}
+.donor-list-container .h1style{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add margin to separate it from the header */
+}
+
+.searchBar input {
+    width: 50%; 
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px; 
+    outline: none;
+}
+
+
+
+.hrStyle hr{
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #000000;
+
+}
+
+.donor-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.donor-card {
+    margin: 50px;
+    margin-left: 100px;
+    width: 200px;
+    padding: 20px;
+    background-color: #d41052;    
+    border: 1px solid #880430;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.donor-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}

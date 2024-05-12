@@ -1,0 +1,97 @@
+/* login.css */
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.register  {
+    max-width: 400px;
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body {
+    display:flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+body {
+    background-color: #f8f8f8; /* Background color for the other half */
+    color: #333; /* Text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto;
+}
+
+.background-image {
+    flex: 1; /* Take up half of the container */
+    background-image: url('orphange.webp'); /* Path to your background image */
+
+
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    height: 100%; /* Full height of the container */
+}
+
+.content {
+    flex: 1; /* Take up half of the container */
+    padding: 20px;
+}
+

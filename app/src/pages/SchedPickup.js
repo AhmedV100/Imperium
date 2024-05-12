@@ -38,10 +38,13 @@ function SchedPickup() {
     return (
         <>
             <header className="headnav"><NavBar /></header>
+           
             <div className="wrappp">
+                
                 <div className="boxx2">
                     <Stack gap={3} className="col-md-5 mx-auto" style={{ width: "90%", marginTop: "28px" }}>
                         <Container fluid>
+                            <Row style={{marginBottom:"20px"}}> <h3 style={{textAlign:"center", Font:"inherit"}}>Select your pickup details: </h3></Row>
                             <Row>
                                 <h6 className="boxx3" style={{marginBottom:"10px"}}>Please choose your vehicle:</h6>
                                 <Form>
@@ -110,7 +113,7 @@ function SchedPickup() {
 
                         </Container>
 
-                        <Button className="color" variant="secondary" onClick={handleSubmit}> Confirm</Button>
+                        <Button className="color" variant="secondary" onClick={handleSubmit}> Confirm Donation</Button>
                         <Button className="color" variant="secondary">Cancel</Button>
                     </Stack>
                 </div>

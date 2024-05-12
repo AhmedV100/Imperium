@@ -8,14 +8,16 @@
     min-width: 100%;
 }
 .boxx2{
-    height: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 700px;
     width: 500px;
     background: transparent;
     border: 3px solid rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(300px);
     color: black;
     border-radius: 50px;
-    padding: 25px 35px;
+    padding: 10px 35px;
 }
 
 .boxx3{
