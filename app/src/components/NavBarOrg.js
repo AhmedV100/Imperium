@@ -10,7 +10,7 @@ function NavBar({ posts }) {
   const nav = useNavigate();
   const { orgId } = useParams();
 
-  // end of paste
+
 
   const [unreadNotificationsCount, setUnreadNotificationsCount] = useState(0);
 

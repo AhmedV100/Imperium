@@ -29,11 +29,9 @@ import OrganizationList from "./shahd/OrganizationList"
 import Donor_OrgRequests from "./shahd/Donor_OrgRequests"
 import AccountSettings from "./shahd/AccountSettings"
 import ViewNotificationPosts from "./pages/OrgPosts/ViewNotificationPosts";
-<<<<<<< HEAD
 import ViewAllPosts from "./pages/OrgPosts/ViewAllPosts";
 
-=======
->>>>>>> 7e8adaf4988475b34c25a605c1f804d9ac1a8565
+
 import Donors from "./Data/Donors.json";
 import Admin from "./Data/Admin.json";
 
@@ -116,8 +114,6 @@ function App() {
           />
 
           <Route path="/organization/:orgId" element={<OrgHome />} />
-<<<<<<< HEAD
-=======
           {/* <Route
             path="/organization/:orgId/posts"
             element={<OrganizationPosts />}
@@ -130,7 +126,6 @@ function App() {
             path="/organization/:orgId/notifications"
             element={<OrganizationNotifications />}
           /> */}
->>>>>>> 7e8adaf4988475b34c25a605c1f804d9ac1a8565
 
           <Route
             path="/organization/:orgId/new-post"
