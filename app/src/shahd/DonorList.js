@@ -7,14 +7,14 @@ function DonorList() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedDonor, setSelectedDonor] = useState(null);
     const [donors, setDonors] = useState([
-        { id: 1, name: "Donor 1", role: "Volunteer Doctor", details: "Details about Donor 1" },
-        { id: 2, name: "Donor 2", role: "Volunteer Teacher", details: "Details about Donor 2" },
-        { id: 3, name: "Donor 3", role: "Volunteer Doctor", details: "Details about Donor 3" },
-        { id: 4, name: "Donor 4", role: "Volunteer Teacher", details: "Details about Donor 4" },
-        { id: 5, name: "Donor 5", role: "Volunteer Teacher", details: "Details about Donor 4" },
-        { id: 6, name: "Donor 5", role: "Volunteer Teacher", details: "Details about Donor 4" },
-        { id: 7, name: "Donor 5", role: "Volunteer Teacher", details: "Details about Donor 4" },
-        { id: 8, name: "Donor 5", role: "Volunteer Teacher", details: "Details about Donor 4" },
+        { id: 1, name: "Joe allam", role: "Volunteer Doctor", email: "joe@gmail.com", number:"01139495933", address:"123 main street",area:"Nasr City",governate:"Cairo"},
+        { id: 2, name: "Ahmed", role: "Volunteer Teacher", email: "Details about Donor 2" },
+        { id: 3, name: "Mohamed", role: "Volunteer Doctor", email: "Details about Donor 3" },
+        { id: 4, name: "Mostafa", role: "Volunteer Teacher", email: "Details about Donor 4" },
+        { id: 5, name: "Abdelrahman", role: "Volunteer Teacher", email: "Details about Donor 4" },
+        { id: 6, name: "Shahd", role: "Volunteer Teacher", email: "Details about Donor 4" },
+        { id: 7, name: "Rawan", role: "Volunteer Teacher", email: "Details about Donor 4" },
+        { id: 8, name: "Donor 5", role: "Volunteer Teacher", email: "Details about Donor 4" },
 
 
 
@@ -71,8 +71,13 @@ function DonorList() {
                         <div className="popup-content" onClick={(e) => e.stopPropagation()}>
                             <span className="close" onClick={handleClosePopup}>&times;</span>
                             <h3>{selectedDonor.name}</h3>
-                            <p>{selectedDonor.role}</p>
-                            <p>{selectedDonor.details}</p>
+                            <p><b>Role: </b>{selectedDonor.role}</p>
+                            <p><b>Email: </b>{selectedDonor.email}</p>
+                            <p><b>Number: </b>{selectedDonor.number}</p>
+                            <p><b>Address: </b>{selectedDonor.address}</p>
+                            <p><b>Area: </b>{selectedDonor.area}</p>
+                            <p><b>Governate: </b>{selectedDonor.governate}</p>
+
                         </div>
                     </div>
                 )}

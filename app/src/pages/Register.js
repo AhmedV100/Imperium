@@ -11,11 +11,18 @@ export default function Register({ onRegisteredUsersChange }) {
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [contactNumber, setContactNumber] = useState('');
+  const [address, setAddress] = useState('');
+  const [area, setArea] = useState('');
+  const [goveronate, setGoveronate] = useState('');
+  const [gender, setGender] = useState('');
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleRegister = () => {
-    if (!firstName || !lastName || !password || !confirmPassword) {
-      setErrorMessage("Please enter First name, Last name, Password");
+    if (!firstName || !lastName || !password || !confirmPassword || !email || !contactNumber || !address || !area || !goveronate || !gender || !termsAccepted) {
+      setErrorMessage('Please fill in all fields and accept the terms');
       return;
     }
 
@@ -36,6 +43,12 @@ export default function Register({ onRegisteredUsersChange }) {
       object_type,
       username,
       password,
+      email,
+      contactNumber,
+      address,
+      area,
+      goveronate,
+      gender
     };
 
     // // Store the new user in the array of registered users
@@ -49,6 +62,13 @@ export default function Register({ onRegisteredUsersChange }) {
     setLastName("");
     setPassword("");
     setConfirmPassword("");
+    setEmail('');
+    setContactNumber('');
+    setAddress('');
+    setArea('');
+    setGoveronate('');
+    setGender('');
+    setTermsAccepted(false); 
 
     console.log("User registered successfully");
     navigate("/donor/id:" + newUser.id);
@@ -96,18 +116,22 @@ export default function Register({ onRegisteredUsersChange }) {
               />
             </div>
             <div className="inputs2_1">
-              <input type="email" placeholder="Email" required />
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
               <input
                 type="number"
+                value={contactNumber} 
+                onChange={(e) => setContactNumber(e.target.value)}
                 placeholder="Contact number"
                 min="0"
                 minLength={8}
                 required
               />
-              <input type="text" placeholder="Address" required />
-              <input type="text" className="area" placeholder="Area" required />
+              <input type="text" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)} required />
+              <input type="text" className="area" placeholder="Area" value={area} onChange={(e) => setArea(e.target.value)} required />
               <input
                 type="text"
+                value={goveronate} 
+                onChange={(e) => setGoveronate(e.target.value)}
                 className="gov"
                 placeholder="Goveronate"
                 required
@@ -117,8 +141,8 @@ export default function Register({ onRegisteredUsersChange }) {
             <div className="gender">
               <label>
                 <strong>Gender:</strong>
-                <input type="radio" name="gender" value="male" /> Male
-                <input type="radio" name="gender" value="female" /> Female
+                <input type="radio" name="gender" value="male" onChange={(e) => setGender(e.target.value)} /> Male
+                <input type="radio" name="gender" value="female" onChange={(e) => setGender(e.target.value)} /> Female
               </label>
             </div>
 
@@ -132,7 +156,7 @@ export default function Register({ onRegisteredUsersChange }) {
             <div className="TermBox">
               <label for="checkbox">
                 {" "}
-                <input type="checkbox" id="checkbox" />{" "}
+                <input type="checkbox" id="checkbox" checked={termsAccepted} onChange={() => setTermsAccepted(!termsAccepted)} />{" "}
                 <strong>I accept the </strong> <a href="#">Terms of Use </a>
                 <strong> & </strong> <a href="#">Privacy Policy</a>.
               </label>

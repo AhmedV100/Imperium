@@ -81,6 +81,11 @@
     border-radius: 35px;
 }
 
+.box button:hover {
+    background-color: #f0f0f0; /* Change to your desired hover color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover */
+}
+
 .box .resgisteration{
     text-align: center;
     margin-top: 15px;

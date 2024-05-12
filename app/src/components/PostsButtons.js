@@ -3,6 +3,8 @@ import { Button, Card, Row, Col } from "react-bootstrap";
 
 function PostsButtons({
   item,
+  postId,
+  donorId,
   handleShowDonor,
   handleShowCard,
   handleDeleteCard,
@@ -10,7 +12,7 @@ function PostsButtons({
   return (
     <Card.Body>
       <Row className="mb-3">
-        {item.donorId && (
+        {donorId && (
           <Col>
             <Button size="lg" onClick={handleShowDonor} variant="primary" block>
               Donor Info

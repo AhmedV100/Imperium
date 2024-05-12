@@ -24,8 +24,12 @@ import Organizations from "./Data/Organizations.json";
 import Posts from "./Data/Posts.json";
 import AdminDashboard from "./shahd/Admindashboard";
 import DonorList from "./shahd/DonorList";
-import DonorSubmissions from "./shahd/DonorSubmissions";
+import Donor_OrgSubmissions from "./shahd/Donor_OrgSubmissions";
 import OrganizationList from "./shahd/OrganizationList"
+import Donor_OrgRequests from "./shahd/Donor_OrgRequests"
+import AccountSettings from "./shahd/AccountSettings"
+// import Donors from "./Data/Donors.json";
+// import Admin from "./Data/Admin.json";
 
 import ViewNotificationPosts from "./pages/OrgPosts/ViewNotificationPosts";
 
@@ -153,16 +157,14 @@ function App() {
             element={<RegisterOrg></RegisterOrg>}
           ></Route>
 
+          <Route path="/admindashboard" element={<AdminDashboard/>}></Route>
+          <Route path="/donorList" element={<DonorList/>}></Route>
+          <Route path="/donor_OrgSubmissions" element={<Donor_OrgSubmissions/>}></Route>
+          <Route path="/organizationList" element={<OrganizationList/>}></Route>
+          <Route path="/donor_OrgRequests" element={<Donor_OrgRequests/>}></Route>
+          <Route path="/accountSettings" element={<AccountSettings/>}> </Route>
           <Route path="/admindashboard" element={<AdminDashboard />}></Route>
           <Route path="/donorList" element={<DonorList />}></Route>
-          <Route
-            path="/donorSubmissions"
-            element={<DonorSubmissions />}
-          ></Route>
-          <Route
-            path="/organizationList"
-            element={<OrganizationList />}
-          ></Route>
         </Routes>
       </BrowserRouter>
     </div>

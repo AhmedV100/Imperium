@@ -10,7 +10,7 @@
 
 .box3{
     margin-left: 36%;
-    height: 845px;
+    height: 856px;
     width: 578px;
     background: transparent;
     border: 2px solid rgba(0, 0, 0, 0.6);
@@ -109,6 +109,10 @@ input::-webkit-inner-spin-button {
     color: #000;
     font-weight: 750;
     border-radius: 35px;
+}
+.box3 button:hover {
+    background-color: #f0f0f0; /* Change to your desired hover color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover */
 }
 
 .box3 .resgisteration{
