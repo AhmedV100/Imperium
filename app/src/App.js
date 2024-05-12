@@ -5,14 +5,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register";
-// import SchedPickup from "./pages/SchedPickup";
+import SchedPickup from "./pages/SchedPickup";
 import RegisterOrg from "./pages/RegisterOrg/RegisterOrg";
 import OrgHome from "./pages/OrgHome/OrgHome";
 import Donor from "./pages/Donor";
-
+import DeliveryAndNotifications from "./pages/DeliveryAndNotifications";
 import MakePost from "./pages/OrgPosts/MakePost";
 import DonorBrowser from "./components/DonorBrowser";
-
+import DonationHistory from "./pages/DonationHistory";
+import DonationNotification from "./pages/DonationNotification";
 import ClothesComponent from "./components/FilterOptions/ClothesComponent";
 import ToysComponent from "./components/FilterOptions/ToysComponent";
 import FoodComponent from "./components/FilterOptions/FoodComponent";
@@ -48,6 +49,9 @@ function App() {
           <Route index element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/donor" element={<Donor />}></Route>
+          <Route path="/donor/deliveryandnotifications" element={<DeliveryAndNotifications />} />
+          <Route path="/donor/donationhistory" element={<DonationHistory />} />
+          <Route path="/donor/donationnotification" element={<DonationNotification />} />
           <Route path="/donor/browser" element={<DonorBrowser />} />
           <Route
             path="/donor/browser/all"
@@ -95,6 +99,7 @@ function App() {
             <Route path="/organization/:orgId/new-post" element={<MakePost />}></Route>
 
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/schedpickup" element={<SchedPickup />}></Route>
 
           <Route path="/register" element={<Register />}></Route>
           <Route

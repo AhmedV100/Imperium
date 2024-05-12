@@ -27,19 +27,19 @@ function applyBloodFilters(items, filters) {
   return items.filter((item) => {
     if (
       filters[0].trim() !== "" &&
-      item["hospital_name"].toLowerCase() !== filters[0]
+      item.fields["hospital_name"].toLowerCase() !== filters[0]
     ) {
       return false;
     }
     if (
       filters[1].trim() !== "" &&
-      item["governorate"].toLowerCase() !== filters[1]
+      item.fields["governorate"].toLowerCase() !== filters[1]
     ) {
       return false;
     }
     if (
       filters[2].trim() !== "" &&
-      item["hospital_area"].toLowerCase() !== filters[2]
+      item.fields["hospital_area"].toLowerCase() !== filters[2]
     ) {
       return false;
     }
@@ -50,13 +50,13 @@ function applyCasesFilters(items, filters) {
   return items.filter((item) => {
     if (
       filters[6].trim() !== "" &&
-      item["medical_specialty"].toLowerCase() !== filters[6]
+      item.fields["medical_specialty"].toLowerCase() !== filters[6]
     ) {
       return false;
     }
     if (
       filters[7].trim() !== "" &&
-      item["organization_name"].toLowerCase() !== filters[7]
+      item.fields["organization_name"].toLowerCase() !== filters[7]
     ) {
       return false;
     }
@@ -65,18 +65,18 @@ function applyCasesFilters(items, filters) {
 }
 function applyClothesFilters(items, filters) {
   return items.filter((item) => {
-    if (filters[0].trim() !== "" && item["age"].toLowerCase() !== filters[0]) {
+    if (filters[0].trim() !== "" && item.fields["age"].toLowerCase() !== filters[0]) {
       return false;
     }
     if (
       filters[1].trim() !== "" &&
-      item["gender"].toLowerCase() !== filters[1]
+      item.fields["gender"].toLowerCase() !== filters[1]
     ) {
       return false;
     }
     if (
       filters[2].trim() !== "" &&
-      item["season"].toLowerCase() !== filters[2]
+      item.fields["season"].toLowerCase() !== filters[2]
     ) {
       return false;
     }
@@ -85,7 +85,7 @@ function applyClothesFilters(items, filters) {
 }
 function applyFoodsFilters(items, filters) {
   return items.filter((item) => {
-    if (!filters.includes(item["type"])) {
+    if (!filters.includes(item.fields["type"])) {
       return false;
     }
     return true;
@@ -96,26 +96,26 @@ function applyMedsFilters(items, filters) {
   return items.filter((item) => {
     if (
       filters[0].trim() !== "" &&
-      item["device_type"].toLowerCase() !== filters[0]
+      item.fields["device_type"].toLowerCase() !== filters[0]
     ) {
       return false;
     }
     if (
       filters[1].trim() !== "" &&
-      item["equipment_type"].toLowerCase() !== filters[1]
+      item.fields["equipment_type"].toLowerCase() !== filters[1]
     ) {
       return false;
     }
     if (
       filters[2].trim() !== "" &&
-      item["medication_type"].toLowerCase() !== filters[2]
+      item.fields["medication_type"].toLowerCase() !== filters[2]
     ) {
       return false;
     }
     if (
       filters[3].trim() !== "" &&
-      item["use"].toLowerCase() !== filters[3] &&
-      item["type"].toLowerCase() === "medication"
+      item.fields["use"].toLowerCase() !== filters[3] &&
+      item.fields["type"].toLowerCase() === "medication"
     ) {
       return false;
     }
@@ -127,16 +127,16 @@ function applyTeachesFilters(items, filters) {
   return items.filter((item) => {
     if (
       filters[1].trim() !== "" &&
-      !item["subjects_to_be_taught"].toLowerCase().includes(filters[1])
+      !item.fields["subjects_to_be_taught"].toLowerCase().includes(filters[1])
     ) {
       return false;
     }
-    if (filters[2].trim() !== "" && item["area"].toLowerCase() !== filters[2]) {
+    if (filters[2].trim() !== "" && item.fields["area"].toLowerCase() !== filters[2]) {
       return false;
     }
     if (
       filters[3].trim() !== "" &&
-      item["government"].toLowerCase() !== filters[3]
+      item.fields["government"].toLowerCase() !== filters[3]
     ) {
       return false;
     }
@@ -145,16 +145,16 @@ function applyTeachesFilters(items, filters) {
 }
 function applyToysFilters(items, filters) {
   return items.filter((item) => {
-    if (filters[0].trim() !== "" && item["age"].toLowerCase() !== filters[0]) {
+    if (filters[0].trim() !== "" && item.fields["age"].toLowerCase() !== filters[0]) {
       return false;
     }
     if (
       filters[1].trim() !== "" &&
-      item["gender"].toLowerCase() !== filters[1]
+      item.fields["gender"].toLowerCase() !== filters[1]
     ) {
       return false;
     }
-    if (!filters[2].includes(item["type"].toLowerCase())) {
+    if (!filters[2].includes(item.fields["type"].toLowerCase())) {
       return false;
     }
     return true;
@@ -172,15 +172,15 @@ export default function ItemsGrid({
   filterOptionsForSchoolSupplies,
   filterOptionsForBloodDonations,
 }) {
-  const [bloods, setBloods] = useState();
-  const [books, setBooks] = useState();
-  const [cases, setCases] = useState();
-  const [clothes, setClothes] = useState();
-  const [foods, setFoods] = useState();
-  const [meds, setMeds] = useState();
-  const [stationaries, setStationaries] = useState();
-  const [teaches, setTeaches] = useState();
-  const [toys, setToys] = useState();
+  const [bloods, setBloods] = useState([]);
+  const [books, setBooks] = useState([]);
+  const [cases, setCases] = useState([]);
+  const [clothes, setClothes] = useState([]);
+  const [foods, setFoods] = useState([]);
+  const [meds, setMeds] = useState([]);
+  const [stationaries, setStationaries] = useState([]);
+  const [teaches, setTeaches] = useState([]);
+  const [toys, setToys] = useState([]);
 
   const all = [
     ...bloods,
@@ -199,7 +199,8 @@ export default function ItemsGrid({
   const [currentItems, setCurrentItems] = useState([]);
 
   useEffect(() => {
-    const storedDataPosts = JSON.parse(localStorage.getItem("data")).posts;
+    const storedDataPosts = JSON.parse(localStorage.getItem("posts"));
+    console.log("storedDataPosts", storedDataPosts);
     setBloods(storedDataPosts.filter((post) => post.object_type === "bloods"));
     setBooks(storedDataPosts.filter((post) => post.object_type === "books"));
     setCases(storedDataPosts.filter((post) => post.object_type === "cases"));
@@ -216,16 +217,6 @@ export default function ItemsGrid({
     );
     setToys(storedDataPosts.filter((post) => post.object_type === "toys"));
   }, []);
-
-  console.log("bloods: ", bloods);
-  console.log("books: ", books);
-  console.log("cases: ", cases);
-  console.log("clothes: ", clothes);
-  console.log("foods: ", foods);
-  console.log("meds: ", meds);
-  console.log("stationaries: ", stationaries);
-  console.log("teaches: ", teaches);
-  console.log("toys: ", toys);
 
   const pageSize = 9;
 
@@ -375,7 +366,11 @@ export default function ItemsGrid({
       <Row>
         {currentItems.map((item, index) => (
           <Col key={index} sm={4}>
-            <ItemCard item={item} index={index}></ItemCard>
+            <ItemCard
+              category={item.object_type}
+              item={item.fields}
+              index={index}
+            ></ItemCard>
           </Col>
         ))}
       </Row>
