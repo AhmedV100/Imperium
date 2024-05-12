@@ -3,26 +3,30 @@
     "id": 1,
     "object_type": "donor",
     "username": "donor3",
-    "password": "donor3"
+    "password": "donor3",
+    "rule" : "Teacher"
   },
   {
     "id": 4,
     "object_type": "donor",
     "username": "donor4",
-    "password": "donor4"
+    "password": "donor4",
+    "rule":null
   },
 
   {
     "id": 5,
     "object_type": "donor",
     "username": "donor5",
-    "password": "donor5"
+    "password": "donor5",
+    "rule": "Engineer"
   },
 
   {
     "id": 6,
     "object_type": "donor",
     "username": "donor6",
-    "password": "donor6"
+    "password": "donor6",
+    "rule": "Doctor"
   }
 ]
