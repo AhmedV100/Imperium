@@ -2,15 +2,17 @@ import React from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import logo from "./navIcon.ico";
 import "./hover.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-function NavBar() {
+export default function NavBarDonor() {
   const nav = useNavigate();
+  const { donorId } = useParams();
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: "70px" }}>
       <Container style={{ maxWidth: "100%" }}>
         <Navbar.Brand
-          href="/Home"
+          href="/home"
           style={{
             paddingLeft: "2vw",
             paddingRight: "1vw",
@@ -30,18 +32,11 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav" style={{ margin: "0" }}>
           <Nav className="ml-auto" style={{ margin: "0" }}>
             <Nav.Link
-              href="/home"
+              href={`/donor/${donorId}`}
               className="nav-link"
               style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
             >
               Home
-            </Nav.Link>
-            <Nav.Link
-              href="/admindashboard"
-              className="nav-link"
-              style={{ paddingLeft: "1vw", paddingRight: "1vw", margin: "0" }}
-            >
-              Dashboard
             </Nav.Link>
           </Nav>
           <Button
@@ -64,5 +59,3 @@ function NavBar() {
     </Navbar>
   );
 }
-
-export default NavBar;

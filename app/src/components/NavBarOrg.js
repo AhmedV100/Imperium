@@ -6,11 +6,10 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import NotificationIcon from "./NotificationIcon";
-function NavBar({ posts }) {
+
+export default function NavBarOrg({ posts }) {
   const nav = useNavigate();
   const { orgId } = useParams();
-
-
 
   const [unreadNotificationsCount, setUnreadNotificationsCount] = useState(0);
 
@@ -29,7 +28,7 @@ function NavBar({ posts }) {
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: "70px" }}>
       <Container style={{ margin: "0" }}>
         <Navbar.Brand
-          href="/Home"
+          href="/home"
           style={{
             paddingLeft: "2vw",
             paddingRight: "1vw",
@@ -91,10 +90,25 @@ function NavBar({ posts }) {
           >
             New Post
           </Button>
+          <Button
+            className="ms-auto"
+            type="button"
+            variant="outline-light"
+            onClick={() => nav("/home")}
+            style={{
+              paddingLeft: "1.2vw",
+              paddingRight: "1.2vw",
+              paddingTop: "3px",
+              paddingBottom: "5px",
+              marginRight: "4vw",
+            }}
+          >
+            logout
+          </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
 
-export default NavBar;
+

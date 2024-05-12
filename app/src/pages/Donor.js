@@ -1,11 +1,11 @@
-import NavBar from "../components/NavBar";
+import NavBarDonor from "../components/NavBarDonor";
 import Footer from "../components/footer";
 
 import DonorCardOptions from "../components/DonorCardOptions";
 export default function Donor() {
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBarDonor></NavBarDonor>
       <DonorCardOptions></DonorCardOptions>
       <Footer></Footer>
     </div>
