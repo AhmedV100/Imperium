@@ -21,6 +21,10 @@ import SchoolSuppliesComponent from "./components/FilterOptions/SchoolSuppliesCo
 import BloodDonationsComponent from "./components/FilterOptions/BloodDonationsComponent";
 import Organizations from "./Data/Organizations.json";
 import Posts from "./Data/Posts.json";
+import AdminDashboard from "./shahd/Admindashboard";
+import DonorList from "./shahd/DonorList";
+import DonorSubmissions from "./shahd/DonorSubmissions";
+import OrganizationList from "./shahd/OrganizationList"
 // import Donors from "./Data/Donors.json";
 // import Admin from "./Data/Admin.json";
 
@@ -97,6 +101,13 @@ function App() {
             path="/registerOrg"
             element={<RegisterOrg></RegisterOrg>}
           ></Route>
+
+          <Route path="/admindashboard" element={<AdminDashboard/>}></Route>
+          <Route path="/donorList" element={<DonorList/>}></Route>
+          <Route path="/donorSubmissions" element={<DonorSubmissions/>}></Route>
+          <Route path="/organizationList" element={<OrganizationList/>}></Route>
+
+
         </Routes>
       </BrowserRouter>
     </div>

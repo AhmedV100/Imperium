@@ -1,0 +1,99 @@
+.wopper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100%;
+    padding: 20px;
+    background-image: url("../images/row3-donation.png");
+    background-size: cover;
+}
+
+/* Header styles */
+.wopper h1 {
+    color: #3f51b5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Search input styles */
+.wrapping {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wrapping {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add margin to separate it from the header */
+}
+
+.wrapping input {
+    width: 50%; 
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px; 
+    outline: none;
+}
+/* Organization list styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+li.organization {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+li.organization:hover {
+    background-color: #f0f0f0;
+}
+
+/* Popup styles */
+.organization-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure the popup is on top of other content */
+}
+
+.organization-popup .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    position: relative;
+}
+
+.organization-popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+}
+
+.organization-popup .close:hover {
+    color: #333;
+}
